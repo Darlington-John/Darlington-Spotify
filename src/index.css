@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+    font-family: 'Circular Spotify Mid';
+    src: url('./Assets/Fonts/CircularStd-Book.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Circular Spotify Light';
+    src: url('./Assets/Fonts/CircularStd-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Circular Spotify Bold';
+    src: url('./Assets/Fonts/CircularStd-Black.otf') format('opentype');
+}
+
+* {
+    font-family: Circular Spotify Mid;
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
