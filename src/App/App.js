@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../Pages/Home/HomePage';
 import PlaylistPage from '../Pages/Playlist/PlaylistPage';
 import NowPlaying from '../Components/NowPlaying';
+require('events').EventEmitter.defaultMaxListeners = 40;
 
 function App() {
   return (

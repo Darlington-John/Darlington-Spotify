@@ -40,7 +40,7 @@ const SideBar = () => {
         setSidebar2Width(newWidth);
       }
     },
-    [isResizing2],
+    [isResizing2, setSidebar2Width],
   );
 
   useEffect(() => {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
 import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import BillieForestImg from './../Assets/Images/BillieForest.jpg';
 import BillieRedImg from './../Assets/Images/BillieRed.jpg';
@@ -22,7 +22,7 @@ import ArtistsBio from './ArtistsBio';
 const Cards = (props) => {
   const { selectedSong } = useMusic();
   const location = useLocation();
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     const navbarCardsContainer = document.querySelectorAll(
       '.navbar-cards-container',
     );
@@ -40,7 +40,38 @@ const Cards = (props) => {
         card2.style.display = 'none';
       }
     });
-  };
+  }, []); // Empty dependency array means the function does not depend on any external variable
+
+  useEffect(() => {
+    // Define handleResize function
+    const handleResize = () => {
+      const navbarCardsContainer = document.querySelectorAll(
+        '.navbar-cards-container',
+      );
+
+      navbarCardsContainer.forEach((container) => {
+        const card1 = container.querySelector('.card1');
+        const card2 = container.querySelector('.card2');
+
+        const containerWidth = container.clientWidth;
+        if (containerWidth <= 200) {
+          card1.style.display = 'none';
+          card2.style.display = 'flex';
+        } else {
+          card1.style.display = 'flex';
+          card2.style.display = 'none';
+        }
+      });
+    };
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const [isFollowed, setIsFollowed] = useState(false);
   const toggleFollowed = () => {
     // Toggle the isPlaying state when the button is clicked
@@ -314,7 +345,12 @@ const Cards = (props) => {
           <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
             <div className="w-full flex items-center justify-start gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
               <div className="plus-container">
-                <img src={LikedSongsImg} id="homeIcon" className="hover-img" />
+                <img
+                  src={LikedSongsImg}
+                  id="homeIcon"
+                  className="hover-img"
+                  alt=""
+                />
               </div>
               <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
                 Liked songs
@@ -323,7 +359,7 @@ const Cards = (props) => {
           </div>
           <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
             <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-              <img src={LikedSongsImg} id="homeIcon" />
+              <img src={LikedSongsImg} id="homeIcon" alt="" />
             </div>
           </div>
         </div>
@@ -383,6 +419,7 @@ const Cards = (props) => {
                 <img
                   src={selectedSong.artistImg}
                   className="rounded-xl absolute top-0 w-full"
+                  alt=""
                 />
               </>
             ) : (
@@ -390,6 +427,7 @@ const Cards = (props) => {
                 <img
                   src={BillieEilishImg}
                   className="rounded-xl absolute top-0 w-full"
+                  alt=""
                 />
               </>
             )}
@@ -445,7 +483,12 @@ const Cards = (props) => {
           <div className="Popup-container">
             <div className="Popup-content flex flex-col gap-10 relative items-end">
               <div className="bg-grey p-1  close-btn " onClick={closePopUp}>
-                <img className="w-4 " src={XmarkIcon} onClick={closePopUp} />
+                <img
+                  className="w-4 "
+                  src={XmarkIcon}
+                  onClick={closePopUp}
+                  alt=""
+                />
               </div>
               <div className="flex justify-between items-center slideshow">
                 <img
@@ -458,7 +501,7 @@ const Cards = (props) => {
                   onClick={nextSlide}
                   className=" p-2 bg-grey follow-button rounded-full text-sm"
                 >
-                  <img src={ArrLeftIcon} />
+                  <img src={ArrLeftIcon} alt="" />
                 </button>
               </div>
               <div className="flex flex-row gap-8">
@@ -572,6 +615,7 @@ const Cards = (props) => {
               <img
                 src={props.PlaylistImg}
                 className="w-14  rounded-lg xs:w-10"
+                alt=""
               />
               <span className="text-white text-base xs:text-sm">
                 {props.PlaylistTitle}
@@ -579,7 +623,7 @@ const Cards = (props) => {
             </div>
             <div>
               <button className="bg-spGreen rounded-full p-4 playlist-play xs:hidden">
-                <img src={PlayIcon} className="w-4" />
+                <img src={PlayIcon} className="w-4" alt="" />
               </button>
             </div>
           </div>
@@ -608,10 +652,11 @@ const Cards = (props) => {
                 onClick={() => {
                   togglePlay(props.audioUrl);
                 }}
+                alt=""
               />
             </div>
             <div className="flex flex-row gap-2 items-center">
-              <img src={props.songImg} className="w-10 rounded-sm" />
+              <img src={props.songImg} className="w-10 rounded-sm" alt="" />
               <div className="flex flex-col">
                 <h1
                   className={`text-white text-base md:text-sm ${
@@ -639,9 +684,13 @@ const Cards = (props) => {
         <Link to={`/mixData/${props.CardTitle}`}>
           <div className="flex flex-col gap-2 p-4 bg-lightBlack hover:bg-grey rounded-lg w-52  features-card">
             <div className="relative">
-              <img src={props.FeatureImg} className="w-full rounded-lg " />
+              <img
+                src={props.FeatureImg}
+                className="w-full rounded-lg "
+                alt=""
+              />
               <button className="bg-spGreen rounded-full p-4 playlist-play bottom-2 right-2 absolute">
-                <img src={PlayIcon} className="w-4" />
+                <img src={PlayIcon} className="w-4" alt="" />
               </button>
             </div>
             <div className="flex flex-col gap-0">

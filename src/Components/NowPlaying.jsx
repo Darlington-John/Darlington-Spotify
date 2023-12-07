@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ChangeMyNumber from "./../Assets/Music/Billie Eilish-I did'nt change my number.mp3";
 import HappierThanEverImg from './../Assets/Images/HappierThanEver.jpg';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import PreviousIcon from './../Assets/Icons/Previous.svg';
 import ShuffleIcon from './../Assets/Icons/Shuffle.svg';
 import ShuffleActiveIcon from './../Assets/Icons/ShuffleActive.svg';
 import LoopIcon from './../Assets/Icons/Loop.svg';
-import LoopActiveIcon from './../Assets/Icons/LoopActive.svg';
+
 import LoopOneIcon from './../Assets/Icons/LoopOne.svg';
 import LikeIcon from './../Assets/Icons/Like.svg';
 import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
@@ -24,8 +24,6 @@ import ConnectedActiveIcon from './../Assets/Icons/ConnectedActive.svg';
 import UnMuteIcon from './../Assets/Icons/UnMute.svg';
 import MuteIcon from './../Assets/Icons/Mute.svg';
 
-import { ambientSongs } from './ArrayData';
-
 import { useMusic } from './MusicContext';
 const NowPlaying = (props) => {
   const {
@@ -36,7 +34,7 @@ const NowPlaying = (props) => {
     playPrevious,
     playNext,
     isLike,
-    setIsLike,
+
     toggleLike,
     toggleLoop,
     isLooping,
@@ -53,7 +51,7 @@ const NowPlaying = (props) => {
 
   const [progress, setProgress] = useState(0);
   const volumeIcons = [UnMuteIcon, MuteIcon];
-  const LoopIcons = [LoopIcon, LoopActiveIcon, LoopOneIcon];
+
   const [currentTime, setCurrentTime] = useState('0:00');
   const [duration, setDuration] = useState('0:00');
 
@@ -83,14 +81,12 @@ const NowPlaying = (props) => {
   const handleTimeUpdate = () => {
     const audio = audioRef.current;
 
-    // Check if audio duration is a valid number
     if (!isNaN(audio.duration) && isFinite(audio.duration)) {
       const calculatedProgress = (audio.currentTime / audio.duration) * 100;
       setProgress(calculatedProgress);
       setCurrentTime(formatTime(audio.currentTime));
       setDuration(formatTime(audio.duration));
     } else {
-      // Set default values when duration is NaN or not a finite number
       setProgress(0);
       setCurrentTime('0:00');
       setDuration('0:00');
@@ -119,7 +115,7 @@ const NowPlaying = (props) => {
       audioRef.current.play();
       setIsPlaying(true);
     }
-  }, [selectedSong, audioRef]);
+  }, [selectedSong, audioRef, setIsPlaying]);
 
   const handleClick = () => {
     if (selectedSong) {
@@ -143,11 +139,19 @@ const NowPlaying = (props) => {
           <div>
             {selectedSong ? (
               <>
-                <img src={selectedSong.songImg} className="w-16 rounded-lg" />
+                <img
+                  src={selectedSong.songImg}
+                  className="w-16 rounded-lg"
+                  alt=""
+                />
               </>
             ) : (
               <>
-                <img src={HappierThanEverImg} className="w-16 rounded-lg" />
+                <img
+                  src={HappierThanEverImg}
+                  className="w-16 rounded-lg"
+                  alt=""
+                />
               </>
             )}
           </div>
@@ -164,9 +168,9 @@ const NowPlaying = (props) => {
           <div>
             <button onClick={toggleLike}>
               {isLike ? (
-                <img src={LikeActiveIcon} className="w-4" />
+                <img src={LikeActiveIcon} className="w-4" alt="" />
               ) : (
-                <img src={LikeIcon} className="w-4" />
+                <img src={LikeIcon} className="w-4" alt="" />
               )}
             </button>
           </div>
@@ -176,13 +180,13 @@ const NowPlaying = (props) => {
           <div className="flex flex-row gap-6">
             <button onClick={toggleShuffle}>
               {isShuffle ? (
-                <img src={ShuffleActiveIcon} className="w-4" />
+                <img src={ShuffleActiveIcon} className="w-4" alt="" />
               ) : (
-                <img src={ShuffleIcon} className="w-4" />
+                <img src={ShuffleIcon} className="w-4" alt="" />
               )}
             </button>
             <button onClick={playPrevious}>
-              <img src={PreviousIcon} className="w-4" />
+              <img src={PreviousIcon} className="w-4" alt="" />
             </button>
             {selectedSong ? (
               <>
@@ -207,13 +211,13 @@ const NowPlaying = (props) => {
             )}
 
             <button onClick={playNext}>
-              <img src={NextIcon} className="w-4" />
+              <img src={NextIcon} className="w-4" alt="" />
             </button>
             <button onClick={toggleLoop}>
               {isLooping ? (
-                <img src={LoopOneIcon} className="w-4" />
+                <img src={LoopOneIcon} className="w-4" alt="" />
               ) : (
-                <img src={LoopIcon} className="w-4" />
+                <img src={LoopIcon} className="w-4" alt="" />
               )}
             </button>
           </div>
@@ -237,30 +241,30 @@ const NowPlaying = (props) => {
         >
           <button onClick={toggleNowPlay}>
             {isNowPlay ? (
-              <img src={NowPlayingActiveIcon} className="w-4" />
+              <img src={NowPlayingActiveIcon} className="w-4" alt="" />
             ) : (
-              <img src={NowPlayingIcon} className="w-4" />
+              <img src={NowPlayingIcon} className="w-4" alt="" />
             )}
           </button>
           <button onClick={toggleMic}>
             {isMic ? (
-              <img src={MicActiveIcon} className="w-4" />
+              <img src={MicActiveIcon} className="w-4" alt="" />
             ) : (
-              <img src={MicIcon} className="w-4" />
+              <img src={MicIcon} className="w-4" alt="" />
             )}
           </button>
           <button onClick={toggleQueue}>
             {isQueue ? (
-              <img src={QueueActiveIcon} className="w-4" />
+              <img src={QueueActiveIcon} className="w-4" alt="" />
             ) : (
-              <img src={QueueIcon} className="w-4" />
+              <img src={QueueIcon} className="w-4" alt="" />
             )}
           </button>
           <button onClick={toggleConnected}>
             {isConnected ? (
-              <img src={ConnectedActiveIcon} className="w-4" />
+              <img src={ConnectedActiveIcon} className="w-4" alt="" />
             ) : (
-              <img src={ConnectedIcon} className="w-4" />
+              <img src={ConnectedIcon} className="w-4" alt="" />
             )}
           </button>
 
@@ -313,6 +317,7 @@ const NowPlaying = (props) => {
                     <img
                       src={selectedSong.songImg}
                       className="w-14 rounded-lg md:rounded-sm md:w-10"
+                      alt=""
                     />
                   </>
                 ) : (
@@ -320,6 +325,7 @@ const NowPlaying = (props) => {
                     <img
                       src={HappierThanEverImg}
                       className="w-14 rounded-lg md:rounded-sm md:w-10"
+                      alt=""
                     />
                   </>
                 )}
@@ -338,9 +344,9 @@ const NowPlaying = (props) => {
             <div className="flex flex-row gap-3">
               <button onClick={toggleLike}>
                 {isLike ? (
-                  <img src={LikeActiveIcon} className="w-4" />
+                  <img src={LikeActiveIcon} className="w-4" alt="" />
                 ) : (
-                  <img src={LikeIcon} className="w-4" />
+                  <img src={LikeIcon} className="w-4" alt="" />
                 )}
               </button>
               {selectedSong ? (

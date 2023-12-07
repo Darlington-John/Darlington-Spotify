@@ -2,12 +2,8 @@ import React from 'react';
 import Cards from './Cards';
 import HappierThanEverImg from './../Assets/Images/HappierThanEver.jpg';
 
-import BillieBandanaImg from './../Assets/Images/BillieBandana.png';
-import WorldShirtImg from './../Assets/Images/WorldShirt.png';
-import MortageLimeImg from './../Assets/Images/MortageLime.png';
-
 import ellipsisIcon from './../Assets/Icons/ellipsis.svg';
-import LinkIcon from './../Assets/Icons/Link.svg';
+
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
 import LikeIcon from './../Assets/Icons/Like.svg';
 import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
@@ -42,7 +38,7 @@ const SideBarRight = (props) => {
         setSidebar1Width(newWidth);
       }
     },
-    [isResizing1],
+    [isResizing1, setSidebar1Width],
   );
 
   const resize2 = useCallback(
@@ -76,7 +72,7 @@ const SideBarRight = (props) => {
       window.removeEventListener('mouseup', stopResizing);
     };
   }, [resize1, resize2, stopResizing]);
-  const { selectedSong, isLike, setIsLike, toggleLike } = useMusic();
+  const { selectedSong, isLike, toggleLike } = useMusic();
 
   return (
     <div>
@@ -93,7 +89,12 @@ const SideBarRight = (props) => {
           <div className="flex items-center justify-center w-full flex-col p-2 pb-40 ">
             {isMore ? (
               <div className="flex flex-row items-center justify-between  w-full p-4">
-                <img src={ellipsisIcon} className="w-6" onClick={toggleMore} />
+                <img
+                  src={ellipsisIcon}
+                  className="w-6"
+                  onClick={toggleMore}
+                  alt=""
+                />
               </div>
             ) : (
               <div className="flex flex-col animate-pulse w-full">
@@ -103,16 +104,29 @@ const SideBarRight = (props) => {
                       ? selectedSong.songName
                       : "I Didn't Change My Number"}
                   </h1>
-                  <img src={XmarkIcon} className="w-4" onClick={toggleMore} />
+                  <img
+                    src={XmarkIcon}
+                    className="w-4"
+                    onClick={toggleMore}
+                    alt=""
+                  />
                 </div>
                 <div className="flex flex-col gap-4 pb-6">
                   {selectedSong ? (
                     <>
-                      <img src={selectedSong.songImg} className="rounded-xl" />
+                      <img
+                        src={selectedSong.songImg}
+                        className="rounded-xl"
+                        alt=""
+                      />
                     </>
                   ) : (
                     <>
-                      <img src={HappierThanEverImg} className="rounded-xl" />
+                      <img
+                        src={HappierThanEverImg}
+                        className="rounded-xl"
+                        alt=""
+                      />
                     </>
                   )}
                   <div className="flex flex-row justify-between ">
@@ -134,9 +148,9 @@ const SideBarRight = (props) => {
                     <div className="flex flex-row">
                       <button onClick={toggleLike}>
                         {isLike ? (
-                          <img src={LikeActiveIcon} className="w-4" />
+                          <img src={LikeActiveIcon} className="w-4" alt="" />
                         ) : (
-                          <img src={LikeIcon} className="w-4" />
+                          <img src={LikeIcon} className="w-4" alt="" />
                         )}
                       </button>
                     </div>

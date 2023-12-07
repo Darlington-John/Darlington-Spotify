@@ -6,7 +6,7 @@ import DarlingtonIcon from './../Assets/Images/Blohsh.jpg';
 import AlarmIcon from './../Assets/Icons/Alarm.svg';
 import SettingsIcon from './../Assets/Icons/Settings.svg';
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getGreeting } from './Filters';
 import { toggleNav } from './../JavaScript.js';
 import { Link, useNavigate } from 'react-router-dom';
@@ -19,25 +19,7 @@ const NavBar = (props) => {
   const handleForwardClick = () => {
     navigate(1);
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.getElementById('Navbar');
-      const scrollHeight = window.scrollY;
-      const offset = 20;
 
-      if (scrollHeight > offset) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <div
       className="flex flex-row items-center justify-between sticky top-0 xs:hidden bg-deepBlack py-2  z-50"
@@ -48,14 +30,14 @@ const NavBar = (props) => {
           className="bg-deepBlack rounded-full p-2 nav-btn"
           onClick={handleBackClick}
         >
-          <img src={ArrRightIcon} className="w-4" />
+          <img src={ArrRightIcon} className="w-4" alt="" />
         </button>
         <button
           className="bg-deepBlack rounded-full p-2 nav-btn"
           onClick={handleForwardClick}
         >
           {' '}
-          <img src={ArrLeftIcon} className="w-4" />
+          <img src={ArrLeftIcon} className="w-4" alt="" />
         </button>
       </div>
       <div className="flex flex-row gap-4 items-center">
@@ -63,16 +45,16 @@ const NavBar = (props) => {
           Explore premium
         </button>
         <button className="py-2 px-4 bg-grey text-base nav-btn rounded-full flex gap-2 items-center text-white">
-          <img src={DownloadIcon} className="w-4" />
+          <img src={DownloadIcon} className="w-4" alt="" />
           <span>Install app</span>
         </button>
         <div className="flex items-center gap-2">
           <button className="bg-deepBlack rounded-full p-2 nav-btn">
-            <img src={AlarmIcon} className="w-4" />
+            <img src={AlarmIcon} className="w-4" alt="" />
           </button>
 
           <button className="bg-deepBlack rounded-full p-0  nav-btn">
-            <img src={DarlingtonIcon} className="w-6 rounded-full" />
+            <img src={DarlingtonIcon} className="w-6 rounded-full" alt="" />
           </button>
         </div>
       </div>
@@ -105,7 +87,7 @@ export const MobileNavbar = (props) => {
             className="bg-deepBlack rounded-full p-2 nav-btn pl-4"
             onClick={handleBackClick}
           >
-            <img src={ArrRightIcon} className="w-4" />
+            <img src={ArrRightIcon} className="w-4" alt="" />
           </button>
 
           <h1 className="text-white text-2xl font-bold pl-4">
@@ -119,6 +101,7 @@ export const MobileNavbar = (props) => {
           id="barsIcon"
           src={icon}
           className="w-6 z-10 absolute right-0 top-1/4 "
+          alt=""
         />
       </Link>
     </div>

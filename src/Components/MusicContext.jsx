@@ -4,9 +4,10 @@ import React, {
   useState,
   useRef,
   useEffect,
+  useCallback,
 } from 'react';
-import { myHitsMix, ambientSongs } from './ArrayData';
 
+import { myHitsMix, ambientSongs } from './PlaylistData';
 const MusicContext = createContext();
 export const MusicProvider = ({ children }) => {
   const [selectedSong, setSelectedSong] = useState(null);
@@ -17,47 +18,47 @@ export const MusicProvider = ({ children }) => {
   const toggleLike = () => {
     setIsLike(!isLike);
   };
-  const [currentPlaylist, setCurrentPlaylist] = useState('myHitsMix');
-  const determineCurrentPlaylist = () => {
+  const [currentPlaylist] = useState('myHitsMix');
+  const determineCurrentPlaylist = useCallback(() => {
     switch (currentPlaylist) {
       case 'myHitsMix':
         return myHitsMix;
       case 'ambientSongs':
         return ambientSongs;
       default:
-        return myHitsMix; // Default to Eilish Mix if no specific playlist is matched
+        return myHitsMix;
     }
-  };
+  }, [currentPlaylist]);
 
-  const determineCurrentPlaylistIndex = () => {
-    const playlist = determineCurrentPlaylist();
-    return playlist.findIndex(
-      (song) => song.audioUrl === selectedSong?.audioUrl,
-    );
-  };
   const [isLooping, setIsLooping] = useState(false);
   const toggleLoop = () => {
     setIsLooping(!isLooping);
     audioRef.current.loop = !isLooping;
   };
 
-  const playNext = () => {
+  const playNext = useCallback(() => {
     const playlist = determineCurrentPlaylist();
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % playlist.length);
     setSelectedSong(playlist[currentSongIndex]);
 
     if (!isLooping && currentSongIndex === playlist.length - 1) {
-      // If not looping and it's the last song, pause and reset
       audioRef.current.pause();
       setIsPlaying(false);
       setCurrentSongIndex(0);
     } else {
-      // Otherwise, play the next song
       audioRef.current.src = playlist[currentSongIndex].audioUrl;
       audioRef.current.play().catch((error) => console.error(error));
       setIsPlaying(true);
     }
-  };
+  }, [
+    determineCurrentPlaylist,
+    currentSongIndex,
+    setCurrentSongIndex,
+    setSelectedSong,
+    setIsPlaying,
+    audioRef,
+    isLooping,
+  ]);
 
   const playPrevious = () => {
     const previousIndex =
@@ -82,7 +83,6 @@ export const MusicProvider = ({ children }) => {
         setIsPlaying(false);
       }
 
-      // setSelectedSong(myHitsMix.find((song) => song.audioUrl === audioUrl));
       setSelectedSong(myHitsMix.find((songs) => songs.audioUrl === audioUrl));
       audioRef.current.src = audioUrl;
       audioRef.current.play().catch((error) => console.error(error));
@@ -90,18 +90,17 @@ export const MusicProvider = ({ children }) => {
   };
   useEffect(() => {
     const handleAudioEnded = () => {
-      // Automatically play the next song when the current one ends
       playNext();
     };
 
-    // Add an event listener for the 'ended' event
-    audioRef.current.addEventListener('ended', handleAudioEnded);
+    const currentAudioRef = audioRef.current;
 
-    // Clean up the event listener when the component unmounts
+    currentAudioRef.addEventListener('ended', handleAudioEnded);
+
     return () => {
-      audioRef.current.removeEventListener('ended', handleAudioEnded);
+      currentAudioRef.removeEventListener('ended', handleAudioEnded);
     };
-  }, [playNext]);
+  }, [playNext, audioRef]);
 
   const value = {
     selectedSong,

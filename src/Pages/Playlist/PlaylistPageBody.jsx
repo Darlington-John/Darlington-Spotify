@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import SideBar from './../../Components/Sidebar';
 import Bottombar from '../../Components/Bottombar';
@@ -58,6 +58,7 @@ const PlaylistPageBody = (props) => {
                   : '-'
               }
               className="w-56 2xs:w-full md:mr-auto md:ml-auto md:w-72"
+              alt=""
             />
             <div className="flex flex-col gap-2 ">
               <h1 className="text-base">
