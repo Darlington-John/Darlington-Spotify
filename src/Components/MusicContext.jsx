@@ -14,10 +14,61 @@ export const MusicProvider = ({ children }) => {
   const audioRef = useRef(new Audio());
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isLike, setIsLike] = useState(false);
-  const toggleLike = () => {
-    setIsLike(!isLike);
+  const [likedSongs, setLikedSongs] = useState([]);
+  const [likedSongsCount, setLikedSongsCount] = useState(0);
+  const [likedSongsPlaylist, setLikedSongsPlaylist] = useState([]);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    const storedLikedSongs = JSON.parse(localStorage.getItem('likedSongs'));
+    const storedLikedSongsPlaylist = JSON.parse(
+      localStorage.getItem('likedSongsPlaylist'),
+    );
+
+    if (storedLikedSongs) {
+      setLikedSongs(storedLikedSongs);
+      setLikedSongsCount(storedLikedSongs.length);
+    }
+
+    if (storedLikedSongsPlaylist) {
+      setLikedSongsPlaylist(storedLikedSongsPlaylist);
+    }
+
+    setIsInitialized(true);
+  }, []);
+  useEffect(() => {
+    // Update the likedSongsCount whenever the likedSongs array changes
+    setLikedSongsCount(likedSongs.length);
+  }, [likedSongs]);
+  const toggleLike = (song) => {
+    // Check if the song is already liked
+    const isLiked = likedSongs.some(
+      (likedSong) => likedSong.songDuration === song.songDuration,
+    );
+
+    if (isLiked) {
+      // Remove the song from liked songs
+      setLikedSongs((prevLikedSongs) =>
+        prevLikedSongs.filter(
+          (likedSong) => likedSong.songDuration !== song.songDuration,
+        ),
+      );
+    } else {
+      // Add the song to liked songs
+      setLikedSongs((prevLikedSongs) => [...prevLikedSongs, song]);
+    }
   };
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
+      localStorage.setItem(
+        'likedSongsPlaylist',
+        JSON.stringify(likedSongsPlaylist),
+      );
+    }
+    console.log('Liked Songs Playlist:', likedSongsPlaylist);
+  }, [likedSongs, likedSongsPlaylist, isInitialized]);
+
   const [currentPlaylist] = useState('myHitsMix');
   const determineCurrentPlaylist = useCallback(() => {
     switch (currentPlaylist) {
@@ -111,8 +162,8 @@ export const MusicProvider = ({ children }) => {
     setIsPlaying,
     playPrevious,
     playNext,
-    isLike,
-    setIsLike,
+    likedSongs,
+    likedSongsCount,
     toggleLike,
     toggleLoop,
     isLooping,

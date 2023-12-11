@@ -8,6 +8,7 @@ import SideBarRight from '../../Components/SidebarRight';
 import Filters from '../../Components/Filters';
 import OverLay from '../../Components/Overlay';
 import Features from '../../Components/Features';
+
 const HomePageBody = () => {
   return (
     <div className="app-container ">

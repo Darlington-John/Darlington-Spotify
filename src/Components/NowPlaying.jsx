@@ -33,9 +33,7 @@ const NowPlaying = (props) => {
     setIsPlaying,
     playPrevious,
     playNext,
-    isLike,
 
-    toggleLike,
     toggleLoop,
     isLooping,
   } = useMusic();
@@ -165,15 +163,7 @@ const NowPlaying = (props) => {
               {selectedSong ? selectedSong.songArtists : 'Billie Eilish'}
             </Link>
           </div>
-          <div>
-            <button onClick={toggleLike}>
-              {isLike ? (
-                <img src={LikeActiveIcon} className="w-4" alt="" />
-              ) : (
-                <img src={LikeIcon} className="w-4" alt="" />
-              )}
-            </button>
-          </div>
+          <div></div>
         </div>
 
         <div className="custom-audio-player" style={{ flex: '30%' }}>
@@ -342,13 +332,6 @@ const NowPlaying = (props) => {
               </div>
             </div>
             <div className="flex flex-row gap-3">
-              <button onClick={toggleLike}>
-                {isLike ? (
-                  <img src={LikeActiveIcon} className="w-4" alt="" />
-                ) : (
-                  <img src={LikeIcon} className="w-4" alt="" />
-                )}
-              </button>
               {selectedSong ? (
                 <>
                   <button onClick={handleClick} className="play-button">

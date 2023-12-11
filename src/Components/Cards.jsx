@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
+import LikeIcon from './../Assets/Icons/Like.svg';
+import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
 import BillieForestImg from './../Assets/Images/BillieForest.jpg';
 import BillieRedImg from './../Assets/Images/BillieRed.jpg';
 import BillieEilishGreenImg from './../Assets/Images/BillieEilishGreen.jpg';
@@ -14,13 +15,28 @@ import ArrLeftIcon from './../Assets/Icons/ArrLeft.svg';
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
 import PlayWhiteIcon from './../Assets/Icons/PlayWhite.svg';
 import PlayIcon from './../Assets/Icons/Play.svg';
+import MusicIcon from './../Assets/Icons/Music.svg';
+import EpisodeIcon from './../Assets/Icons/Episode.svg';
 
 import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
 import { useMusic } from './MusicContext';
 import ArtistsBio from './ArtistsBio';
 const Cards = (props) => {
-  const { selectedSong } = useMusic();
+  const { selectedSong, toggleLike, likedSongs, likedSongsCount } = useMusic();
+  // const {
+  //   isLike,
+
+  //   toggleLike,
+  // } = useMusic();
+  const isLiked = likedSongs.some(
+    (likedSong) => likedSong.songDuration === props.songDuration,
+  );
+
+  const handleToggleLike = () => {
+    toggleLike(props);
+  };
+
   const location = useLocation();
   const handleResize = () => {
     const navbarCardsContainer = document.querySelectorAll(
@@ -32,7 +48,7 @@ const Cards = (props) => {
       const card2 = container.querySelector('.card2');
 
       const containerWidth = container.clientWidth;
-      if (containerWidth <= 200) {
+      if (containerWidth <= 250) {
         card1.style.display = 'none';
         card2.style.display = 'flex';
       } else {
@@ -308,72 +324,7 @@ const Cards = (props) => {
           </div>
         </div>
       )}
-      {props.navbarCardsLike && (
-        <div className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container">
-          <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
-            <div className="w-full flex items-center justify-start gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
-              <div className="plus-container">
-                <img src={LikedSongsImg} id="homeIcon" className="hover-img" />
-              </div>
-              <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
-                Liked songs
-              </Link>
-            </div>
-          </div>
-          <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
-            <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-              <img src={LikedSongsImg} id="homeIcon" />
-            </div>
-          </div>
-        </div>
-      )}
-      {props.navbarCardsEpisodes && (
-        <div className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container">
-          <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
-            <div className="w-full flex items-center justify-start gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
-              <div className="episodes-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-name="Layer 1"
-                  viewBox="0 0 24 24"
-                  x="0px"
-                  y="0px"
-                  id="homeIcon"
-                  fill="#1DB954"
-                >
-                  <circle cx="12" cy="11" r="2.75" />
-                  <path d="m12,5.25c-3.17,0-5.75,2.58-5.75,5.75,0,1.12.33,2.21.94,3.15.23.34.69.44,1.04.21.35-.23.44-.69.21-1.04-.45-.69-.69-1.49-.69-2.33,0-2.34,1.91-4.25,4.25-4.25s4.25,1.91,4.25,4.25c0,.83-.24,1.64-.69,2.33-.23.35-.13.81.21,1.04.13.08.27.12.41.12.24,0,.48-.12.63-.34.61-.94.94-2.02.94-3.15,0-3.17-2.58-5.75-5.75-5.75Z" />
-                  <path d="m12,2.25C7.17,2.25,3.25,6.17,3.25,11c0,1.95.63,3.8,1.82,5.35.25.33.72.39,1.05.13.33-.25.39-.72.13-1.05-.99-1.28-1.51-2.81-1.51-4.43,0-4,3.25-7.25,7.25-7.25s7.25,3.25,7.25,7.25c0,1.62-.52,3.15-1.51,4.43-.25.33-.19.8.13,1.05.14.11.3.16.46.16.22,0,.45-.1.59-.29,1.19-1.54,1.82-3.39,1.82-5.35,0-4.83-3.92-8.75-8.75-8.75Z" />
-                  <path d="m15.52,18.03l-.41-1.11c-.4-1.07-1.44-1.78-2.58-1.78h-1.06c-1.14,0-2.18.71-2.58,1.78l-.41,1.11c-.32.85-.2,1.79.31,2.54.51.74,1.36,1.18,2.26,1.18h1.9c.9,0,1.75-.44,2.26-1.18.51-.74.63-1.69.31-2.53h0Z" />
-                </svg>
-              </div>
-              <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
-                Your Episodes
-              </Link>
-            </div>
-          </div>
-          <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
-            <div className="w-full flex items-center justify-center gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-              <div className="episodes-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-name="Layer 1"
-                  viewBox="0 0 24 24"
-                  x="0px"
-                  y="0px"
-                  id="homeIcon"
-                  fill="#1DB954"
-                >
-                  <circle cx="12" cy="11" r="2.75" />
-                  <path d="m12,5.25c-3.17,0-5.75,2.58-5.75,5.75,0,1.12.33,2.21.94,3.15.23.34.69.44,1.04.21.35-.23.44-.69.21-1.04-.45-.69-.69-1.49-.69-2.33,0-2.34,1.91-4.25,4.25-4.25s4.25,1.91,4.25,4.25c0,.83-.24,1.64-.69,2.33-.23.35-.13.81.21,1.04.13.08.27.12.41.12.24,0,.48-.12.63-.34.61-.94.94-2.02.94-3.15,0-3.17-2.58-5.75-5.75-5.75Z" />
-                  <path d="m12,2.25C7.17,2.25,3.25,6.17,3.25,11c0,1.95.63,3.8,1.82,5.35.25.33.72.39,1.05.13.33-.25.39-.72.13-1.05-.99-1.28-1.51-2.81-1.51-4.43,0-4,3.25-7.25,7.25-7.25s7.25,3.25,7.25,7.25c0,1.62-.52,3.15-1.51,4.43-.25.33-.19.8.13,1.05.14.11.3.16.46.16.22,0,.45-.1.59-.29,1.19-1.54,1.82-3.39,1.82-5.35,0-4.83-3.92-8.75-8.75-8.75Z" />
-                  <path d="m15.52,18.03l-.41-1.11c-.4-1.07-1.44-1.78-2.58-1.78h-1.06c-1.14,0-2.18.71-2.58,1.78l-.41,1.11c-.32.85-.2,1.79.31,2.54.51.74,1.36,1.18,2.26,1.18h1.9c.9,0,1.75-.44,2.26-1.18.51-.74.63-1.69.31-2.53h0Z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+
       {props.ArtistCard && (
         <div className="gradient-container relative " onClick={openPopUp}>
           <div className="flex flex-col gap-3 items-start relative">
@@ -584,8 +535,14 @@ const Cards = (props) => {
           </div>
         </Link>
       )}
+
       {props.songCard && (
-        <div className="grid grid-cols-3  w-full hover:bg-lightBlack   py-2 rounded-md px-4 items-center song-card xl:justify-between xl:grid-cols-2 md:px-2">
+        <div
+          className="grid grid-cols-3  w-full hover:bg-lightBlack   py-2 rounded-md px-4 items-center song-card xl:justify-between xl:grid-cols-2 md:px-2"
+          onDoubleClick={() => {
+            togglePlay(props.audioUrl);
+          }}
+        >
           <div className="flex flex-row items-center gap-2 w-full">
             <div className="song-card-play">
               <h1
@@ -624,24 +581,95 @@ const Cards = (props) => {
           <div className="w-full flex justify-end text-silver text-sm album-test xl:hidden">
             <h1>{props.song?.songAlbum}</h1>
           </div>
-          <div className="w-full text-white flex  justify-end md:text-sm">
+          <div className="w-full text-white flex  justify-end items-center md:text-sm gap-10">
+            <button onClick={handleToggleLike} className="like-btn">
+              {isLiked ? (
+                <img src={LikeActiveIcon} className="w-4 " alt="" />
+              ) : (
+                <img src={LikeIcon} className="w-4 like-img" alt="" />
+              )}
+            </button>
             <h1>{props.songDuration}</h1>
           </div>
         </div>
       )}
       {props.FeaturesCard && (
-        <div className="flex flex-col gap-2 p-4 bg-lightBlack hover:bg-grey rounded-lg w-52  features-card">
-          <div className="relative">
-            <img src={props.FeatureImg} className="w-full rounded-lg " />
-            <button className="bg-spGreen rounded-full p-4 playlist-play bottom-2 right-2 absolute">
-              <img src={PlayIcon} className="w-4" />
-            </button>
+        <Link to={`/mixData/${props.CardTitle}`}>
+          <div className="flex flex-col gap-2 p-4 bg-lightBlack hover:bg-grey rounded-lg w-52  features-card">
+            <div className="relative">
+              <img src={props.FeatureImg} className="w-full rounded-lg " />
+              <button className="bg-spGreen rounded-full p-4 playlist-play bottom-2 right-2 absolute">
+                <img src={PlayIcon} className="w-4" />
+              </button>
+            </div>
+            <div className="flex flex-col gap-0">
+              <h1 className="text-white">{props.CardTitle}</h1>
+              <p className="leading-5 text-sm text-spGrey">{props.Featuring}</p>
+            </div>
           </div>
-          <div className="flex flex-col gap-0">
-            <h1 className="text-white">{props.CardTitle}</h1>
-            <p className="leading-5 text-sm text-spGrey">{props.Featuring}</p>
+        </Link>
+      )}
+      {props.createdPlaylist && (
+        <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
+          <div className="flex items-center justify-center w-auto p-5 rounded-md bg-silver">
+            <img src={MusicIcon} className="w-4" />
+          </div>
+          <div className="flex flex-col items-start justify-between">
+            <h1>{props.playlistName}</h1>
+            <div className="flex flex-row gap-3 items-center">
+              <h1>{props.playlistGroup}</h1>
+              <h1>.</h1>
+              <h1>{props.playlistUser}</h1>
+            </div>
           </div>
         </div>
+      )}
+      {props.likedPlaylist && (
+        <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
+          <div className="flex items-center justify-center w-auto p-5 rounded-md bg-silver">
+            <img src={MusicIcon} className="w-4" />
+          </div>
+          <div className="flex flex-col items-start justify-between">
+            <h1>{props.playlistName}</h1>
+            <div className="flex flex-row gap-3 items-center">
+              <h1>playlist</h1>
+              <h1>.</h1>
+              <h1>Darlington</h1>
+            </div>
+          </div>
+        </div>
+      )}
+      {props.navbarCardsLike && (
+        <Link to="/likedSongs">
+          <div className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container">
+            <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
+              <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
+                <div className="flex items-center justify-center bg-silver  rounded-md ">
+                  <img
+                    src={LikedSongsImg}
+                    className="hover-img  w-12 rounded-md"
+                  />
+                </div>
+
+                <div className="flex flex flex-col gap-1 text-base">
+                  <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
+                    Liked songs
+                  </Link>
+                  <div className="flex flex-row gap-1 text-sm">
+                    <h1>Playlist</h1>
+                    <h1>.</h1>
+                    <h1>{likedSongsCount} songs</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
+              <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
+                <img src={LikedSongsImg} className="w-12 rounded-md" />
+              </div>
+            </div>
+          </div>
+        </Link>
       )}
     </>
   );

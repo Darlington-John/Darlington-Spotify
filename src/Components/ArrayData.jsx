@@ -141,7 +141,7 @@ export const mixData = [
     album: 'Album',
     title: 'Title',
 
-    playlistSongs: <Playlists Eilish=" " />,
+    playlistSongs: <Playlists myHits=" " />,
   },
 
   {
@@ -156,7 +156,8 @@ export const mixData = [
     duration: ClockIcon,
     album: 'Album',
     title: 'Title',
-    playlistSongs: <Playlists myHits=" " />,
+    playlistSongs: <EilishPlaylist Eilish=" "/>,
+
   },
   {
     key: 'Sia',
@@ -202,7 +203,7 @@ export const madeForUser = [
     duration: ClockIcon,
     album: 'Album',
     title: 'Title',
-    playlistSongs: <Playlists lifeSucks=" " />,
+    playlistSongs: <LifeSucksPlaylist lifeSucks=" " />,
   },
   {
     key: 'Comfort ',
@@ -231,7 +232,7 @@ export const madeForUser = [
     duration: ClockIcon,
     album: 'Album',
     title: 'Title',
-    playlistSongs: <Playlists lifeSucks=" " />,
+    playlistSongs: <LifeSucksPlaylist lifeSucks=" " />,
   },
   {
     key: 'Chill',
