@@ -72,7 +72,7 @@ const SideBarRight = (props) => {
       window.removeEventListener('mouseup', stopResizing);
     };
   }, [resize1, resize2, stopResizing]);
-  const { selectedSong, isLike, toggleLike } = useMusic();
+  const { selectedSong } = useMusic();
 
   return (
     <div>
@@ -144,15 +144,6 @@ const SideBarRight = (props) => {
                           ? selectedSong.songArtists
                           : 'Billie Eilish'}
                       </Link>
-                    </div>
-                    <div className="flex flex-row">
-                      <button onClick={toggleLike}>
-                        {isLike ? (
-                          <img src={LikeActiveIcon} className="w-4" alt="" />
-                        ) : (
-                          <img src={LikeIcon} className="w-4" alt="" />
-                        )}
-                      </button>
                     </div>
                   </div>
                 </div>

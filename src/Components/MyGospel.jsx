@@ -35,13 +35,11 @@ export const myGospel = [
     audioUrl: Oceans,
     artistImg: HillImg,
     songStream: '3,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Hillsong UNITED is committed to creating a musical expression that is
         almost uncomfortable in its uniqueness. Our mission is to write songs
         that awa...
-      </span>
-    ),
+      `,
     artistsFirst: HillImg,
     artistsSec: HillTwoImg,
     artistsThird: HillThreeImg,
@@ -59,16 +57,15 @@ export const myGospel = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Hillsong UNITED is committed to creating a musical expression that is
         almost uncomfortable in its uniqueness. Our mission is to write songs
         that awaken churches and individuals to the fact that we are redeemed
         and called into the story of God. Birthed in the youth ministry of
         Hillsong Church in Australia, UNITED is an eclectic mix of musicians,
         songwriters and worship leaders.
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 2,
@@ -83,24 +80,11 @@ export const myGospel = [
     audioUrl: Slaves,
     artistImg: BethelImg,
     songStream: '4,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Bethel Music is a worship movement pursuing the presence of God and
         capturing fresh expressions of worship out of Redding, California.
-        Bethel Music has grown from a local church music ministry to a global
-        outreach made up of a collective of songwriters, artists and musicians.
-        Brian and Jenn Johnson co-founded this movement in 2001; their mission
-        was to raise up worshippers who take hold of their true identity and
-        pursue intimacy with God above all else. Since 2001, the Bethel Music
-        collective has released 17 worship albums, the most recent releases
-        being Homecoming (2021), Peace (2021), and Simple (2022), each carrying
-        a unique theme and featuring some of the most well-recognized artists in
-        the genre. In 2021, the label was nominated for 6 Dove Awards, and
-        another 11 in 2022, spanning categories from Songwriter of the Year and
-        Worship Album of the Year to Inspirational and Rock/Contemporary Songs
-        of the Year. As a youthful label of only 13 years, Bethel Musi...
-      </span>
-    ),
+        Bethel Musi...
+      `,
     artistsFirst: BethelImg,
     artistsSec: BethelTwoImg,
     artistsThird: BethelThreeImg,
@@ -118,8 +102,7 @@ export const myGospel = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Bethel Music is a worship movement pursuing the presence of God and
         capturing fresh expressions of worship out of Redding, California.
         Bethel Music has grown from a local church music ministry to a global
@@ -141,8 +124,7 @@ export const myGospel = [
         “Living Hope” in the top 10 since 2019. Hitting a new stride over the
         last few years, Bethel Music has continually ranked at #6 in the top 10
         radio market share.
-      </span>
-    ),
+      `,
   },
   {
     id: 3,
@@ -157,13 +139,11 @@ export const myGospel = [
     audioUrl: Surrender,
     artistImg: HillImg,
     songStream: '3,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Hillsong UNITED is committed to creating a musical expression that is
         almost uncomfortable in its uniqueness. Our mission is to write songs
         that awa...
-      </span>
-    ),
+      `,
     artistsFirst: HillImg,
     artistsSec: HillTwoImg,
     artistsThird: HillThreeImg,
@@ -181,16 +161,15 @@ export const myGospel = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Hillsong UNITED is committed to creating a musical expression that is
         almost uncomfortable in its uniqueness. Our mission is to write songs
         that awaken churches and individuals to the fact that we are redeemed
         and called into the story of God. Birthed in the youth ministry of
         Hillsong Church in Australia, UNITED is an eclectic mix of musicians,
         songwriters and worship leaders.
-      </span>
-    ),
+      
+    `,
   },
 ];
 export const MyGospelPlaylist = (props) => {
@@ -218,6 +197,8 @@ export const MyGospelPlaylist = (props) => {
                 togglePlay={() => handleTogglePlay(song.audioUrl)}
                 setIsPlaying={setIsPlaying}
                 myGospelMix={props.myGospelMix}
+                artistsBio={song.artistsBio}
+                aboutArtists={song.aboutArtists}
               />
             </div>
           ))}

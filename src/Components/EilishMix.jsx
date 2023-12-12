@@ -68,13 +68,11 @@ export const eilishMix = [
     audioUrl: ChangeMyNumber,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -92,7 +90,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
 
   {
@@ -108,13 +127,11 @@ export const eilishMix = [
     audioUrl: BadGuy,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -132,7 +149,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 3,
@@ -147,13 +185,11 @@ export const eilishMix = [
     audioUrl: Oxytocin,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -171,7 +207,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 4,
@@ -186,13 +243,11 @@ export const eilishMix = [
     audioUrl: Everything,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -210,7 +265,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 5,
@@ -225,13 +301,11 @@ export const eilishMix = [
     audioUrl: OverHeated,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -249,7 +323,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 6,
@@ -264,13 +359,11 @@ export const eilishMix = [
     audioUrl: Crown,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -288,7 +381,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 7,
@@ -303,13 +417,11 @@ export const eilishMix = [
     audioUrl: TimeToDie,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -327,7 +439,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 8,
@@ -342,13 +475,11 @@ export const eilishMix = [
     audioUrl: NDA,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -366,7 +497,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 9,
@@ -381,13 +533,11 @@ export const eilishMix = [
     audioUrl: HappierThanEver,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -405,7 +555,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 10,
@@ -420,13 +591,11 @@ export const eilishMix = [
     audioUrl: Goldwing,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -444,7 +613,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 11,
@@ -459,13 +649,11 @@ export const eilishMix = [
     audioUrl: Lovely,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -483,7 +671,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 12,
@@ -498,13 +707,11 @@ export const eilishMix = [
     audioUrl: PartyOver,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -522,7 +729,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 13,
@@ -537,13 +765,11 @@ export const eilishMix = [
     audioUrl: StrangeAddiction,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -561,7 +787,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 14,
@@ -576,13 +823,11 @@ export const eilishMix = [
     audioUrl: LoveYou,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -600,7 +845,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 15,
@@ -615,13 +881,11 @@ export const eilishMix = [
     audioUrl: OceanEyes,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -639,7 +903,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 16,
@@ -654,13 +939,11 @@ export const eilishMix = [
     audioUrl: GettingOlder,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -678,7 +961,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 17,
@@ -693,13 +997,11 @@ export const eilishMix = [
     audioUrl: MyFuture,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -717,7 +1019,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 18,
@@ -732,13 +1055,11 @@ export const eilishMix = [
     audioUrl: Therefore,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -756,7 +1077,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 19,
@@ -771,13 +1113,11 @@ export const eilishMix = [
     audioUrl: TV,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -795,7 +1135,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 20,
@@ -810,13 +1171,11 @@ export const eilishMix = [
     audioUrl: Ilomilo,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -834,7 +1193,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 21,
@@ -849,13 +1229,11 @@ export const eilishMix = [
     audioUrl: BossaNova,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -873,7 +1251,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 22,
@@ -888,13 +1287,11 @@ export const eilishMix = [
     audioUrl: Bellyache,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -912,7 +1309,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 23,
@@ -927,13 +1345,11 @@ export const eilishMix = [
     audioUrl: Bored,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -951,7 +1367,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 24,
@@ -966,13 +1403,11 @@ export const eilishMix = [
     audioUrl: Dies,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -990,7 +1425,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 25,
@@ -1005,13 +1461,11 @@ export const eilishMix = [
     audioUrl: Copycat,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1029,7 +1483,28 @@ export const eilishMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   // Add more songs for this playlist
 ];
@@ -1059,6 +1534,8 @@ const EilishPlaylist = (props) => {
                 togglePlay={() => handleTogglePlay(song.audioUrl)}
                 setIsPlaying={setIsPlaying}
                 eilishMix={props.eilishMix}
+                aboutArtists={song.aboutArtists}
+                artistsBio={song.artistsBio}
               />
             </div>
           ))}

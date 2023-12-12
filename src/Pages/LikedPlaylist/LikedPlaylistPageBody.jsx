@@ -11,6 +11,7 @@ import PlaylistLikeBar from '../../Components/PlaylistLikeBar';
 import SideBarRight from '../../Components/SidebarRight';
 import Bottombar from '../../Components/Bottombar';
 import PlayListGroup from '../../Components/PlaylistGroup';
+import AltoIcon from './../../Assets/Icons/Alto.svg';
 const LikedPlaylistPageBody = () => {
   const { likedSongsPlaylist } = useMusic();
   const { likedSongs, toggleLike, likedSongsCount } = useMusic();
@@ -44,7 +45,7 @@ const LikedPlaylistPageBody = () => {
             />
             <div className="flex flex-col gap-2 ">
               <h1 className="text-base">Playlist</h1>
-              <h1 className=" text-8xl    font-bold md:text-4xl">
+              <h1 className=" text-8xl    font-bold md:text-6xl xs:text-4xl">
                 Liked Songs
               </h1>
 
@@ -54,26 +55,41 @@ const LikedPlaylistPageBody = () => {
             </div>
           </div>
           <div className="flex flex-col transBlackLight  p-5 md:px-2 md:pt-0 gap-5">
-            <PlaylistLikeBar />
-            <PlayListGroup
-              duration={ClockIcon}
-              album="Album"
-              title="Title"
-              number="#"
-            />
-
+            {likedSongs.length > 0 ? (
+              <PlayListGroup
+                duration={ClockIcon}
+                album="Album"
+                title="Title"
+                number="#"
+              />
+            ) : (
+              ' '
+            )}
             <div className="text-white">
-              {likedSongs.map((song) => (
-                <div key={song.songDuration}>
-                  <Cards
-                    {...song}
-                    isPlaying={song.audioUrl === selectedSong?.audioUrl}
-                    togglePlay={() => handleTogglePlay(song.audioUrl)}
-                    setIsPlaying={setIsPlaying}
-                    isLiked
-                  />
+              {likedSongs.length > 0 ? (
+                likedSongs.map((song, index) => (
+                  <div key={song.id}>
+                    <Cards
+                      {...song}
+                      songNumber={index + 1}
+                      isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                      togglePlay={() => handleTogglePlay(song.audioUrl)}
+                      setIsPlaying={setIsPlaying}
+                      isLiked
+                    />
+                  </div>
+                ))
+              ) : (
+                <div className="text-center py-12 flex flex-col items-center gap-2">
+                  <img className="w-20 mx-auto" src={AltoIcon} />
+                  <h1 className="font-bold text-3xl">
+                    Songs you like will appear here
+                  </h1>
+                  <h1 className="text-base">
+                    Save songs by tapping the heart icon
+                  </h1>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>

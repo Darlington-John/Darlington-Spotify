@@ -177,13 +177,11 @@ export const myHitsMix = [
     audioUrl: OverHeated,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -201,7 +199,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 2,
@@ -216,13 +235,11 @@ export const myHitsMix = [
     audioUrl: ItWas,
     artistImg: HarryOneImg,
     songStream: '55,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Harry Styles’ third solo album, Harry's House, is breaking new ground
         for one of the most creative forces in pop music, a star who keeps
         refusing to stand stil...
-      </span>
-    ),
+      `,
     artistsFirst: HarryOneImg,
     artistsSec: HarryTwoImg,
     artistsThird: HarryOneImg,
@@ -240,8 +257,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Harry Styles’ third solo album, Harry's House, is breaking new ground
         for one of the most creative forces in pop music, a star who keeps
         refusing to stand still. It’s a deeply personal statement from an artist
@@ -264,8 +280,7 @@ export const myHitsMix = [
         honored, taking its place in history. Harry is taking Love on Tour
         worldwide through 2022, in the aftermath of his historic Coachella set,
         in support of Harry’s House.
-      </span>
-    ),
+      `,
   },
   {
     id: 3,
@@ -280,13 +295,11 @@ export const myHitsMix = [
     audioUrl: Circles,
     artistImg: PostImg,
     songStream: '59,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
-        debut, he ...
-      </span>
-    ),
+        debut, he...
+    `,
     artistsFirst: PostImg,
     artistsSec: PostTwoImg,
     artistsThird: PostThreeImg,
@@ -304,8 +317,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
         debut, he went from underground genre novelty to certified superstar,
@@ -340,8 +352,7 @@ export const myHitsMix = [
         Awards. Along with producers , , , and , the dark, introspective affair
         also featured guest rappers , , and , as well as the additional radio
         hit "Better Now."
-      </span>
-    ),
+      `,
   },
   {
     id: 4,
@@ -356,13 +367,11 @@ export const myHitsMix = [
     audioUrl: Chandelier,
     artistImg: SiaImg,
     songStream: '61,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a sing...
-      </span>
-    ),
+      `,
     artistsFirst: SiaImg,
     artistsSec: SiaImg,
     artistsThird: SiaImg,
@@ -380,8 +389,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a singer in the acid jazz band Crisp in the
@@ -398,8 +406,8 @@ export const myHitsMix = [
         songwriting for other artists, producing successful collaborations
         "Titanium" (with David Guetta), "Diamonds" (with Rihanna), and "Wild
         Ones" (with Flo Rida).
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 5,
@@ -414,13 +422,11 @@ export const myHitsMix = [
     audioUrl: BadGuy,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -438,7 +444,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 6,
@@ -453,13 +480,11 @@ export const myHitsMix = [
     audioUrl: Hearing,
     artistImg: ThomImg,
     songStream: '1,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         As the frontman for , Thom Yorke provides the band with a humanistic
         focus: his keening, emphatic vocals balance even the group's chilliest
         moments. Howe...
-      </span>
-    ),
+      `,
     artistsFirst: ThomImg,
     artistsSec: ThomImg,
     artistsThird: ThomImg,
@@ -477,8 +502,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         As the frontman for , Thom Yorke provides the band with a humanistic
         focus: his keening, emphatic vocals balance even the group's chilliest
         moments. However, other than duets with similarly inclined artists (, ),
@@ -515,8 +539,8 @@ export const myHitsMix = [
         abstract Kid A, but instead found it debuting at the top of the U.S.
         charts (despite the absence of a video or single being released from the
         album).
-      </span>
-    ),
+  
+    `,
   },
   {
     id: 7,
@@ -531,13 +555,13 @@ export const myHitsMix = [
     audioUrl: Demons,
     artistImg: ImagineImg,
     songStream: '57,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
+      
         Formed in 2009, Imagine Dragons first revealed their emotionally charged
         and inventive sensibilities with a series of independently released EPs
         that earned t...
-      </span>
-    ),
+  
+    `,
     artistsFirst: ImagineImg,
     artistsSec: ImagineTwoImg,
     artistsThird: ImagineThreeImg,
@@ -555,8 +579,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Formed in 2009, Imagine Dragons first revealed their emotionally charged
         and inventive sensibilities with a series of independently released EPs
         that earned them grassroots following. Signed to KIDinaKORNER/Interscope
@@ -577,8 +600,8 @@ export const myHitsMix = [
         like you’re escaping into a world that’s much more vibrant. Our hope is
         that the album helps people focus on the beauty of each moment, and
         really see all the brilliance and color of life.”
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 8,
@@ -593,13 +616,11 @@ export const myHitsMix = [
     audioUrl: Oxytocin,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -617,7 +638,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 9,
@@ -632,12 +674,10 @@ export const myHitsMix = [
     audioUrl: Stars,
     artistImg: OneRepublicImg,
     songStream: '45,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Grammy nominated OneRepublic, is comprised of singer/songwriter and lead
         vocalist Ryan Tedder, guitarists Zach Filkins and Drew Brown, keys Br...
-      </span>
-    ),
+      `,
     artistsFirst: OneRepublicImg,
     artistsSec: OneRepublicTwoImg,
     artistsThird: OneRepublicThreeImg,
@@ -655,8 +695,8 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+      
         Grammy nominated OneRepublic, is comprised of singer/songwriter and lead
         vocalist Ryan Tedder, guitarists Zach Filkins and Drew Brown, keys Brian
         Willett, bassist and cellist Brent Kutzle, and drummer Eddie Fisher. The
@@ -676,8 +716,8 @@ export const myHitsMix = [
         Gun: Maverick. Earlier this year, they released their single, “West
         Coast” to rave reviews. Their upcoming North American tour, “Never
         Ending Summer Tour,” will kick off in July of this year.
-      </span>
-    ),
+     
+    `,
   },
   {
     id: 10,
@@ -692,13 +732,11 @@ export const myHitsMix = [
     audioUrl: NDA,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -716,7 +754,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 11,
@@ -731,13 +790,13 @@ export const myHitsMix = [
     audioUrl: HomeTown,
     artistImg: TwentyImg,
     songStream: '30,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
+      
         Twenty One Pilots - GRAMMY® Award-winning Twenty One Pilots quietly
         emerged as one of the most successful bands of the 21st century and
         redefine...
-      </span>
-    ),
+     
+    `,
     artistsFirst: TwentyImg,
     artistsSec: TwentyTwoImg,
     artistsThird: TwentyImg,
@@ -755,8 +814,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Twenty One Pilots - GRAMMY® Award-winning Twenty One Pilots quietly
         emerged as one of the most successful bands of the 21st century and
         redefined the sound of a generation. After billions of streams and
@@ -778,8 +836,8 @@ export const myHitsMix = [
         Gold, Platinum or Multi-Platinum certification from the RIAA, making the
         duo the first artist / group with two albums to reach this landmark
         achievement.
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 12,
@@ -794,13 +852,11 @@ export const myHitsMix = [
     audioUrl: Better,
     artistImg: PostImg,
     songStream: '59,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
-        debut, he ...
-      </span>
-    ),
+        debut, he...
+    `,
     artistsFirst: PostImg,
     artistsSec: PostTwoImg,
     artistsThird: PostThreeImg,
@@ -818,8 +874,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
         debut, he went from underground genre novelty to certified superstar,
@@ -854,8 +909,7 @@ export const myHitsMix = [
         Awards. Along with producers , , , and , the dark, introspective affair
         also featured guest rappers , , and , as well as the additional radio
         hit "Better Now."
-      </span>
-    ),
+      `,
   },
   {
     id: 13,
@@ -870,13 +924,11 @@ export const myHitsMix = [
     audioUrl: Crown,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -894,7 +946,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 14,
@@ -909,13 +982,11 @@ export const myHitsMix = [
     audioUrl: Waves,
     artistImg: GlassImg,
     songStream: '21,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Dave Bayley, Ed Irwin-Singer (bass), Drew MacFarlane (guitar) and Joe
         Seaward (drums) released their first album, Zaba, in 2014, on Paul
         Epworth’s Wolf T....
-      </span>
-    ),
+      `,
     artistsFirst: GlassImg,
     artistsSec: GlassTwoImg,
     artistsThird: GlassThreeImg,
@@ -933,8 +1004,8 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+     
         Dave Bayley, Ed Irwin-Singer (bass), Drew MacFarlane (guitar) and Joe
         Seaward (drums) released their first album, Zaba, in 2014, on Paul
         Epworth’s Wolf Tone label. It was a modest debut (“We thought we’d go
@@ -955,8 +1026,8 @@ export const myHitsMix = [
         Wrench, Manny Maroquin and MixedbyAli. Glass Animals’ most enthralling
         album to date, it’s a pop record of rare scope, vision and emotional
         depth.
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 15,
@@ -971,13 +1042,11 @@ export const myHitsMix = [
     audioUrl: Audio,
     artistImg: SiaImg,
     songStream: '61,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a sing...
-      </span>
-    ),
+      `,
     artistsFirst: SiaImg,
     artistsSec: SiaImg,
     artistsThird: SiaImg,
@@ -995,8 +1064,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a singer in the acid jazz band Crisp in the
@@ -1013,8 +1081,8 @@ export const myHitsMix = [
         songwriting for other artists, producing successful collaborations
         "Titanium" (with David Guetta), "Diamonds" (with Rihanna), and "Wild
         Ones" (with Flo Rida).
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 16,
@@ -1029,13 +1097,13 @@ export const myHitsMix = [
     audioUrl: Dream,
     artistImg: ImagineImg,
     songStream: '57,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
+      
         Formed in 2009, Imagine Dragons first revealed their emotionally charged
         and inventive sensibilities with a series of independently released EPs
         that earned t...
-      </span>
-    ),
+  
+    `,
     artistsFirst: ImagineImg,
     artistsSec: ImagineTwoImg,
     artistsThird: ImagineThreeImg,
@@ -1053,8 +1121,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Formed in 2009, Imagine Dragons first revealed their emotionally charged
         and inventive sensibilities with a series of independently released EPs
         that earned them grassroots following. Signed to KIDinaKORNER/Interscope
@@ -1075,8 +1142,8 @@ export const myHitsMix = [
         like you’re escaping into a world that’s much more vibrant. Our hope is
         that the album helps people focus on the beauty of each moment, and
         really see all the brilliance and color of life.”
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 17,
@@ -1091,13 +1158,11 @@ export const myHitsMix = [
     audioUrl: Mad,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1115,7 +1180,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 18,
@@ -1130,13 +1216,11 @@ export const myHitsMix = [
     audioUrl: Goldwing,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1154,7 +1238,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 19,
@@ -1169,13 +1274,11 @@ export const myHitsMix = [
     audioUrl: HappierThanEverEdit,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1193,7 +1296,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 20,
@@ -1208,13 +1332,11 @@ export const myHitsMix = [
     audioUrl: Ghost,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1232,7 +1354,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 21,
@@ -1247,13 +1390,11 @@ export const myHitsMix = [
     audioUrl: Flames,
     artistImg: DavidImg,
     songStream: '67,867,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         DJ. Producer. Artist. David Guetta is a musical trailblazer and an
         international icon. With 2x Grammys awards, 11x Grammy nominations, 7x
         UK numb...
-      </span>
-    ),
+      `,
     artistsFirst: DavidImg,
     artistsSec: DavidTwoImg,
     artistsThird: DavidThreeImg,
@@ -1271,8 +1412,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         DJ. Producer. Artist. David Guetta is a musical trailblazer and an
         international icon. With 2x Grammys awards, 11x Grammy nominations, 7x
         UK number 1 singles, over 40 billion global streams, 50 million records
@@ -1293,8 +1433,8 @@ export const myHitsMix = [
         a nod for ‘Best Dance/Electronic Recording’, has garnered 1.8 billion
         global streams and simultaneously hit #1 at the US Top 40 & US Dance
         Radio charts.
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 22,
@@ -1309,13 +1449,11 @@ export const myHitsMix = [
     audioUrl: Unforgettable,
     artistImg: FrenchImg,
     songStream: '18,867,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         A Moroccan-American rapper who built an indie empire with his Cocaine
         City imprint, French Montana rose from the New York mixtape underground
         in the 2...
-      </span>
-    ),
+      `,
     artistsFirst: FrenchImg,
     artistsSec: FrenchTwoImg,
     artistsThird: FrenchImg,
@@ -1333,8 +1471,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         A Moroccan-American rapper who built an indie empire with his Cocaine
         City imprint, French Montana rose from the New York mixtape underground
         in the 2000s to emerge as a pop-savvy hip-hop artist in the 2010s.
@@ -1355,8 +1492,7 @@ export const myHitsMix = [
         signing to both 's and ' imprints in a unique joint venture. His 2012
         single "Pop That" would be the first release for the united labels,
         while 2013 saw the arrival of his debut album, Excuse My French.
-      </span>
-    ),
+      `,
   },
   {
     id: 23,
@@ -1372,13 +1508,11 @@ export const myHitsMix = [
     audioUrl: ChangeMyNumber,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1396,7 +1530,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 24,
@@ -1411,13 +1566,11 @@ export const myHitsMix = [
     audioUrl: Bellyache,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1435,7 +1588,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 25,
@@ -1450,13 +1624,11 @@ export const myHitsMix = [
     audioUrl: Copycat,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1474,7 +1646,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 26,
@@ -1489,13 +1682,11 @@ export const myHitsMix = [
     audioUrl: Gimme,
     artistImg: SiaImg,
     songStream: '61,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a sing...
-      </span>
-    ),
+      `,
     artistsFirst: SiaImg,
     artistsSec: SiaImg,
     artistsThird: SiaImg,
@@ -1513,8 +1704,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a singer in the acid jazz band Crisp in the
@@ -1531,8 +1721,8 @@ export const myHitsMix = [
         songwriting for other artists, producing successful collaborations
         "Titanium" (with David Guetta), "Diamonds" (with Rihanna), and "Wild
         Ones" (with Flo Rida).
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 27,
@@ -1547,13 +1737,11 @@ export const myHitsMix = [
     audioUrl: Blind,
     artistImg: WeekndImg,
     songStream: '101,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         The Weeknd took over pop music & culture on his own terms filtering R&B,
         Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum
         3X G...
-      </span>
-    ),
+      `,
     artistsFirst: WeekndImg,
     artistsSec: WeekndTwoImg,
     artistsThird: WeekndThreeImg,
@@ -1571,8 +1759,8 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+      
         The Weeknd took over pop music & culture on his own terms filtering R&B,
         Pop,& hip-hop through an ambitious widescreen lens. The multi-platinum
         3X GRAMMY Award winner has emerged as one of the most successful &
@@ -1593,8 +1781,8 @@ export const myHitsMix = [
         becoming the first to ever rank #1 on the Billboard 200, Hot 100, and
         Artist 100 simultaneously. is the #1 R&B streaming album of all time
         (followed by at #2).
-      </span>
-    ),
+    
+    `,
   },
   {
     id: 28,
@@ -1609,13 +1797,11 @@ export const myHitsMix = [
     audioUrl: Watermelon,
     artistImg: HarryOneImg,
     songStream: '55,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Harry Styles’ third solo album, Harry's House, is breaking new ground
         for one of the most creative forces in pop music, a star who keeps
         refusing to stand stil...
-      </span>
-    ),
+      `,
     artistsFirst: HarryOneImg,
     artistsSec: HarryTwoImg,
     artistsThird: HarryOneImg,
@@ -1633,8 +1819,8 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+      
         Harry Styles’ third solo album, Harry's House, is breaking new ground
         for one of the most creative forces in pop music, a star who keeps
         refusing to stand still. It’s a deeply personal statement from an artist
@@ -1657,8 +1843,8 @@ export const myHitsMix = [
         honored, taking its place in history. Harry is taking Love on Tour
         worldwide through 2022, in the aftermath of his historic Coachella set,
         in support of Harry’s House.
-      </span>
-    ),
+  
+    `,
   },
   {
     id: 29,
@@ -1673,13 +1859,11 @@ export const myHitsMix = [
     audioUrl: Sunflower,
     artistImg: PostImg,
     songStream: '59,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
-        debut, he ...
-      </span>
-    ),
+        debut, he...
+    `,
     artistsFirst: PostImg,
     artistsSec: PostTwoImg,
     artistsThird: PostThreeImg,
@@ -1697,8 +1881,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Diamond-certified American hitmaker Post Malone bridges the gap between
         the worlds of rap and the pop mainstream. Within five years of his
         debut, he went from underground genre novelty to certified superstar,
@@ -1733,8 +1916,7 @@ export const myHitsMix = [
         Awards. Along with producers , , , and , the dark, introspective affair
         also featured guest rappers , , and , as well as the additional radio
         hit "Better Now."
-      </span>
-    ),
+      `,
   },
   {
     id: 30,
@@ -1749,13 +1931,11 @@ export const myHitsMix = [
     audioUrl: Gasoline,
     artistImg: SiaImg,
     songStream: '61,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a sing...
-      </span>
-    ),
+      `,
     artistsFirst: SiaImg,
     artistsSec: SiaImg,
     artistsThird: SiaImg,
@@ -1773,8 +1953,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Sia Kate Isobelle Furler (/ˈsiːə/ SEE-ə; born 18 December 1975) is an
         Australian singer and songwriter. Born and raised in Adelaide, she
         started her career as a singer in the acid jazz band Crisp in the
@@ -1791,8 +1970,8 @@ export const myHitsMix = [
         songwriting for other artists, producing successful collaborations
         "Titanium" (with David Guetta), "Diamonds" (with Rihanna), and "Wild
         Ones" (with Flo Rida).
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 31,
@@ -1807,8 +1986,7 @@ export const myHitsMix = [
     audioUrl: Charm,
     artistImg: RemaImg,
     songStream: '10,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Afrorave prodigy, Rema was introduced to the world in March 2019, with
         the release of his self-titled debut EP, and the global hits “Corny”,
         “Dumebi” and “Iron Man” which was featured on Barack Obama’s Summer
@@ -1818,8 +1996,7 @@ export const myHitsMix = [
         multiple mentions in global publications and platforms, including cover
         stories in Fader & Dazed, and features in Pitchfork and Rolling Stone
         which listed “Iro...
-      </span>
-    ),
+      `,
     artistsFirst: RemaImg,
     artistsSec: RemaTwoImg,
     artistsThird: RemaThreeImg,
@@ -1837,8 +2014,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Afrorave prodigy, Rema was introduced to the world in March 2019, with
         the release of his self-titled debut EP, and the global hits “Corny”,
         “Dumebi” and “Iron Man” which was featured on Barack Obama’s Summer
@@ -1861,8 +2037,8 @@ export const myHitsMix = [
         stranglehold on streaming charts, and the singer's push for global
         stardom is stronger than it's ever been. In October 2023, he released a
         5-track EP titled "RAVAGE"
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 32,
@@ -1877,13 +2053,11 @@ export const myHitsMix = [
     audioUrl: Roma,
     artistImg: BillieEilishImg,
     songStream: '67,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         With the release of her highly anticipated sophomore album ‘Happier Than
         Ever,’ the 21-year-old Los Angeles native remains one of the biggest
         stars to emerge i...
-      </span>
-    ),
+      `,
     artistsFirst: BillieEilishImg,
     artistsSec: BillieForestImg,
     artistsThird: BillieAnacondaImg,
@@ -1901,7 +2075,28 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: <ArtistsBio BillieEilish=" " />,
+    artistsBio: ` With the release of her highly anticipated sophomore album ‘Happier
+          Than Ever,’ the 21-year-old Los Angeles native remains one of the
+          biggest stars to emerge in the 21st century. Since the release of her
+          debut single “ocean eyes” in 2015, Eilish continues to shatter the
+          ceiling of music with her genre-defying sound. Fast forward from her
+          humble breakout, her album WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?
+          debuted at No. 1 on the Billboard 200 in the U.S as well as 17
+          additional countries around the world upon release in 2019, and was
+          the most streamed album of that year. WHEN WE ALL FALL ASLEEP, WHERE
+          DO WE GO? was written, produced and recorded entirely by Billie Eilish
+          and brother FINNEAS in their childhood home of Los Angeles. Billie
+          Eilish went on to make history as the youngest artist to receive
+          nominations and win in all the major categories at the 62nd GRAMMY®
+          Awards, receiving an award for Best New Artist, Album of the Year,
+          Record of the Year, Song of the Year, and Best Pop Vocal Album. Billie
+          Eilish is also the youngest artist to write and record an official
+          James Bond theme song, ‘No Time To Die.’ Most recently, Billie Eilish
+          was nominated for four additional awards at the 63rd Annual GRAMMY
+          Awards in 2021, and took home both Record of the Year for 'everything
+          i wanted,' and Best Song Written For Visual Media for 'No Time To
+          Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
+          Billie and her brother FINNEAS, who also produced the album.`,
   },
   {
     id: 33,
@@ -1916,13 +2111,11 @@ export const myHitsMix = [
     audioUrl: Sometimes,
     artistImg: JuiceImg,
     songStream: '14,767,338',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Juice WRLD became a Top Ten hitmaker delivering introspective lyrics
         atop melodic production, with echoes of and . His heartsick 2018 debut
         Goo...
-      </span>
-    ),
+     `,
     artistsFirst: JuiceImg,
     artistsSec: JuiceTwoImg,
     artistsThird: JuiceTwoImg,
@@ -1940,8 +2133,7 @@ export const myHitsMix = [
     listFour: '782,582 ',
     listLocFive: 'Sao Paulo, BR',
     listFive: '744,634 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Juice WRLD became a Top Ten hitmaker delivering introspective lyrics
         atop melodic production, with echoes of and . His heartsick 2018 debut
         Goodbye & Good Riddance (2018), home to his biggest hit "Lucid Dreams,"
@@ -1970,10 +2162,11 @@ export const myHitsMix = [
         followed with high-profile collaborations with ("Hate Me"),
         ("Graduation"), ("All Night"), and ("Bandit"). In 2019, the latter track
         joined "Lucid Dreams" as the rapper's second Top Ten hit.
-      </span>
-    ),
+     
+    `,
   },
 ];
+
 export const ambientSongs = [
   {
     id: 1,
@@ -1988,7 +2181,9 @@ export const ambientSongs = [
     audioUrl: Shitsu,
     artistImg: YashunaruImg,
     songStream: '736,423',
-
+    aboutArtists: `     Yasuharu Takanashi Heavily influenced by rock music, he takes his work
+        to another level by blending hard rock and orchestral sounds to create
+        profound and ele...`,
     artistsFirst: YashunaruImg,
     artistsSec: YashunaruSecImg,
     artistsThird: YasuharuThirdImg,
@@ -2002,9 +2197,7 @@ export const ambientSongs = [
     listTwo: '12,022',
     listLocThree: 'Mexico City, MX',
     listThree: '8,392 ',
-    artistsBio: (
-      <span>
-        Yasuharu Takanashi Heavily influenced by rock music, he takes his work
+    artistsBio: `  Yasuharu Takanashi Heavily influenced by rock music, he takes his work
         to another level by blending hard rock and orchestral sounds to create
         profound and elegant soundscapes. He is the organizer of the music
         production team “Team-MAX” and also the leader of “YAIBA”, a rock and
@@ -2019,9 +2212,7 @@ export const ambientSongs = [
         代表作に、『NARUTO－ナルト－疾風伝』『BORUTO-ボルト-NARUTO NEXT
         GENERATIONS』『FAIRY
         TAIL』『ゾンビランドサガ』『ゲゲゲの鬼太郎(第6期)』『美少女戦士セーラームーンCrystal』『フレッシュプリキュア!』～『スマイルプリキュア!』『地獄少女』『ログ・ホライズン』『地球へ…』『PRIDE』テーマ曲等がある。
-        自身がパーソナリティを務めるWebラジオ番組『アキバ鋼鉄製作所』を隔週で配信中。
-      </span>
-    ),
+        自身がパーソナリティを務めるWebラジオ番組『アキバ鋼鉄製作所』を隔週で配信中。`,
   },
   {
     id: 2,
@@ -2036,13 +2227,11 @@ export const ambientSongs = [
     audioUrl: Girei,
     artistImg: LorenzoImg,
     songStream: '207,763',
-    aboutArtists: (
-      <span>
+    aboutArtists: ` 
         Lorenzo Ferrara is a 21 years old composer based in Florence, Italy. His
         music has been placed in TV and medias worldwide including: BBC, NBC,
         CBS, FO...
-      </span>
-    ),
+     `,
     artistsFirst: LorenzoImg,
     artistsSec: lorenzoSecImg,
     artistsThird: lorenzoThirdImg,
@@ -2056,14 +2245,12 @@ export const ambientSongs = [
     listTwo: '2,022',
     listLocThree: 'Chennai, IN',
     listThree: '1,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Lorenzo Ferrara is a 21 years old composer based in Florence, Italy. His
         music has been placed in TV and medias worldwide including: BBC, NBC,
         CBS, FOX, IGN, StarTV, ESPN, Sky Sport and many more. For professional
         requests contact at lorenzoferrara.music@gmail.com
-      </span>
-    ),
+      `,
   },
   {
     id: 3,
@@ -2078,11 +2265,9 @@ export const ambientSongs = [
     audioUrl: Senya,
     artistImg: TigerProImg,
     songStream: '73,871',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Like anime covers ? Well , you’ve come to the right place ♥️🔥
-      </span>
-    ),
+      `,
     artistsFirst: TigerProImg,
     artistsSec: SenyaImg,
     artistsThird: SenyaSecImg,
@@ -2096,11 +2281,9 @@ export const ambientSongs = [
     listTwo: '1,535',
     listLocThree: 'Delhi, IN',
     listThree: '1,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Like anime covers ? Well , you’ve come to the right place ♥️🔥
-      </span>
-    ),
+      `,
   },
   {
     id: 4,
@@ -2115,11 +2298,9 @@ export const ambientSongs = [
     audioUrl: Guren,
     artistImg: ChasingImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Welcome inside my Universe. Chasing Mirrors is a side project of R A Y.
-      </span>
-    ),
+      `,
     artistsFirst: ChasingImg,
     artistsSec: GurenImg,
     artistsThird: ChasingImg,
@@ -2133,11 +2314,9 @@ export const ambientSongs = [
     listTwo: '1,535',
     listLocThree: 'Delhi, IN',
     listThree: '1,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
         Welcome inside my Universe. Chasing Mirrors is a side project of R A Y.
-      </span>
-    ),
+      `,
   },
 
   {
@@ -2153,13 +2332,11 @@ export const ambientSongs = [
     audioUrl: Utsusemi,
     artistImg: EliottImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for so...
-      </span>
-    ),
+     `,
     artistsFirst: EliottImg,
     artistsSec: EliottSecImg,
     artistsThird: EliottImg,
@@ -2173,16 +2350,15 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+  
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for someone hoping to learn a musical instrument.
         However, the French man has not only mastered the techniques within the
         course of five years, but also made the traditional instrument famous
         worldwide through his creative interpretative playing of it.
-      </span>
-    ),
+      `,
   },
   {
     id: 6,
@@ -2197,13 +2373,11 @@ export const ambientSongs = [
     audioUrl: Samidare,
     artistImg: EliottImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for so...
-      </span>
-    ),
+     `,
     artistsFirst: EliottImg,
     artistsSec: EliottSecImg,
     artistsThird: EliottImg,
@@ -2217,16 +2391,16 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+    
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for someone hoping to learn a musical instrument.
         However, the French man has not only mastered the techniques within the
         course of five years, but also made the traditional instrument famous
         worldwide through his creative interpretative playing of it.
-      </span>
-    ),
+      
+    `,
   },
   {
     id: 7,
@@ -2241,13 +2415,11 @@ export const ambientSongs = [
     audioUrl: Sadness,
     artistImg: TaylorImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         It’s hard to imagine that a girl growing up with a love for video games
         and an early interest in the violin would ultimately turn into the
         global phenomenon an...
-      </span>
-    ),
+     `,
     artistsFirst: TaylorImg,
     artistsSec: TaylorSecImg,
     artistsThird: TaylorThirdImg,
@@ -2261,8 +2433,8 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+
         It’s hard to imagine that a girl growing up with a love for video games
         and an early interest in the violin would ultimately turn into the
         global phenomenon and crossover sensation artist that is Taylor Davis. A
@@ -2285,8 +2457,8 @@ export const ambientSongs = [
         Taylor also serves as an Ambassador for the “I Am A Witness” campaign
         against bullying, helping others to overcome many of the challenges that
         she faced growing up.
-      </span>
-    ),
+   
+    `,
   },
   {
     id: 8,
@@ -2301,13 +2473,12 @@ export const ambientSongs = [
     audioUrl: Shirohae,
     artistImg: CallumImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Callum is a fingerstyle guitarist from Glasgow, Scotland. He started
         playing guitar when he was 10 years old and hasn’t looked back. Inspired
         by many famous com...
-      </span>
-    ),
+   
+    `,
     artistsFirst: CallumImg,
     artistsSec: CallumSecImg,
     artistsThird: CallumThirdImg,
@@ -2321,15 +2492,15 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+
         Callum is a fingerstyle guitarist from Glasgow, Scotland. He started
         playing guitar when he was 10 years old and hasn’t looked back. Inspired
         by many famous composers and guitarists from the likes of Hans Zimmer &
         many more... Callum tries to bring famous movie scores, TV themes &
         gaming music to life through the guitar.
-      </span>
-    ),
+  
+    `,
   },
   {
     id: 9,
@@ -2344,13 +2515,13 @@ export const ambientSongs = [
     audioUrl: Saika,
     artistImg: LarsImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
+  
         Callum is a fingerstyle guitarist from Glasgow, Scotland. He started
         playing guitar when he was 10 years old and hasn’t looked back. Inspired
         by many famous com...
-      </span>
-    ),
+
+    `,
     artistsFirst: LarsImg,
     artistsSec: LarsSecImg,
     artistsThird: LarsImg,
@@ -2364,15 +2535,15 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: `
+  
         Callum is a fingerstyle guitarist from Glasgow, Scotland. He started
         playing guitar when he was 10 years old and hasn’t looked back. Inspired
         by many famous composers and guitarists from the likes of Hans Zimmer &
         many more... Callum tries to bring famous movie scores, TV themes &
         gaming music to life through the guitar.
-      </span>
-    ),
+   
+    `,
   },
   {
     id: 10,
@@ -2387,13 +2558,12 @@ export const ambientSongs = [
     audioUrl: ManWorld,
     artistImg: EliottImg,
     songStream: '130,659',
-    aboutArtists: (
-      <span>
+    aboutArtists: `
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for so...
-      </span>
-    ),
+      
+    `,
     artistsFirst: EliottImg,
     artistsSec: EliottSecImg,
     artistsThird: EliottImg,
@@ -2407,16 +2577,16 @@ export const ambientSongs = [
     listTwo: '20,535',
     listLocThree: 'Delhi, IN',
     listThree: '10,392 ',
-    artistsBio: (
-      <span>
+    artistsBio: ` 
+     
         Eliott Tordo’s story with the Erhu, a traditional Chinese stringed
         musical instrument, started when he was in his 20s, an age considered
         comparatively late for someone hoping to learn a musical instrument.
         However, the French man has not only mastered the techniques within the
         course of five years, but also made the traditional instrument famous
         worldwide through his creative interpretative playing of it.
-      </span>
-    ),
+    
+    `,
   },
 ];
 export default myHitsMix;

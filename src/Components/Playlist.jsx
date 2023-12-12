@@ -33,6 +33,8 @@ const Playlists = (props) => {
                 togglePlay={() => handleTogglePlay(song.audioUrl)}
                 setIsPlaying={setIsPlaying}
                 ambientSongs={props.ambientSongs}
+                artistsBio={song.artistsBio}
+                aboutArtists={song.aboutArtists}
               />
             </div>
           ))}
@@ -81,6 +83,8 @@ const Playlists = (props) => {
                 togglePlay={() => handleTogglePlay(song.audioUrl)}
                 setIsPlaying={setIsPlaying}
                 myHitsMix={props.myHitsMix}
+                artistsBio={song.artistsBio}
+                aboutArtists={song.aboutArtists}
               />
             </div>
           ))}

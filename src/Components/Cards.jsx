@@ -24,6 +24,7 @@ import { useMusic } from './MusicContext';
 import ArtistsBio from './ArtistsBio';
 const Cards = (props) => {
   const { selectedSong, toggleLike, likedSongs, likedSongsCount } = useMusic();
+  const [showMessage, setShowMessage] = useState(false);
   // const {
   //   isLike,
 
@@ -35,6 +36,12 @@ const Cards = (props) => {
 
   const handleToggleLike = () => {
     toggleLike(props);
+    setShowMessage(true);
+
+    // Hide the message after 3 seconds
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 1000);
   };
 
   const location = useLocation();
@@ -119,7 +126,11 @@ const Cards = (props) => {
                   fill="#b3b3b3"
                 />
               </svg>
-              <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
+              <Link
+                to="/"
+                id={location.pathname === '/' ? 'active' : ''}
+                className="text-silver"
+              >
                 Home
               </Link>
             </div>
@@ -141,11 +152,15 @@ const Cards = (props) => {
                   d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
                   id="searchPath"
                   fill="#b3b3b3"
+                  className={
+                    location.pathname === '/SearchPage' ? 'active' : ''
+                  }
                 />
               </svg>
               <Link
                 to="/SearchPage"
                 id={location.pathname === '/SearchPage' ? 'active' : ''}
+                className="text-silver"
               >
                 Search
               </Link>
@@ -639,37 +654,58 @@ const Cards = (props) => {
           </div>
         </div>
       )}
-      {props.navbarCardsLike && (
-        <Link to="/likedSongs">
-          <div className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container">
-            <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
-              <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
-                <div className="flex items-center justify-center bg-silver  rounded-md ">
-                  <img
-                    src={LikedSongsImg}
-                    className="hover-img  w-12 rounded-md"
-                  />
-                </div>
 
-                <div className="flex flex flex-col gap-1 text-base">
-                  <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
-                    Liked songs
-                  </Link>
-                  <div className="flex flex-row gap-1 text-sm">
-                    <h1>Playlist</h1>
-                    <h1>.</h1>
-                    <h1>{likedSongsCount} songs</h1>
+      <>
+        {' '}
+        {props.navbarCardsLike && (
+          <Link to="/likedSongs">
+            <div
+              className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack ${
+                location.pathname === '/likedSongs' ? 'bg-lightBlack' : ''
+              }`}
+            >
+              <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
+                <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
+                  <div className="flex items-center justify-center bg-silver  rounded-md ">
+                    <img src={LikedSongsImg} className="  w-12 rounded-md" />
+                  </div>
+
+                  <div className="flex flex flex-col gap-1 text-base">
+                    <Link
+                      to="/likedSongs"
+                      id={location.pathname === '/likedSongs' ? 'active' : ''}
+                    >
+                      Liked songs
+                    </Link>
+                    <div className="flex flex-row gap-1 text-sm text-silver">
+                      <h1>Playlist</h1>
+                      <h1>.</h1>
+                      <h1>{likedSongsCount} songs</h1>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
-              <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-                <img src={LikedSongsImg} className="w-12 rounded-md" />
+              <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
+                <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
+                  <img src={LikedSongsImg} className="w-12 rounded-md" />
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        )}
+      </>
+
+      {showMessage && (
+        <div className="liked-message">
+          {isLiked ? (
+            <p className="add-message">
+              <img src={LikedSongsImg} className="hover-img  w-8 rounded-md" />
+              Added to liked songs
+            </p>
+          ) : (
+            <p className="remv-message">Removed from liked songs</p>
+          )}
+        </div>
       )}
     </>
   );
