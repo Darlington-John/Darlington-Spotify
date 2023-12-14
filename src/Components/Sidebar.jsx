@@ -108,21 +108,8 @@ const SideBar = () => {
           navbarLibrary=" "
           navbarCardsAlbum=" "
           navbarCardsLike=" "
+          createdPlaylist=" "
         />
-
-        <form onSubmit={handleFormSubmit}>
-          <label htmlFor="playlistName">Playlist Name:</label>
-          <input
-            type="text"
-            id="playlistName"
-            value={playlistName}
-            onChange={(e) => setPlaylistName(e.target.value)}
-            required
-          />
-          <button type="submit">Create Playlist</button>
-        </form>
-
-        {/* Display the created playlists using Card component */}
       </div>
       <div className="app-sidebar-resizer" onMouseDown={startResizing1}></div>
     </div>

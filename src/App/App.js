@@ -4,6 +4,7 @@ import HomePage from '../Pages/Home/HomePage';
 import PlaylistPage from '../Pages/Playlist/PlaylistPage';
 import NowPlaying from '../Components/NowPlaying';
 import LikedPlaylistPage from '../Pages/LikedPlaylist/LikedPlaylistPage';
+import CreatedPlaylist from '../Pages/CreatedPlaylist/CreatedPlaylistPage';
 require('events').EventEmitter.defaultMaxListeners = 40;
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
         <Route path="FiltersData/:PlaylistTitle" element={<PlaylistPage />} />{' '}
         <Route path="mixData/:CardTitle" element={<PlaylistPage />} />{' '}
         <Route path="/likedSongs" element={<LikedPlaylistPage />} />{' '}
+        <Route
+          path="/CreatedPlaylist/:playlistId"
+          element={<CreatedPlaylist />}
+        />
       </Routes>{' '}
       <NowPlaying nowPlayingMobile=" " />
     </BrowserRouter>
@@ -21,3 +26,4 @@ function App() {
 }
 
 export default App;
+

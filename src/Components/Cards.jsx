@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import LikeIcon from './../Assets/Icons/Like.svg';
@@ -22,8 +23,15 @@ import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
 import { useMusic } from './MusicContext';
 import ArtistsBio from './ArtistsBio';
+import CreatedPlaylistPageBody from '../Pages/CreatedPlaylist/CreatedPlaylistPageBody';
 const Cards = (props) => {
-  const { selectedSong, toggleLike, likedSongs, likedSongsCount } = useMusic();
+  const {
+    selectedSong,
+    toggleLike,
+    likedSongs,
+    likedSongsCount,
+    createPlaylist,
+  } = useMusic();
   const [showMessage, setShowMessage] = useState(false);
   // const {
   //   isLike,
@@ -103,6 +111,35 @@ const Cards = (props) => {
   };
 
   const { isPlaying, togglePlay } = props;
+  const [createdPlaylists, setCreatedPlaylists] = useState(
+    JSON.parse(localStorage.getItem('createdPlaylists')) || [],
+  );
+
+  // Save playlists to localStorage whenever the state changes
+  useEffect(() => {
+    localStorage.setItem('createdPlaylists', JSON.stringify(createdPlaylists));
+  }, [createdPlaylists]);
+
+  const handleCreatePlaylist = () => {
+    const newPlaylist = {
+      id: createdPlaylists.length + 1,
+      name: `My Playlist #${createdPlaylists.length + 1}`, // Default name
+      imgSrc: LikedSongsImg, // Default image
+    };
+
+    setCreatedPlaylists([...createdPlaylists, newPlaylist]);
+  };
+
+  const updatePlaylist = (playlistId, newName) => {
+    setCreatedPlaylists((prevPlaylists) =>
+      prevPlaylists.map((playlist) =>
+        playlist.id === Number(playlistId)
+          ? { ...playlist, name: newName }
+          : playlist,
+      ),
+    );
+  };
+  const { playlistDetails, playlists } = useMusic();
 
   return (
     <>
@@ -287,7 +324,10 @@ const Cards = (props) => {
         </div>
       )}
       {props.navbarCardsAlbum && (
-        <div className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container">
+        <div
+          className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container cursor-pointer"
+          onClick={createPlaylist}
+        >
           <div className="w-full flex flex-col gap-8 px-5 py-1 rounded-lg card1">
             <div className="w-full flex items-center justify-start gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
               <div className="plus-container">
@@ -309,9 +349,7 @@ const Cards = (props) => {
                   />
                 </svg>
               </div>
-              <Link to="/" id={location.pathname === '/' ? 'active' : ''}>
-                Create Playlist
-              </Link>
+              <h1>Create Playlist</h1>
             </div>
           </div>
 
@@ -624,21 +662,7 @@ const Cards = (props) => {
           </div>
         </Link>
       )}
-      {props.createdPlaylist && (
-        <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
-          <div className="flex items-center justify-center w-auto p-5 rounded-md bg-silver">
-            <img src={MusicIcon} className="w-4" />
-          </div>
-          <div className="flex flex-col items-start justify-between">
-            <h1>{props.playlistName}</h1>
-            <div className="flex flex-row gap-3 items-center">
-              <h1>{props.playlistGroup}</h1>
-              <h1>.</h1>
-              <h1>{props.playlistUser}</h1>
-            </div>
-          </div>
-        </div>
-      )}
+
       {props.likedPlaylist && (
         <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
           <div className="flex items-center justify-center w-auto p-5 rounded-md bg-silver">
@@ -706,6 +730,63 @@ const Cards = (props) => {
             <p className="remv-message">Removed from liked songs</p>
           )}
         </div>
+      )}
+      {props.createdPlaylist && (
+        <>
+          {playlists.map((playlist) => (
+            <Link
+              to={`/CreatedPlaylist/${playlist.id}?imgSrc=${encodeURIComponent(
+                playlist.imgSrc,
+              )}`}
+              key={playlist.id}
+            >
+              <div
+                className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack ${
+                  location.pathname === `/CreatedPlaylist/${playlist.id}`
+                    ? 'bg-lightBlack'
+                    : ''
+                }`}
+              >
+                <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
+                  <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
+                    <div className="flex items-center justify-center bg-silver  rounded-md ">
+                      {/* <img src={LikedSongsImg} className="  w-12 rounded-md" /> */}
+                      <img
+                        src={playlist.imgSrc}
+                        alt={`Playlist ${playlist.id}`}
+                        className=" w-12 rounded-md object-cover h-12"
+                      />
+                    </div>
+
+                    <div className="flex flex flex-col gap-1 text-base ">
+                      <Link
+                        to={`/CreatedPlaylist/${
+                          playlist.id
+                        }?imgSrc=${encodeURIComponent(playlist.imgSrc)}`}
+                      >
+                        {playlist.name}
+                      </Link>
+
+                      <div className="flex flex-row gap-1 text-sm text-silver">
+                        <h1>Playlist</h1>
+                        <h1>.</h1>
+                        <h1>Jxt Darlington</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
+                  <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
+                    <img
+                      src={playlist.imgSrc}
+                      className="w-12 h-12 rounded-md object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </>
       )}
     </>
   );
