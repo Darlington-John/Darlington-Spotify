@@ -188,7 +188,7 @@ export const MyGospelPlaylist = (props) => {
     <>
       {props.myGospel && (
         <div>
-          {myGospel.map((song) => (
+          {myGospel.map((song, index) => (
             <div key={song.songName}>
               <Cards
                 {...song}
@@ -199,6 +199,7 @@ export const MyGospelPlaylist = (props) => {
                 myGospelMix={props.myGospelMix}
                 artistsBio={song.artistsBio}
                 aboutArtists={song.aboutArtists}
+                songNumber={index + 1}
               />
             </div>
           ))}

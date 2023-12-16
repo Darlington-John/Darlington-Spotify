@@ -1522,7 +1522,7 @@ export const LifeSucksPlaylist = (props) => {
     <>
       {props.lifeSucks && (
         <div>
-          {lifeSucksMix.map((song) => (
+          {lifeSucksMix.map((song, index) => (
             <div key={song.songName}>
               <Cards
                 {...song}
@@ -1533,6 +1533,7 @@ export const LifeSucksPlaylist = (props) => {
                 lifeSucksMix={props.lifeSucksMix}
                 aboutArtists={song.aboutArtists}
                 artistsBio={song.artistsBio}
+                songNumber={index + 1}
               />
             </div>
           ))}

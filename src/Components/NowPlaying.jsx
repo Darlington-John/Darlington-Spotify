@@ -36,6 +36,9 @@ const NowPlaying = (props) => {
 
     toggleLoop,
     isLooping,
+    handleToggleShuffle,
+    isShuffleOn,
+    setIsShuffleOn,
   } = useMusic();
   const { audioRef } = useMusic();
 
@@ -57,6 +60,7 @@ const NowPlaying = (props) => {
 
   const toggleShuffle = () => {
     setIsShuffle(!isShuffle);
+    handleToggleShuffle();
   };
 
   const toggleNowPlay = () => {
@@ -169,7 +173,7 @@ const NowPlaying = (props) => {
         <div className="custom-audio-player" style={{ flex: '30%' }}>
           <div className="flex flex-row gap-6">
             <button onClick={toggleShuffle}>
-              {isShuffle ? (
+              {isShuffleOn ? (
                 <img src={ShuffleActiveIcon} className="w-4" alt="" />
               ) : (
                 <img src={ShuffleIcon} className="w-4" alt="" />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import LikeIcon from './../Assets/Icons/Like.svg';
 import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
 import BillieForestImg from './../Assets/Images/BillieForest.jpg';
@@ -13,17 +13,19 @@ import BillieEilishGreenImg from './../Assets/Images/BillieEilishGreen.jpg';
 import BillieAnacondaImg from './../Assets/Images/BillieAnaconda.jpg';
 import LikedSongsImg from './../Assets/Images/LikedSongs.png';
 import ArrLeftIcon from './../Assets/Icons/ArrLeft.svg';
+import PlusCircleIcon from './../Assets/Icons/PlusCircle.svg';
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
 import PlayWhiteIcon from './../Assets/Icons/PlayWhite.svg';
 import PlayIcon from './../Assets/Icons/Play.svg';
 import MusicIcon from './../Assets/Icons/Music.svg';
 import EpisodeIcon from './../Assets/Icons/Episode.svg';
-
+import VerEllipsisIcon from './../Assets/Icons/VerEllipsis.svg';
 import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
 import { useMusic } from './MusicContext';
 import ArtistsBio from './ArtistsBio';
 import CreatedPlaylistPageBody from '../Pages/CreatedPlaylist/CreatedPlaylistPageBody';
+import PlaylistDropdown from './Dropdown';
 const Cards = (props) => {
   const {
     selectedSong,
@@ -31,17 +33,33 @@ const Cards = (props) => {
     likedSongs,
     likedSongsCount,
     createPlaylist,
+    toggleAdded,
+    addedSongs,
+    addedSongsTwo,
+
+    toggleAddedTwo,
   } = useMusic();
   const [showMessage, setShowMessage] = useState(false);
+  const [showAddedMessage, setShowAddedMessage] = useState(false);
   // const {
   //   isLike,
 
   //   toggleLike,
   // } = useMusic();
+  const onPlaylistSelect = props;
+  const handlePlaylistSelect = (e) => {
+    const selectedPlaylistId = e.target.value;
+    onPlaylistSelect(selectedPlaylistId);
+  };
   const isLiked = likedSongs.some(
     (likedSong) => likedSong.songDuration === props.songDuration,
   );
-
+  const isAdded = addedSongs.some(
+    (addedSong) => addedSong.songDuration === props.songDuration,
+  );
+  const isAddedTwo = addedSongsTwo.some(
+    (addedSongTwo) => addedSongTwo.songDuration === props.songDuration,
+  );
   const handleToggleLike = () => {
     toggleLike(props);
     setShowMessage(true);
@@ -49,6 +67,25 @@ const Cards = (props) => {
     // Hide the message after 3 seconds
     setTimeout(() => {
       setShowMessage(false);
+    }, 1000);
+  };
+  const handleToggleAddedTwo = () => {
+    toggleAddedTwo(props);
+    setShowAddedMessage(true);
+
+    // Hide the message after 3 seconds
+    setTimeout(() => {
+      setShowAddedMessage(false);
+    }, 1000);
+  };
+
+  const handleToggleAdded = () => {
+    toggleAdded(props);
+    setShowAddedMessage(true);
+
+    // Hide the message after 3 seconds
+    setTimeout(() => {
+      setShowAddedMessage(false);
     }, 1000);
   };
 
@@ -140,6 +177,36 @@ const Cards = (props) => {
     );
   };
   const { playlistDetails, playlists } = useMusic();
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const popup = document.getElementById('playlistPopup');
+
+      if (popup && !popup.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+  const togglePopup = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+  const dropdownRef = useRef(null);
+  const handleBtnClick = () => {
+    if (dropdownRef.current) {
+      dropdownRef.current.click();
+    }
+  };
+  const handleButtonClick = (event) => {
+    event.stopPropagation();
+    togglePopup();
+    handleBtnClick();
+  };
 
   return (
     <>
@@ -379,20 +446,23 @@ const Cards = (props) => {
       )}
 
       {props.ArtistCard && (
-        <div className="gradient-container relative " onClick={openPopUp}>
-          <div className="flex flex-col gap-3 items-start relative">
+        <div className="gradient-container  flex flex-col ">
+          <div
+            className="flex flex-col gap-3 items-start relative rounded-t-lg"
+            onClick={openPopUp}
+          >
             {selectedSong ? (
               <>
                 <img
                   src={selectedSong.artistImg}
-                  className="rounded-xl absolute top-0 w-full"
+                  className=" w-full rounded-t-xl max-h-80 object-cover"
                 />
               </>
             ) : (
               <>
                 <img
                   src={BillieEilishImg}
-                  className="rounded-xl absolute top-0 w-full"
+                  className=" w-full rounded-t-xl max-h-80 object-cover"
                 />
               </>
             )}
@@ -405,12 +475,12 @@ const Cards = (props) => {
               About the artist
             </h1>
           </div>
-          <div className="bg-lightBlack flex flex-col absolute bottom-0 w-full py-4 px-2">
+          <div className="bg-lightBlack flex flex-col  w-full py-4 px-2 rounded-b-xl">
             <h1
               className="text-xl song-name-link hover:underline"
               style={{ color: 'white' }}
             >
-              {selectedSong ? selectedSong.songArtists : 'Billie Eilish'}
+              {selectedSong ? selectedSong.songArtistMain : 'Billie Eilish'}
             </h1>
             <div className="flex justify-between items-center py-2 flex-wrap">
               <h2 className="flex gap-2 items-baseline flex-wrap">
@@ -422,7 +492,7 @@ const Cards = (props) => {
               </h2>
               <button
                 onClick={toggleFollowed}
-                className="py-2 my-2 px-4 bg-grey follow-button rounded-full text-sm"
+                className="py-2 my-2 px-4 bg-grey follow-button rounded-full text-sm z-10"
               >
                 {isFollowed ? <span>Follow</span> : <span>Unfollow</span>}
               </button>
@@ -591,7 +661,9 @@ const Cards = (props) => {
 
       {props.songCard && (
         <div
-          className="grid grid-cols-3  w-full hover:bg-lightBlack   py-2 rounded-md px-4 items-center song-card xl:justify-between xl:grid-cols-2 md:px-2"
+          className={`grid grid-cols-3  w-full hover:bg-lightBlack   py-2 rounded-md px-4 items-center song-card xl:justify-between xl:grid-cols-2 md:px-2 ${
+            isOpen ? 'spGreen bg-grey hover:bg-grey' : ''
+          }`}
           onDoubleClick={() => {
             togglePlay(props.audioUrl);
           }}
@@ -616,6 +688,7 @@ const Cards = (props) => {
             </div>
             <div className="flex flex-row gap-2 items-center">
               <img src={props.songImg} className="w-10 rounded-sm" />
+
               <div className="flex flex-col">
                 <h1
                   className={`text-white text-base md:text-sm ${
@@ -634,7 +707,7 @@ const Cards = (props) => {
           <div className="w-full flex justify-end text-silver text-sm album-test xl:hidden">
             <h1>{props.song?.songAlbum}</h1>
           </div>
-          <div className="w-full text-white flex  justify-end items-center md:text-sm gap-10">
+          <div className="w-full text-white flex  justify-end items-center md:text-sm gap-12">
             <button onClick={handleToggleLike} className="like-btn">
               {isLiked ? (
                 <img src={LikeActiveIcon} className="w-4 " alt="" />
@@ -642,10 +715,81 @@ const Cards = (props) => {
                 <img src={LikeIcon} className="w-4 like-img" alt="" />
               )}
             </button>
-            <h1>{props.songDuration}</h1>
+            <div className="flex item-center justify-end gap-1">
+              <h1>{props.songDuration}</h1>
+              <div className="dropdown relative flex item-center justify-end w-4">
+                <img
+                  src={VerEllipsisIcon}
+                  className="w-4"
+                  onClick={handleButtonClick}
+                />
+                {isOpen && (
+                  // <select
+                  //   onChange={handlePlaylistSelect}
+                  //   id="playlistPopup"
+                  //   ref={dropdownRef}
+                  // >
+                  //   <option value="" disabled>
+                  //     Select Playlist
+                  //   </option>
+                  //   {playlists.map((playlist) => (
+                  //     <option key={playlist.id} value={playlist.id}>
+                  //       {playlist.name}
+                  //     </option>
+                  //   ))}
+                  // </select>
+                  <div
+                    className="add-dropdown w-56  rounded-lg p-1 bg-grey absolute right-0 bottom-0 flex flex-col   bg-grey z-40 "
+                    id="playlistPopup"
+                    ref={dropdownRef}
+                  >
+                    <div className="flex items-center justify-center  w-full   p-2 rounded-lg">
+                      <h1 className="text-base ">Add to Playlist</h1>
+                    </div>
+
+                    <div
+                      className="flex items-center justify-between  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer"
+                      onClick={createPlaylist}
+                    >
+                      <h1 className="text-sm ">Create Playlist</h1>
+                      <img src={PlusCircleIcon} className="w-4 " alt="" />
+                    </div>
+                    {playlists.map((playlist, index) => (
+                      //  <option key={playlist.id} value={playlist.id}>
+                      //    {playlist.name}
+                      //         </option>
+
+                      <div
+                        // className="flex items-center justify-between  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer"
+                        className={`flex items-center gap-3  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer  ${
+                          location.pathname ===
+                          `/CreatedPlaylist/${playlist.id}`
+                            ? 'bg-lightBlack hidden'
+                            : ''
+                        }`}
+                        key={playlist.id}
+                        onClick={() =>
+                          index === 1
+                            ? handleToggleAddedTwo()
+                            : handleToggleAdded()
+                        }
+                      >
+                        <img
+                          src={playlist.imgSrc}
+                          alt={`Playlist ${playlist.id}`}
+                          className=" w-8 rounded-md object-cover h-8"
+                        />
+                        <h1 className="text-sm ">{playlist.name}</h1>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       )}
+
       {props.FeaturesCard && (
         <Link to={`/mixData/${props.CardTitle}`}>
           <div className="flex flex-col gap-2 p-4 bg-lightBlack hover:bg-grey rounded-lg w-52  features-card">
@@ -724,6 +868,21 @@ const Cards = (props) => {
           {isLiked ? (
             <p className="add-message">
               <img src={LikedSongsImg} className="hover-img  w-8 rounded-md" />
+              Added to liked songs
+            </p>
+          ) : (
+            <p className="remv-message">Removed from liked songs</p>
+          )}
+        </div>
+      )}
+      {showAddedMessage && (
+        <div className="liked-message">
+          {isAdded ? (
+            <p className="add-message">
+              <img
+                src={playlists.imgSrc}
+                className="hover-img  w-8 rounded-md"
+              />
               Added to liked songs
             </p>
           ) : (

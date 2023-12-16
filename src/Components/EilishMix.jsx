@@ -1525,7 +1525,7 @@ const EilishPlaylist = (props) => {
     <>
       {props.Eilish && (
         <div>
-          {eilishMix.map((song) => (
+          {eilishMix.map((song, index) => (
             <div key={song.songName}>
               <Cards
                 {...song}
@@ -1536,6 +1536,7 @@ const EilishPlaylist = (props) => {
                 eilishMix={props.eilishMix}
                 aboutArtists={song.aboutArtists}
                 artistsBio={song.artistsBio}
+                songNumber={index + 1}
               />
             </div>
           ))}

@@ -12,9 +12,9 @@ import SideBarRight from '../../Components/SidebarRight';
 import Bottombar from '../../Components/Bottombar';
 import PlayListGroup from '../../Components/PlaylistGroup';
 import AltoIcon from './../../Assets/Icons/Alto.svg';
+
 const LikedPlaylistPageBody = () => {
-  const { likedSongsPlaylist } = useMusic();
-  const { likedSongs, toggleLike, likedSongsCount } = useMusic();
+  const { likedSongs, likedSongsCount } = useMusic();
 
   const { selectedSong, setSelectedSong } = useMusic();
 
@@ -55,6 +55,11 @@ const LikedPlaylistPageBody = () => {
             </div>
           </div>
           <div className="flex flex-col transBlackLight  p-5 md:px-2 md:pt-0 gap-5">
+            {likedSongs.length > 0 ? (
+              <PlaylistLikeBar likedSongsPlaylistSwitch=" " />
+            ) : (
+              ' '
+            )}
             {likedSongs.length > 0 ? (
               <PlayListGroup
                 duration={ClockIcon}

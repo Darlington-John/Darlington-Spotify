@@ -8,41 +8,48 @@ import SideBarRight from '../../Components/SidebarRight';
 import Bottombar from '../../Components/Bottombar';
 import { useMusic } from '../../Components/MusicContext';
 import EditIcon from './../../Assets/Icons/Edit.svg';
+import ClockIcon from './../../Assets/Icons/Clock.svg';
+import Cards from '../../Components/Cards';
+import PlaylistLikeBar from '../../Components/PlaylistLikeBar';
+import PlayListGroup from '../../Components/PlaylistGroup';
 const CreatedPlaylistPageBody = () => {
   const { playlistId } = useParams();
-  const { playlists, updatePlaylistName } = useMusic();
+  const {
+    playlists,
+    updatePlaylistName,
+    addedSongs,
+    addedSongsTwo,
+    selectedSong,
+    setSelectedSong,
+  } = useMusic();
   const [playlistName, setPlaylistName] = useState('');
   const [playlistImage, setPlaylistImage] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    // Load the playlist image from localStorage when the component mounts
     const storedImage = localStorage.getItem(`playlistImage-${playlistId}`);
     setPlaylistImage(storedImage || null);
   }, [playlistId]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       const popup = document.getElementById('popup');
 
       if (popup && !popup.contains(event.target)) {
-        // Click outside the popup, close it
         setIsOpen(false);
       }
     };
 
-    // Attach the event listener when the component mounts
     document.addEventListener('click', handleClickOutside);
 
-    // Remove the event listener when the component unmounts
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, []); // The empty dependency array ensures that the effect runs only once
+  }, []);
 
   const togglePopup = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
   const handleButtonClick = (event) => {
-    // Prevent the click event from propagating to the document
     event.stopPropagation();
     togglePopup();
   };
@@ -86,12 +93,25 @@ const CreatedPlaylistPageBody = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const imgSrcFromCard = queryParams.get('imgSrc');
+  const [setIsPlaying] = useState(false);
 
+  const handleTogglePlay = (audioUrl) => {
+    const addedSong = addedSongs.find((song) => song.audioUrl === audioUrl);
+
+    const selectedSong = addedSong;
+
+    setSelectedSong(selectedSong);
+  };
+  const handleTogglePlayTwo = (audioUrl) => {
+    const addedSongTwo = addedSongsTwo.find(
+      (song) => song.audioUrl === audioUrl,
+    );
+
+    const selectedSong = addedSongTwo;
+
+    setSelectedSong(selectedSong);
+  };
   return (
-    // <div>
-    //   <h1>Playlist Details for #{playlistId}</h1>
-
-    // </div>
     <div className="app-container md:p-0">
       <SideBar />
       <div className="app-frame md:p-0">
@@ -184,7 +204,74 @@ const CreatedPlaylistPageBody = () => {
               )}
             </div> */}
             <div className="text-white">
-              <h1>Playlist Details for #{playlistId}</h1>
+              {addedSongs.length > 0 ? (
+                <PlaylistLikeBar addedSongsPlaylistSwitch=" " />
+              ) : (
+                ' '
+              )}
+              {addedSongs.length > 0 ? (
+                <PlayListGroup
+                  duration={ClockIcon}
+                  album="Album"
+                  title="Title"
+                  number="#"
+                />
+              ) : (
+                ' '
+              )}
+              {playlistId === '1' ? (
+                <div>
+                  {addedSongs.length > 0 ? (
+                    addedSongs.map((song, index) => (
+                      <div key={song.id}>
+                        <Cards
+                          {...song}
+                          songNumber={index + 1}
+                          isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                          togglePlay={() => handleTogglePlay(song.audioUrl)}
+                          setIsPlaying={setIsPlaying}
+                          isAdded
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <h1 className="font-bold text-3xl">
+                        Songs you like will appear here
+                      </h1>
+                      <h1 className="text-base">
+                        Save songs by tapping the heart icon
+                      </h1>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div>
+                  {addedSongsTwo.length > 0 ? (
+                    addedSongsTwo.map((song, index) => (
+                      <div key={song.id}>
+                        <Cards
+                          {...song}
+                          songNumber={index + 1}
+                          isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                          togglePlay={() => handleTogglePlayTwo(song.audioUrl)}
+                          setIsPlaying={setIsPlaying}
+                          isAddedTwo
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <h1 className="font-bold text-3xl">
+                        Songs you like will appear here
+                      </h1>
+                      <h1 className="text-base">
+                        Save songs by tapping the heart icon
+                      </h1>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

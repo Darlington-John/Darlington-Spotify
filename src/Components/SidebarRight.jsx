@@ -141,7 +141,7 @@ const SideBarRight = (props) => {
                       </Link>
                       <Link className="hover:underline">
                         {selectedSong
-                          ? selectedSong.songArtists
+                          ? selectedSong.songArtistMain
                           : 'Billie Eilish'}
                       </Link>
                     </div>

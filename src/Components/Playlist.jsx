@@ -40,41 +40,10 @@ const Playlists = (props) => {
           ))}
         </div>
       )}
-      {/* {props.Eilish && (
-        <div>
-          {eilishMix.map((song) => (
-            <div key={song.songName}>
-              <Cards
-                {...song}
-                song={song}
-                isPlaying={song.audioUrl === selectedSong?.audioUrl}
-                togglePlay={() => handleTogglePlay(song.audioUrl)}
-                setIsPlaying={setIsPlaying}
-                eilishMix={props.eilishMix}
-              />
-            </div>
-          ))}
-        </div>
-      )} */}
-      {/* {props.lifeSucks && (
-        <div>
-          {lifeSucksMix.map((song) => (
-            <div key={song.songName}>
-              <Cards
-                {...song}
-                song={song}
-                isPlaying={song.audioUrl === selectedSong?.audioUrl}
-                togglePlay={() => handleTogglePlay(song.audioUrl)}
-                setIsPlaying={setIsPlaying}
-                lifeSucksMix={props.lifeSucksMix}
-              />
-            </div>
-          ))}
-        </div>
-      )} */}
+
       {props.myHits && (
         <div>
-          {myHitsMix.map((song) => (
+          {myHitsMix.map((song, index) => (
             <div key={song.songName}>
               <Cards
                 {...song}
@@ -85,27 +54,12 @@ const Playlists = (props) => {
                 myHitsMix={props.myHitsMix}
                 artistsBio={song.artistsBio}
                 aboutArtists={song.aboutArtists}
+                songNumber={index + 1}
               />
             </div>
           ))}
         </div>
       )}
-      {/* {props.myGospel && (
-        <div>
-          {myGospel.map((song) => (
-            <div key={song.songName}>
-              <Cards
-                {...song}
-                song={song}
-                isPlaying={song.audioUrl === selectedSong?.audioUrl}
-                togglePlay={() => handleTogglePlay(song.audioUrl)}
-                setIsPlaying={setIsPlaying}
-                myGospelMix={props.myGospelMix}
-              />
-            </div>
-          ))}
-        </div>
-      )} */}
     </>
   );
 };

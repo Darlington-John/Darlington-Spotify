@@ -90,7 +90,11 @@ const PlaylistPageBody = (props) => {
             </div>
           </div>
           <div className="flex flex-col transBlackLight  p-5 md:px-2 md:pt-0 gap-5">
-            <PlaylistLikeBar />
+            {content
+              ? content.switchPlaylist
+              : playlist
+              ? playlist.switchPlaylist
+              : '-'}
             <PlayListGroup
               duration={
                 content ? content.duration : playlist ? playlist.duration : '-'
