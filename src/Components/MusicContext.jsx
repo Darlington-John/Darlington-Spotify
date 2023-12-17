@@ -28,6 +28,12 @@ export const MusicProvider = ({ children }) => {
   const [addedSongsPlaylist, setAddedSongsPlaylist] = useState([]);
   const [addedSongsTwo, setAddedSongsTwo] = useState([]);
   const [addedSongsPlaylistTwo, setAddedSongsPlaylistTwo] = useState([]);
+  const [addedSongsThree, setAddedSongsThree] = useState([]);
+  const [addedSongsPlaylistThree, setAddedSongsPlaylistThree] = useState([]);
+  const [addedSongsFour, setAddedSongsFour] = useState([]);
+  const [addedSongsPlaylistFour, setAddedSongsPlaylistFour] = useState([]);
+  const [addedSongsFive, setAddedSongsFive] = useState([]);
+  const [addedSongsPlaylistFive, setAddedSongsPlaylistFive] = useState([]);
   useEffect(() => {
     const storedLikedSongs =
       JSON.parse(localStorage.getItem('likedSongs')) || [];
@@ -41,6 +47,18 @@ export const MusicProvider = ({ children }) => {
       JSON.parse(localStorage.getItem('addedSongsTwo')) || [];
     const storedAddedSongsPlaylistTwo =
       JSON.parse(localStorage.getItem('addedSongsPlaylistTwo')) || [];
+    const storedAddedSongsThree =
+      JSON.parse(localStorage.getItem('addedSongsThree')) || [];
+    const storedAddedSongsPlaylistThree =
+      JSON.parse(localStorage.getItem('addedSongsPlaylistThree')) || [];
+    const storedAddedSongsFour =
+      JSON.parse(localStorage.getItem('addedSongsFour')) || [];
+    const storedAddedSongsPlaylistFour =
+      JSON.parse(localStorage.getItem('addedSongsPlaylistFour')) || [];
+    const storedAddedSongsFive =
+      JSON.parse(localStorage.getItem('addedSongsFive')) || [];
+    const storedAddedSongsPlaylistFive =
+      JSON.parse(localStorage.getItem('addedSongsPlaylistFive')) || [];
     const storedCreatedPlaylists =
       JSON.parse(localStorage.getItem('createdPlaylists')) || [];
 
@@ -50,6 +68,12 @@ export const MusicProvider = ({ children }) => {
     setAddedSongsPlaylist(storedAddedSongsPlaylist);
     setAddedSongsTwo(storedAddedSongsTwo);
     setAddedSongsPlaylistTwo(storedAddedSongsPlaylistTwo);
+    setAddedSongsThree(storedAddedSongsThree);
+    setAddedSongsPlaylistThree(storedAddedSongsPlaylistThree);
+    setAddedSongsFour(storedAddedSongsFour);
+    setAddedSongsPlaylistFour(storedAddedSongsPlaylistFour);
+    setAddedSongsFive(storedAddedSongsFive);
+    setAddedSongsPlaylistFive(storedAddedSongsPlaylistFive);
     setCreatedPlaylists(storedCreatedPlaylists);
 
     setIsInitialized(true);
@@ -102,6 +126,54 @@ export const MusicProvider = ({ children }) => {
       setAddedSongsTwo((prevAddedSongsTwo) => [...prevAddedSongsTwo, song]);
     }
   };
+  const toggleAddedThree = (song) => {
+    const isAddedThree = addedSongsThree.some(
+      (addedSongThree) => addedSongThree.songDuration === song.songDuration,
+    );
+
+    if (isAddedThree) {
+      setAddedSongsThree((prevAddedSongsThree) =>
+        prevAddedSongsThree.filter(
+          (addedSongThree) => addedSongThree.songDuration !== song.songDuration,
+        ),
+      );
+    } else {
+      setAddedSongsThree((prevAddedSongsThree) => [
+        ...prevAddedSongsThree,
+        song,
+      ]);
+    }
+  };
+  const toggleAddedFour = (song) => {
+    const isAddedFour = addedSongsFour.some(
+      (addedSongFour) => addedSongFour.songDuration === song.songDuration,
+    );
+
+    if (isAddedFour) {
+      setAddedSongsFour((prevAddedSongsFour) =>
+        prevAddedSongsFour.filter(
+          (addedSongFour) => addedSongFour.songDuration !== song.songDuration,
+        ),
+      );
+    } else {
+      setAddedSongsFour((prevAddedSongsFour) => [...prevAddedSongsFour, song]);
+    }
+  };
+  const toggleAddedFive = (song) => {
+    const isAddedFive = addedSongsFive.some(
+      (addedSongFive) => addedSongFive.songDuration === song.songDuration,
+    );
+
+    if (isAddedFive) {
+      setAddedSongsFive((prevAddedSongsFive) =>
+        prevAddedSongsFive.filter(
+          (addedSongFive) => addedSongFive.songDuration !== song.songDuration,
+        ),
+      );
+    } else {
+      setAddedSongsFive((prevAddedSongsFive) => [...prevAddedSongsFive, song]);
+    }
+  };
   useEffect(() => {
     if (isInitialized) {
       localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
@@ -123,6 +195,21 @@ export const MusicProvider = ({ children }) => {
         'addedSongsPlaylistTwo',
         JSON.stringify(addedSongsPlaylistTwo),
       );
+      localStorage.setItem('addedSongsThree', JSON.stringify(addedSongsThree));
+      localStorage.setItem(
+        'addedSongsPlaylistThree',
+        JSON.stringify(addedSongsPlaylistThree),
+      );
+      localStorage.setItem('addedSongsFour', JSON.stringify(addedSongsFour));
+      localStorage.setItem(
+        'addedSongsPlaylistFour',
+        JSON.stringify(addedSongsPlaylistFour),
+      );
+      localStorage.setItem('addedSongsFive', JSON.stringify(addedSongsFive));
+      localStorage.setItem(
+        'addedSongsPlaylistFive',
+        JSON.stringify(addedSongsPlaylistFive),
+      );
     }
   }, [
     likedSongs,
@@ -132,6 +219,12 @@ export const MusicProvider = ({ children }) => {
     addedSongsPlaylist,
     addedSongsTwo,
     addedSongsPlaylistTwo,
+    addedSongsThree,
+    addedSongsPlaylistThree,
+    addedSongsFour,
+    addedSongsPlaylistFour,
+    addedSongsFive,
+    addedSongsPlaylistFive,
     isInitialized,
   ]);
 
@@ -150,6 +243,16 @@ export const MusicProvider = ({ children }) => {
         return myGospel;
       case 'likedSongs':
         return likedSongs;
+      case 'addedSongs':
+        return addedSongs;
+      case 'addedSongsTwo':
+        return addedSongsTwo;
+      case 'addedSongsThree':
+        return addedSongsThree;
+      case 'addedSongsFour':
+        return addedSongsFour;
+      case 'addedSongsFive':
+        return addedSongsFive;
       default:
         return myHitsMix;
     }
@@ -383,6 +486,123 @@ export const MusicProvider = ({ children }) => {
       console.error('Liked songs playlist is empty.');
     }
   };
+  const playFirstPlaylist = () => {
+    if (addedSongs.length > 0) {
+      const firstAddedSong = addedSongs[0];
+
+      if (!selectedSong || selectedSong.audioUrl !== firstAddedSong.audioUrl) {
+        setSelectedSong(firstAddedSong);
+        audioRef.current.src = firstAddedSong.audioUrl;
+      }
+
+      audioRef.current.loop = isLooping;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.error(error));
+      }
+
+      setIsPlaying(!isPlaying);
+    } else {
+      console.error(' ');
+    }
+  };
+  const playSecondPlaylist = () => {
+    if (addedSongsTwo.length > 0) {
+      const firstAddedSongTwo = addedSongsTwo[0];
+
+      if (
+        !selectedSong ||
+        selectedSong.audioUrl !== firstAddedSongTwo.audioUrl
+      ) {
+        setSelectedSong(firstAddedSongTwo);
+        audioRef.current.src = firstAddedSongTwo.audioUrl;
+      }
+
+      audioRef.current.loop = isLooping;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.error(error));
+      }
+
+      setIsPlaying(!isPlaying);
+    } else {
+      console.error(' ');
+    }
+  };
+  const playThirdPlaylist = () => {
+    if (addedSongsThree.length > 0) {
+      const firstAddedSongThree = addedSongsThree[0];
+
+      if (
+        !selectedSong ||
+        selectedSong.audioUrl !== firstAddedSongThree.audioUrl
+      ) {
+        setSelectedSong(firstAddedSongThree);
+        audioRef.current.src = firstAddedSongThree.audioUrl;
+      }
+
+      audioRef.current.loop = isLooping;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.error(error));
+      }
+
+      setIsPlaying(!isPlaying);
+    } else {
+      console.error(' ');
+    }
+  };
+  const playFourthPlaylist = () => {
+    if (addedSongsFour.length > 0) {
+      const firstAddedSongFour = addedSongsFour[0];
+
+      if (
+        !selectedSong ||
+        selectedSong.audioUrl !== firstAddedSongFour.audioUrl
+      ) {
+        setSelectedSong(firstAddedSongFour);
+        audioRef.current.src = firstAddedSongFour.audioUrl;
+      }
+
+      audioRef.current.loop = isLooping;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.error(error));
+      }
+
+      setIsPlaying(!isPlaying);
+    } else {
+      console.error(' ');
+    }
+  };
+  const playFifthPlaylist = () => {
+    if (addedSongsFive.length > 0) {
+      const firstAddedSongFive = addedSongsFive[0];
+
+      if (
+        !selectedSong ||
+        selectedSong.audioUrl !== firstAddedSongFive.audioUrl
+      ) {
+        setSelectedSong(firstAddedSongFive);
+        audioRef.current.src = firstAddedSongFive.audioUrl;
+      }
+
+      audioRef.current.loop = isLooping;
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((error) => console.error(error));
+      }
+
+      setIsPlaying(!isPlaying);
+    } else {
+      console.error(' ');
+    }
+  };
   const addSongToPlaylist = (playlistId, song) => {
     setCreatedPlaylists((prevPlaylists) =>
       prevPlaylists.map((playlist) =>
@@ -419,6 +639,15 @@ export const MusicProvider = ({ children }) => {
     addedSongsTwo,
 
     toggleAddedTwo,
+    addedSongsThree,
+
+    toggleAddedThree,
+    addedSongsFour,
+
+    toggleAddedFour,
+    addedSongsFive,
+
+    toggleAddedFive,
     toggleLoop,
     isLooping,
 
@@ -434,6 +663,11 @@ export const MusicProvider = ({ children }) => {
     handleToggleShuffle,
     playFirstSong,
     playLikedSongs,
+    playFirstPlaylist,
+    playSecondPlaylist,
+    playThirdPlaylist,
+    playFourthPlaylist,
+    playFifthPlaylist,
     addSongToPlaylist,
   };
 

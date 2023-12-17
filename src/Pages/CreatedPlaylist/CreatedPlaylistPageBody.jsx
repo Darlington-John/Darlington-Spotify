@@ -9,6 +9,7 @@ import Bottombar from '../../Components/Bottombar';
 import { useMusic } from '../../Components/MusicContext';
 import EditIcon from './../../Assets/Icons/Edit.svg';
 import ClockIcon from './../../Assets/Icons/Clock.svg';
+import MusicIcon from './../../Assets/Icons/Music.svg';
 import Cards from '../../Components/Cards';
 import PlaylistLikeBar from '../../Components/PlaylistLikeBar';
 import PlayListGroup from '../../Components/PlaylistGroup';
@@ -19,6 +20,9 @@ const CreatedPlaylistPageBody = () => {
     updatePlaylistName,
     addedSongs,
     addedSongsTwo,
+    addedSongsThree,
+    addedSongsFour,
+    addedSongsFive,
     selectedSong,
     setSelectedSong,
   } = useMusic();
@@ -111,6 +115,33 @@ const CreatedPlaylistPageBody = () => {
 
     setSelectedSong(selectedSong);
   };
+  const handleTogglePlayThree = (audioUrl) => {
+    const addedSongThree = addedSongsThree.find(
+      (song) => song.audioUrl === audioUrl,
+    );
+
+    const selectedSong = addedSongThree;
+
+    setSelectedSong(selectedSong);
+  };
+  const handleTogglePlayFour = (audioUrl) => {
+    const addedSongFour = addedSongsFour.find(
+      (song) => song.audioUrl === audioUrl,
+    );
+
+    const selectedSong = addedSongFour;
+
+    setSelectedSong(selectedSong);
+  };
+  const handleTogglePlayFive = (audioUrl) => {
+    const addedSongFive = addedSongsFive.find(
+      (song) => song.audioUrl === audioUrl,
+    );
+
+    const selectedSong = addedSongFive;
+
+    setSelectedSong(selectedSong);
+  };
   return (
     <div className="app-container md:p-0">
       <SideBar />
@@ -195,32 +226,32 @@ const CreatedPlaylistPageBody = () => {
                 <div className="text-center py-12 flex flex-col items-center gap-2">
                   <img className="w-20 mx-auto" src={AltoIcon} />
                   <h1 className="font-bold text-3xl">
-                    Songs you like will appear here
+                    Songs you add will appear here
                   </h1>
                   <h1 className="text-base">
-                    Save songs by tapping the heart icon
+                    Add songs by tapping the heart icon
                   </h1>
                 </div>
               )}
             </div> */}
             <div className="text-white">
-              {addedSongs.length > 0 ? (
-                <PlaylistLikeBar addedSongsPlaylistSwitch=" " />
-              ) : (
-                ' '
-              )}
-              {addedSongs.length > 0 ? (
-                <PlayListGroup
-                  duration={ClockIcon}
-                  album="Album"
-                  title="Title"
-                  number="#"
-                />
-              ) : (
-                ' '
-              )}
               {playlistId === '1' ? (
                 <div>
+                  {addedSongs.length > 0 ? (
+                    <PlaylistLikeBar firstPlaylistSwitch=" " />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongs.length > 0 ? (
+                    <PlayListGroup
+                      duration={ClockIcon}
+                      album="Album"
+                      title="Title"
+                      number="#"
+                    />
+                  ) : (
+                    ' '
+                  )}
                   {addedSongs.length > 0 ? (
                     addedSongs.map((song, index) => (
                       <div key={song.id}>
@@ -236,17 +267,33 @@ const CreatedPlaylistPageBody = () => {
                     ))
                   ) : (
                     <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <img className="w-20 mx-auto" src={MusicIcon} />
                       <h1 className="font-bold text-3xl">
-                        Songs you like will appear here
+                        Songs you add will appear here
                       </h1>
                       <h1 className="text-base">
-                        Save songs by tapping the heart icon
+                        Add songs by tapping the heart icon
                       </h1>
                     </div>
                   )}
                 </div>
-              ) : (
+              ) : playlistId === '2' ? (
                 <div>
+                  {addedSongsTwo.length > 0 ? (
+                    <PlaylistLikeBar secondPlaylistSwitch=" " />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsTwo.length > 0 ? (
+                    <PlayListGroup
+                      duration={ClockIcon}
+                      album="Album"
+                      title="Title"
+                      number="#"
+                    />
+                  ) : (
+                    ' '
+                  )}
                   {addedSongsTwo.length > 0 ? (
                     addedSongsTwo.map((song, index) => (
                       <div key={song.id}>
@@ -262,11 +309,140 @@ const CreatedPlaylistPageBody = () => {
                     ))
                   ) : (
                     <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <img className="w-20 mx-auto" src={MusicIcon} />
                       <h1 className="font-bold text-3xl">
-                        Songs you like will appear here
+                        Songs you add will appear here
                       </h1>
                       <h1 className="text-base">
-                        Save songs by tapping the heart icon
+                        Add songs by tapping the heart icon
+                      </h1>
+                    </div>
+                  )}
+                </div>
+              ) : playlistId === '3' ? (
+                <div>
+                  {addedSongsThree.length > 0 ? (
+                    <PlaylistLikeBar thirdPlaylistSwitch=" " />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsThree.length > 0 ? (
+                    <PlayListGroup
+                      duration={ClockIcon}
+                      album="Album"
+                      title="Title"
+                      number="#"
+                    />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsThree.length > 0 ? (
+                    addedSongsThree.map((song, index) => (
+                      <div key={song.id}>
+                        <Cards
+                          {...song}
+                          songNumber={index + 1}
+                          isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                          togglePlay={() =>
+                            handleTogglePlayThree(song.audioUrl)
+                          }
+                          setIsPlaying={setIsPlaying}
+                          isAddedThree
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <img className="w-20 mx-auto" src={MusicIcon} />
+                      <h1 className="font-bold text-3xl">
+                        Songs you add will appear here
+                      </h1>
+                      <h1 className="text-base">
+                        Add songs by tapping the heart icon
+                      </h1>
+                    </div>
+                  )}
+                </div>
+              ) : playlistId === '4' ? (
+                <div>
+                  {addedSongsFour.length > 0 ? (
+                    <PlaylistLikeBar fourthPlaylistSwitch=" " />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsFour.length > 0 ? (
+                    <PlayListGroup
+                      duration={ClockIcon}
+                      album="Album"
+                      title="Title"
+                      number="#"
+                    />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsFour.length > 0 ? (
+                    addedSongsFour.map((song, index) => (
+                      <div key={song.id}>
+                        <Cards
+                          {...song}
+                          songNumber={index + 1}
+                          isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                          togglePlay={() => handleTogglePlayFour(song.audioUrl)}
+                          setIsPlaying={setIsPlaying}
+                          isAddedFour
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <img className="w-20 mx-auto" src={MusicIcon} />
+                      <h1 className="font-bold text-3xl">
+                        Songs you add will appear here
+                      </h1>
+                      <h1 className="text-base">
+                        Add songs by tapping the heart icon
+                      </h1>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div>
+                  {addedSongsFive.length > 0 ? (
+                    <PlaylistLikeBar fifthPlaylistSwitch=" " />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsFive.length > 0 ? (
+                    <PlayListGroup
+                      duration={ClockIcon}
+                      album="Album"
+                      title="Title"
+                      number="#"
+                    />
+                  ) : (
+                    ' '
+                  )}
+                  {addedSongsFive.length > 0 ? (
+                    addedSongsFive.map((song, index) => (
+                      <div key={song.id}>
+                        <Cards
+                          {...song}
+                          songNumber={index + 1}
+                          isPlaying={song.audioUrl === selectedSong?.audioUrl}
+                          togglePlay={() => handleTogglePlayFive(song.audioUrl)}
+                          setIsPlaying={setIsPlaying}
+                          isAddedFive
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center py-12 flex flex-col items-center gap-2">
+                      <img className="w-20 mx-auto" src={MusicIcon} />
+                      <h1 className="font-bold text-3xl">
+                        Songs you add will appear here
+                      </h1>
+                      <h1 className="text-base">
+                        Add songs by tapping the heart icon
                       </h1>
                     </div>
                   )}

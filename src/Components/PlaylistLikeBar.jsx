@@ -22,6 +22,16 @@ const PlaylistLikeBar = (props) => {
     playFirstSong,
     isPlaying,
     likedSongs,
+    addedSongs,
+    addedSongsTwo,
+    playFirstPlaylist,
+    playSecondPlaylist,
+    addedSongsThree,
+    playThirdPlaylist,
+    addedSongsFour,
+    playFourthPlaylist,
+    addedSongsFive,
+    playFifthPlaylist,
   } = useMusic();
   const [isLike, setIsLike] = useState(false);
   const toggleLike = () => {
@@ -112,6 +122,81 @@ const PlaylistLikeBar = (props) => {
             onClick={() => {
               handleChangePlaylist('likedSongs');
               playFirstSong(likedSongs);
+            }}
+          >
+            {isPlaying ? (
+              <img src={PauseIcon} className="w-5" />
+            ) : (
+              <img src={PlayIcon} className="w-5" />
+            )}
+          </button>
+        )}
+        {props.firstPlaylistSwitch && (
+          <button
+            className="bg-spGreen rounded-full p-4 md:order-2"
+            onClick={() => {
+              handleChangePlaylist('addedSongs');
+              playFirstPlaylist(addedSongs);
+            }}
+          >
+            {isPlaying ? (
+              <img src={PauseIcon} className="w-5" />
+            ) : (
+              <img src={PlayIcon} className="w-5" />
+            )}
+          </button>
+        )}
+        {props.secondPlaylistSwitch && (
+          <button
+            className="bg-spGreen rounded-full p-4 md:order-2"
+            onClick={() => {
+              handleChangePlaylist('addedSongsTwo');
+              playSecondPlaylist(addedSongsTwo);
+            }}
+          >
+            {isPlaying ? (
+              <img src={PauseIcon} className="w-5" />
+            ) : (
+              <img src={PlayIcon} className="w-5" />
+            )}
+          </button>
+        )}
+        {props.thirdPlaylistSwitch && (
+          <button
+            className="bg-spGreen rounded-full p-4 md:order-2"
+            onClick={() => {
+              handleChangePlaylist('addedSongsThree');
+              playThirdPlaylist(addedSongsThree);
+            }}
+          >
+            {isPlaying ? (
+              <img src={PauseIcon} className="w-5" />
+            ) : (
+              <img src={PlayIcon} className="w-5" />
+            )}
+          </button>
+        )}
+        {props.fourthPlaylistSwitch && (
+          <button
+            className="bg-spGreen rounded-full p-4 md:order-2"
+            onClick={() => {
+              handleChangePlaylist('addedSongsFour');
+              playFourthPlaylist(addedSongsFour);
+            }}
+          >
+            {isPlaying ? (
+              <img src={PauseIcon} className="w-5" />
+            ) : (
+              <img src={PlayIcon} className="w-5" />
+            )}
+          </button>
+        )}
+        {props.fifthPlaylistSwitch && (
+          <button
+            className="bg-spGreen rounded-full p-4 md:order-2"
+            onClick={() => {
+              handleChangePlaylist('addedSongsFive');
+              playFifthPlaylist(addedSongsFive);
             }}
           >
             {isPlaying ? (

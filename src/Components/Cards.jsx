@@ -14,11 +14,13 @@ import BillieAnacondaImg from './../Assets/Images/BillieAnaconda.jpg';
 import LikedSongsImg from './../Assets/Images/LikedSongs.png';
 import ArrLeftIcon from './../Assets/Icons/ArrLeft.svg';
 import PlusCircleIcon from './../Assets/Icons/PlusCircle.svg';
+import PlusIcon from './../Assets/Icons/Plus.svg';
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
 import PlayWhiteIcon from './../Assets/Icons/PlayWhite.svg';
 import PlayIcon from './../Assets/Icons/Play.svg';
 import MusicIcon from './../Assets/Icons/Music.svg';
 import EpisodeIcon from './../Assets/Icons/Episode.svg';
+
 import VerEllipsisIcon from './../Assets/Icons/VerEllipsis.svg';
 import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
@@ -38,9 +40,19 @@ const Cards = (props) => {
     addedSongsTwo,
 
     toggleAddedTwo,
+    toggleAddedThree,
+    addedSongsThree,
+    toggleAddedFour,
+    addedSongsFour,
+    toggleAddedFive,
+    addedSongsFive,
   } = useMusic();
   const [showMessage, setShowMessage] = useState(false);
   const [showAddedMessage, setShowAddedMessage] = useState(false);
+  const [showAddedMessageTwo, setShowAddedMessageTwo] = useState(false);
+  const [showAddedMessageThree, setShowAddedMessageThree] = useState(false);
+  const [showAddedMessageFour, setShowAddedMessageFour] = useState(false);
+  const [showAddedMessageFive, setShowAddedMessageFive] = useState(false);
   // const {
   //   isLike,
 
@@ -60,6 +72,15 @@ const Cards = (props) => {
   const isAddedTwo = addedSongsTwo.some(
     (addedSongTwo) => addedSongTwo.songDuration === props.songDuration,
   );
+  const isAddedThree = addedSongsThree.some(
+    (addedSongThree) => addedSongThree.songDuration === props.songDuration,
+  );
+  const isAddedFour = addedSongsFour.some(
+    (addedSongFour) => addedSongFour.songDuration === props.songDuration,
+  );
+  const isAddedFive = addedSongsFive.some(
+    (addedSongFive) => addedSongFive.songDuration === props.songDuration,
+  );
   const handleToggleLike = () => {
     toggleLike(props);
     setShowMessage(true);
@@ -71,11 +92,38 @@ const Cards = (props) => {
   };
   const handleToggleAddedTwo = () => {
     toggleAddedTwo(props);
-    setShowAddedMessage(true);
+    setShowAddedMessageTwo(true);
 
-    // Hide the message after 3 seconds
+    // Hide the messageTwo after 3 seconds
     setTimeout(() => {
-      setShowAddedMessage(false);
+      setShowAddedMessageTwo(false);
+    }, 1000);
+  };
+  const handleToggleAddedThree = () => {
+    toggleAddedThree(props);
+    setShowAddedMessageThree(true);
+
+    // Hide the messageThree after 3 seconds
+    setTimeout(() => {
+      setShowAddedMessageThree(false);
+    }, 1000);
+  };
+  const handleToggleAddedFour = () => {
+    toggleAddedFour(props);
+    setShowAddedMessageFour(true);
+
+    // Hide the messageFour after 3 seconds
+    setTimeout(() => {
+      setShowAddedMessageFour(false);
+    }, 1000);
+  };
+  const handleToggleAddedFive = () => {
+    toggleAddedFive(props);
+    setShowAddedMessageFive(true);
+
+    // Hide the messageFive after 3 seconds
+    setTimeout(() => {
+      setShowAddedMessageFive(false);
     }, 1000);
   };
 
@@ -717,7 +765,7 @@ const Cards = (props) => {
             </button>
             <div className="flex item-center justify-end gap-1">
               <h1>{props.songDuration}</h1>
-              <div className="dropdown relative flex item-center justify-end w-4">
+              <div className="dropdown relative flex item-center justify-end w-4 ">
                 <img
                   src={VerEllipsisIcon}
                   className="w-4"
@@ -768,11 +816,19 @@ const Cards = (props) => {
                             : ''
                         }`}
                         key={playlist.id}
-                        onClick={() =>
-                          index === 1
-                            ? handleToggleAddedTwo()
-                            : handleToggleAdded()
-                        }
+                        onClick={() => {
+                          if (index === 1) {
+                            handleToggleAddedTwo();
+                          } else if (index === 2) {
+                            handleToggleAddedThree();
+                          } else if (index === 3) {
+                            handleToggleAddedFour();
+                          } else if (index === 4) {
+                            handleToggleAddedFive();
+                          } else {
+                            handleToggleAdded();
+                          }
+                        }}
                       >
                         <img
                           src={playlist.imgSrc}
@@ -875,18 +931,64 @@ const Cards = (props) => {
           )}
         </div>
       )}
+
       {showAddedMessage && (
         <div className="liked-message">
           {isAdded ? (
-            <p className="add-message">
-              <img
-                src={playlists.imgSrc}
-                className="hover-img  w-8 rounded-md"
-              />
-              Added to liked songs
+            <p className="add-message items-center flex gap-3">
+              <img src={PlusIcon} className="hover-img  w-4 rounded-md" />
+              Added to Playlist
             </p>
           ) : (
-            <p className="remv-message">Removed from liked songs</p>
+            <p className="remv-message">Removed from Playlist</p>
+          )}
+        </div>
+      )}
+      {showAddedMessageTwo && (
+        <div className="liked-message">
+          {isAddedTwo ? (
+            <p className="add-message items-center flex gap-3">
+              <img src={PlusIcon} className="hover-img  w-4 rounded-md" />
+              Added to Playlist
+            </p>
+          ) : (
+            <p className="remv-message">Removed from playlist</p>
+          )}
+        </div>
+      )}
+      {showAddedMessageThree && (
+        <div className="liked-message">
+          {isAddedThree ? (
+            <p className="add-message items-center flex gap-3">
+              <img src={PlusIcon} className="hover-img  w-4 rounded-md" />
+              Added to Playlist
+            </p>
+          ) : (
+            <p className="remv-message">Removed from playlist</p>
+          )}
+        </div>
+      )}
+      {showAddedMessageFour && (
+        <div className="liked-message">
+          {isAddedFour ? (
+            <p className="add-message items-center flex gap-3">
+              <img src={PlusIcon} className="hover-img  w-4 rounded-md" />
+              Added to Playlist
+            </p>
+          ) : (
+            <p className="remv-message">Removed from playlist</p>
+          )}
+        </div>
+      )}
+      {showAddedMessageFive && (
+        <div className="liked-message">
+          {isAddedFive ? (
+            <p className="add-message items-center flex gap-3">
+              <img src={PlusIcon} className="hover-img  w-4 rounded-md" />
+              Added to Playlist
+            </p>
+          ) : (
+            <p className="remv-message">Removed from playlist</p>
           )}
         </div>
       )}

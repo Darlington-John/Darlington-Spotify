@@ -934,6 +934,9 @@ button:not(:hover) {
 }
 
 @media screen and (max-width: 900px) {
+    .dropdown {
+        display: none;
+    }
     .now-playing {
         display: none;
     }

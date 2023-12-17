@@ -131,6 +131,7 @@ const NowPlaying = (props) => {
       }
     }
   };
+
   return (
     <div>
       <div className="flex  flex-row fixed justify-between w-screen bottom-0 z-40 bg-deepBlack p-2 now-playing">
