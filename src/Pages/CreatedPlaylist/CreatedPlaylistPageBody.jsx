@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import { Link } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
 import SideBar from '../../Components/Sidebar';
 import NavBar, { MobileNavbar } from '../../Components/Navbar';
@@ -226,9 +226,10 @@ const CreatedPlaylistPageBody = () => {
                       <h1 className="font-bold text-3xl">
                         Songs you add will appear here
                       </h1>
-                      <h1 className="text-base">
-                        Add songs by tapping the heart icon
-                      </h1>
+
+                      <Link to="/SearchPage">
+                        <h1 className="text-base">Go to Search page</h1>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -268,9 +269,9 @@ const CreatedPlaylistPageBody = () => {
                       <h1 className="font-bold text-3xl">
                         Songs you add will appear here
                       </h1>
-                      <h1 className="text-base">
-                        Add songs by tapping the heart icon
-                      </h1>
+                      <Link to="/SearchPage">
+                        <h1 className="text-base">Go to Search page</h1>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -312,9 +313,9 @@ const CreatedPlaylistPageBody = () => {
                       <h1 className="font-bold text-3xl">
                         Songs you add will appear here
                       </h1>
-                      <h1 className="text-base">
-                        Add songs by tapping the heart icon
-                      </h1>
+                      <Link to="/SearchPage">
+                        <h1 className="text-base">Go to Search page</h1>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -354,9 +355,9 @@ const CreatedPlaylistPageBody = () => {
                       <h1 className="font-bold text-3xl">
                         Songs you add will appear here
                       </h1>
-                      <h1 className="text-base">
-                        Add songs by tapping the heart icon
-                      </h1>
+                      <Link to="/SearchPage">
+                        <h1 className="text-base">Go to Search page</h1>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -396,9 +397,9 @@ const CreatedPlaylistPageBody = () => {
                       <h1 className="font-bold text-3xl">
                         Songs you add will appear here
                       </h1>
-                      <h1 className="text-base">
-                        Add songs by tapping the heart icon
-                      </h1>
+                      <Link to="/SearchPage">
+                        <h1 className="text-base">Go to Search page</h1>
+                      </Link>
                     </div>
                   )}
                 </div>
