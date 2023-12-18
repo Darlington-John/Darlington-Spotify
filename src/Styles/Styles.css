@@ -787,11 +787,6 @@ button:not(:hover) {
     display: block;
 }
 
-
-/* .liked-message {
-
-} */
-
 .remv-message {
     background-color: white;
     color: black;
@@ -887,28 +882,33 @@ button:not(:hover) {
     z-index: 40;
 }
 
-@media screen and (max-width: 1020px) {
-    .Overlay {
-        display: block;
-    }
+.search-input::placeholder {
+    font-size: 14px;
+    outline: none;
 }
 
-.Overlay {
-    display: block;
+.search-input {
+    font-size: 14px;
+    color: #fff;
+    outline: none;
 }
 
-.Overlay {
-    display: block;
+.genre-card {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: #dc148c;
+    border-radius: 10px;
+    padding: 15px 10px 10px 20px;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 1020px) {
-    .Overlay {
-        display: block;
-    }
-}
-
-.Overlay {
-    display: block;
+.genre-img {
+    transform: rotate(25deg) translate(18%, -2%);
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
 }
 
 @media screen and (max-width: 1400px) {
@@ -930,6 +930,18 @@ button:not(:hover) {
         text-overflow: ellipsis;
         white-space: wrap;
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .app-sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .Overlay {
+        display: block;
     }
 }
 

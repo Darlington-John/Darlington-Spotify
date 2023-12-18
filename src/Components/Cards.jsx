@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import LikeIcon from './../Assets/Icons/Like.svg';
@@ -19,15 +19,12 @@ import XmarkIcon from './../Assets/Icons/Xmark.svg';
 import PlayWhiteIcon from './../Assets/Icons/PlayWhite.svg';
 import PlayIcon from './../Assets/Icons/Play.svg';
 import MusicIcon from './../Assets/Icons/Music.svg';
-import EpisodeIcon from './../Assets/Icons/Episode.svg';
 
 import VerEllipsisIcon from './../Assets/Icons/VerEllipsis.svg';
 import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
 import { useMusic } from './MusicContext';
-import ArtistsBio from './ArtistsBio';
-import CreatedPlaylistPageBody from '../Pages/CreatedPlaylist/CreatedPlaylistPageBody';
-import PlaylistDropdown from './Dropdown';
+
 const Cards = (props) => {
   const {
     selectedSong,
@@ -53,16 +50,7 @@ const Cards = (props) => {
   const [showAddedMessageThree, setShowAddedMessageThree] = useState(false);
   const [showAddedMessageFour, setShowAddedMessageFour] = useState(false);
   const [showAddedMessageFive, setShowAddedMessageFive] = useState(false);
-  // const {
-  //   isLike,
 
-  //   toggleLike,
-  // } = useMusic();
-  const onPlaylistSelect = props;
-  const handlePlaylistSelect = (e) => {
-    const selectedPlaylistId = e.target.value;
-    onPlaylistSelect(selectedPlaylistId);
-  };
   const isLiked = likedSongs.some(
     (likedSong) => likedSong.songDuration === props.songDuration,
   );
@@ -85,7 +73,6 @@ const Cards = (props) => {
     toggleLike(props);
     setShowMessage(true);
 
-    // Hide the message after 3 seconds
     setTimeout(() => {
       setShowMessage(false);
     }, 1000);
@@ -94,7 +81,6 @@ const Cards = (props) => {
     toggleAddedTwo(props);
     setShowAddedMessageTwo(true);
 
-    // Hide the messageTwo after 3 seconds
     setTimeout(() => {
       setShowAddedMessageTwo(false);
     }, 1000);
@@ -103,7 +89,6 @@ const Cards = (props) => {
     toggleAddedThree(props);
     setShowAddedMessageThree(true);
 
-    // Hide the messageThree after 3 seconds
     setTimeout(() => {
       setShowAddedMessageThree(false);
     }, 1000);
@@ -112,7 +97,6 @@ const Cards = (props) => {
     toggleAddedFour(props);
     setShowAddedMessageFour(true);
 
-    // Hide the messageFour after 3 seconds
     setTimeout(() => {
       setShowAddedMessageFour(false);
     }, 1000);
@@ -121,7 +105,6 @@ const Cards = (props) => {
     toggleAddedFive(props);
     setShowAddedMessageFive(true);
 
-    // Hide the messageFive after 3 seconds
     setTimeout(() => {
       setShowAddedMessageFive(false);
     }, 1000);
@@ -131,7 +114,6 @@ const Cards = (props) => {
     toggleAdded(props);
     setShowAddedMessage(true);
 
-    // Hide the message after 3 seconds
     setTimeout(() => {
       setShowAddedMessage(false);
     }, 1000);
@@ -159,7 +141,6 @@ const Cards = (props) => {
   };
   const [isFollowed, setIsFollowed] = useState(false);
   const toggleFollowed = () => {
-    // Toggle the isPlaying state when the button is clicked
     setIsFollowed(!isFollowed);
   };
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
@@ -170,11 +151,9 @@ const Cards = (props) => {
     setIsPopUpOpen(false);
   };
   useEffect(() => {
-    // Call the resize handler when the component is mounted and whenever the window is resized
     handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -200,31 +179,11 @@ const Cards = (props) => {
     JSON.parse(localStorage.getItem('createdPlaylists')) || [],
   );
 
-  // Save playlists to localStorage whenever the state changes
   useEffect(() => {
     localStorage.setItem('createdPlaylists', JSON.stringify(createdPlaylists));
   }, [createdPlaylists]);
 
-  const handleCreatePlaylist = () => {
-    const newPlaylist = {
-      id: createdPlaylists.length + 1,
-      name: `My Playlist #${createdPlaylists.length + 1}`, // Default name
-      imgSrc: LikedSongsImg, // Default image
-    };
-
-    setCreatedPlaylists([...createdPlaylists, newPlaylist]);
-  };
-
-  const updatePlaylist = (playlistId, newName) => {
-    setCreatedPlaylists((prevPlaylists) =>
-      prevPlaylists.map((playlist) =>
-        playlist.id === Number(playlistId)
-          ? { ...playlist, name: newName }
-          : playlist,
-      ),
-    );
-  };
-  const { playlistDetails, playlists } = useMusic();
+  const { playlists } = useMusic();
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -262,22 +221,24 @@ const Cards = (props) => {
         <div className="w-full flex flex-col gap-8 bg-greyBlack rounded-lg navbar-cards-container">
           <div className="w-full flex flex-col gap-8 bg-greyBlack p-5 rounded-lg card1">
             <div className="w-full flex items-center justify-start gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                class="Svg-sc-ytk21e-0 iYxpxA home-active-icon"
-                viewBox="0 0 24 24"
-                id="homeIcon"
-              >
-                <path
-                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
-                  id="homePath"
-                  className={location.pathname === '/' ? 'active' : ''}
-                  fill="#b3b3b3"
-                />
-              </svg>
+              <Link to="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 iYxpxA home-active-icon"
+                  viewBox="0 0 24 24"
+                  id="homeIcon"
+                >
+                  <path
+                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                    id="homePath"
+                    className={location.pathname === '/' ? 'active' : ''}
+                    fill="#b3b3b3"
+                  />
+                </svg>
+              </Link>
               <Link
                 to="/"
                 id={location.pathname === '/' ? 'active' : ''}
@@ -287,28 +248,30 @@ const Cards = (props) => {
               </Link>
             </div>
             <div className="w-full flex items-center justify-start gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                class="Svg-sc-ytk21e-0 iYxpxA search-active-icon"
-                viewBox="0 0 24 24"
-                id="homeIcon"
-              >
-                <path
-                  d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"
-                  fill="transparent"
-                />
-                <path
-                  d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
-                  id="searchPath"
-                  fill="#b3b3b3"
-                  className={
-                    location.pathname === '/SearchPage' ? 'active' : ''
-                  }
-                />
-              </svg>
+              <Link to="/SearchPage">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 iYxpxA search-active-icon"
+                  viewBox="0 0 24 24"
+                  id="homeIcon"
+                >
+                  <path
+                    d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"
+                    fill="transparent"
+                  />
+                  <path
+                    d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
+                    id="searchPath"
+                    fill="#b3b3b3"
+                    className={
+                      location.pathname === '/SearchPage' ? 'active' : ''
+                    }
+                  />
+                </svg>
+              </Link>
               <Link
                 to="/SearchPage"
                 id={location.pathname === '/SearchPage' ? 'active' : ''}
@@ -384,38 +347,6 @@ const Cards = (props) => {
                 Library
               </Link>
             </div>
-            <div className="flex gap-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 kPpCsU"
-                id="PlusIcon"
-              >
-                <path
-                  d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
-                  id="PlusPath"
-                  fill="#b3b3b3"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                viewBox="0 0 16 16"
-                class="Svg-sc-ytk21e-0 kgVuXA"
-                id="ArrIcon"
-              >
-                <path
-                  d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z"
-                  id="arrPath"
-                  fill="#b3b3b3"
-                />
-              </svg>
-            </div>
           </div>
 
           <div className="w-full flex flex-col gap-8 bg-greyBlack p-1 rounded-lg card2 ">
@@ -460,7 +391,6 @@ const Cards = (props) => {
                     d="M28,16c0,1.105-0.895,2-2,2h-8v8c0,1.105-0.895,2-2,2s-2-0.895-2-2v-8H6c-1.105,0-2-0.895-2-2s0.895-2,2-2h8V6  c0-1.104,0.895-2,2-2s2,0.896,2,2v8h8C27.105,14,28,14.895,28,16z"
                     id="homePath"
                     fill="black"
-                    // className={location.pathname === '/' ? 'active' : ''}
                   />
                 </svg>
               </div>
@@ -677,7 +607,36 @@ const Cards = (props) => {
                     {selectedSong ? (
                       selectedSong.artistsBio
                     ) : (
-                      <ArtistsBio BillieEilish=" " />
+                      <p>
+                        With the release of her highly anticipated sophomore
+                        album ‘Happier Than Ever,’ the 21-year-old Los Angeles
+                        native remains one of the biggest stars to emerge in the
+                        21st century. Since the release of her debut single
+                        “ocean eyes” in 2015, Eilish continues to shatter the
+                        ceiling of music with her genre-defying sound. Fast
+                        forward from her humble breakout, her album WHEN WE ALL
+                        FALL ASLEEP, WHERE DO WE GO? debuted at No. 1 on the
+                        Billboard 200 in the U.S as well as 17 additional
+                        countries around the world upon release in 2019, and was
+                        the most streamed album of that year. WHEN WE ALL FALL
+                        ASLEEP, WHERE DO WE GO? was written, produced and
+                        recorded entirely by Billie Eilish and brother FINNEAS
+                        in their childhood home of Los Angeles. Billie Eilish
+                        went on to make history as the youngest artist to
+                        receive nominations and win in all the major categories
+                        at the 62nd GRAMMY® Awards, receiving an award for Best
+                        New Artist, Album of the Year, Record of the Year, Song
+                        of the Year, and Best Pop Vocal Album. Billie Eilish is
+                        also the youngest artist to write and record an official
+                        James Bond theme song, ‘No Time To Die.’ Most recently,
+                        Billie Eilish was nominated for four additional awards
+                        at the 63rd Annual GRAMMY Awards in 2021, and took home
+                        both Record of the Year for 'everything i wanted,' and
+                        Best Song Written For Visual Media for 'No Time To Die.’
+                        Billie Eilish’s latest album ‘Happier Than Ever’ was
+                        written by Billie and her brother FINNEAS, who also
+                        produced the album.
+                      </p>
                     )}
                   </h3>
                 </div>
@@ -747,13 +706,13 @@ const Cards = (props) => {
                 </h1>
 
                 <h1 className="text-sm  text-silver md:text-xs">
-                  {props.song?.songArtists}
+                  {props.songArtists}
                 </h1>
               </div>
             </div>
           </div>
           <div className="w-full flex justify-end text-silver text-sm album-test xl:hidden">
-            <h1>{props.song?.songAlbum}</h1>
+            <h1>{props.songAlbum}</h1>
           </div>
           <div className="w-full text-white flex  justify-end items-center md:text-sm gap-12">
             <button onClick={handleToggleLike} className="like-btn">
@@ -772,20 +731,6 @@ const Cards = (props) => {
                   onClick={handleButtonClick}
                 />
                 {isOpen && (
-                  // <select
-                  //   onChange={handlePlaylistSelect}
-                  //   id="playlistPopup"
-                  //   ref={dropdownRef}
-                  // >
-                  //   <option value="" disabled>
-                  //     Select Playlist
-                  //   </option>
-                  //   {playlists.map((playlist) => (
-                  //     <option key={playlist.id} value={playlist.id}>
-                  //       {playlist.name}
-                  //     </option>
-                  //   ))}
-                  // </select>
                   <div
                     className="add-dropdown w-56  rounded-lg p-1 bg-grey absolute right-0 bottom-0 flex flex-col   bg-grey z-40 "
                     id="playlistPopup"
@@ -803,12 +748,7 @@ const Cards = (props) => {
                       <img src={PlusCircleIcon} className="w-4 " alt="" />
                     </div>
                     {playlists.map((playlist, index) => (
-                      //  <option key={playlist.id} value={playlist.id}>
-                      //    {playlist.name}
-                      //         </option>
-
                       <div
-                        // className="flex items-center justify-between  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer"
                         className={`flex items-center gap-3  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer  ${
                           location.pathname ===
                           `/CreatedPlaylist/${playlist.id}`
@@ -1011,7 +951,6 @@ const Cards = (props) => {
                 <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
                   <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
                     <div className="flex items-center justify-center bg-silver  rounded-md ">
-                      {/* <img src={LikedSongsImg} className="  w-12 rounded-md" /> */}
                       <img
                         src={playlist.imgSrc}
                         alt={`Playlist ${playlist.id}`}
@@ -1048,6 +987,17 @@ const Cards = (props) => {
             </Link>
           ))}
         </>
+      )}
+      {props.Browse && (
+        <Link to="#">
+          <div
+            className="genre-card"
+            style={{ backgroundColor: props.background }}
+          >
+            <h1 className="text-white text-2xl">{props.genre}</h1>
+            <img src={props.genreImg} className="genre-img w-full" />
+          </div>
+        </Link>
       )}
     </>
   );

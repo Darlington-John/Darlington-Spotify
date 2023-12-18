@@ -57,10 +57,6 @@ const SideBarRight = (props) => {
     setIsMore(!isMore);
     toggleSidebar();
   };
-  // const [isLiked, setIsLiked] = useState(false);
-  // const toggleLiked = () => {
-  //   setIsLiked(!isLiked);
-  // };
 
   useEffect(() => {
     window.addEventListener('mousemove', resize1);

@@ -12,7 +12,7 @@ import { eilishMix } from './EilishMix';
 import { lifeSucksMix } from './LifeSucksMix';
 import { myGospel } from './MyGospel';
 import CreatedMusicImg from './../Assets/Images/CreatedMusic.jpg';
-
+import Fuse from 'fuse.js';
 const MusicContext = createContext();
 export const MusicProvider = ({ children }) => {
   const [selectedSong, setSelectedSong] = useState(null);
@@ -418,7 +418,7 @@ export const MusicProvider = ({ children }) => {
       id: playlists.length + 1,
       name: `My Playlist #${playlists.length + 1}`,
       imgSrc: CreatedMusicImg,
-      songs: [], // Initialize songs as an empty array
+      songs: [],
     };
 
     setPlaylists((prevPlaylists) => {
@@ -612,16 +612,53 @@ export const MusicProvider = ({ children }) => {
       ),
     );
   };
-  // const addSongToPlaylist = (playlistId, song) => {
-  //   setCreatedPlaylists((prevPlaylists) =>
-  //     prevPlaylists.map((playlist) =>
-  //       playlist.id === Number(playlistId)
-  //         ? { ...playlist, songs: [...playlist.songs, song] }
-  //         : playlist,
-  //     ),
-  //   );
-  // };
+
+  const allPlaylists = [
+    ...myHitsMix,
+    ...ambientSongs,
+    ...lifeSucksMix,
+    ...eilishMix,
+    ...myGospel,
+  ];
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const handleSearch = (query) => {
+    const fuse = new Fuse(allPlaylists, {
+      keys: ['songName', 'songArtists', 'songAlbum'],
+      includeScore: true,
+    });
+
+    const results = fuse.search(query);
+
+    const exactMatch = results.length > 0 ? results[0].item : null;
+
+    const fuzzyMatches = results.slice(1, 6).map((result) => result.item);
+
+    const finalResult = exactMatch
+      ? [exactMatch, ...fuzzyMatches]
+      : fuzzyMatches;
+
+    setSearchResults(finalResult);
+  };
+  const handleChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    handleSearch(query);
+  };
+  const handleTogglePlay = (audioUrl) => {
+    const selectedSong = allPlaylists.find(
+      (song) => song.audioUrl === audioUrl,
+    );
+    setSelectedSong(selectedSong);
+  };
   const value = {
+    searchQuery,
+    setSearchQuery,
+    searchResults,
+    setSearchResults,
+    handleTogglePlay,
+    handleSearch,
+    handleChange,
     selectedSong,
     setSelectedSong,
     audioRef,
@@ -669,6 +706,7 @@ export const MusicProvider = ({ children }) => {
     playFourthPlaylist,
     playFifthPlaylist,
     addSongToPlaylist,
+    allPlaylists,
   };
 
   return (

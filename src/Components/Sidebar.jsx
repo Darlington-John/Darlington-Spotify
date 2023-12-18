@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Cards from './Cards';
-import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   const sidebar1Ref = useRef(null);
@@ -54,45 +53,6 @@ const SideBar = () => {
       window.removeEventListener('mouseup', stopResizing);
     };
   }, [resize1, resize2, stopResizing]);
-  const [playlistName, setPlaylistName] = useState('');
-  const [playlists, setPlaylists] = useState([]);
-  const [songs, setSongs] = useState([]);
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:3001/api/createPlaylist', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: playlistName,
-          songs: songs.map((song) => song.name), // Send only song names to the server
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create playlist');
-      }
-
-      const data = await response.json();
-      console.log('Playlist created:', data);
-
-      setPlaylists((prevPlaylists) => [...prevPlaylists, data]);
-
-      // Reset the playlistName and songs states after creating a playlist
-      setPlaylistName('');
-      setSongs([]);
-    } catch (error) {
-      console.error('Error creating playlist:', error);
-    }
-  };
-
-  // const handleAddSong = () => {
-  //   setSongs((prevSongs) => [...prevSongs, { name: songName }]);
-  //   setSongName('');
-  // };
 
   return (
     <div

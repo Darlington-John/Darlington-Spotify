@@ -5,6 +5,7 @@ import PlaylistPage from '../Pages/Playlist/PlaylistPage';
 import NowPlaying from '../Components/NowPlaying';
 import LikedPlaylistPage from '../Pages/LikedPlaylist/LikedPlaylistPage';
 import CreatedPlaylist from '../Pages/CreatedPlaylist/CreatedPlaylistPage';
+import SearchPage from '../Pages/Search/SearchPage';
 require('events').EventEmitter.defaultMaxListeners = 40;
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           path="/CreatedPlaylist/:playlistId"
           element={<CreatedPlaylist />}
         />
+        <Route path="/SearchPage" element={<SearchPage />} />
       </Routes>{' '}
       <NowPlaying nowPlayingMobile=" " />
     </BrowserRouter>

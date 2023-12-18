@@ -11,8 +11,7 @@ import ShuffleActiveIcon from './../Assets/Icons/ShuffleActive.svg';
 import LoopIcon from './../Assets/Icons/Loop.svg';
 
 import LoopOneIcon from './../Assets/Icons/LoopOne.svg';
-import LikeIcon from './../Assets/Icons/Like.svg';
-import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
+
 import NowPlayingIcon from './../Assets/Icons/NowPlaying.svg';
 import NowPlayingActiveIcon from './../Assets/Icons/NowPlayingActive.svg';
 import MicIcon from './../Assets/Icons/Mic.svg';
@@ -38,7 +37,6 @@ const NowPlaying = (props) => {
     isLooping,
     handleToggleShuffle,
     isShuffleOn,
-    setIsShuffleOn,
   } = useMusic();
   const { audioRef } = useMusic();
 

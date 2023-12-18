@@ -1,48 +1,36 @@
-import React, { useState } from 'react';
-import Fuse from 'fuse.js';
+import React, { useEffect } from 'react';
 
-const SearchComponent = ({ data }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+import { useMusic } from './MusicContext';
 
-  const fuse = new Fuse(data, {
-    keys: ['songName', 'songArtists', 'songAlbum'],
-    includeScore: true,
-  });
+import SearchIcon from './../Assets/Icons/Search.svg';
 
-  const handleSearch = (query) => {
-    const results = fuse.search(query);
-    setSearchResults(results.map((result) => result.item));
-  };
+const Search = () => {
+  const {
+    searchQuery,
 
-  const handleChange = (event) => {
-    const query = event.target.value;
-    setSearchQuery(query);
-    handleSearch(query);
-  };
+    handleSearch,
+    handleChange,
+  } = useMusic();
+
+  useEffect(() => {
+    handleSearch(searchQuery);
+  }, [searchQuery]);
 
   return (
-    <div>
+    <div
+      className="search-container flex gap-2 p-3 rounded-full  bg-grey "
+      tabIndex="0"
+    >
+      <img src={SearchIcon} className="w-5" />
       <input
         type="text"
-        placeholder="Search songs..."
+        placeholder="What do you want to listen to"
         value={searchQuery}
         onChange={handleChange}
+        className="search-input w-56 bg-grey"
       />
-
-      <div className="card-container">
-        {searchResults.map((result) => (
-          <div key={result.id} className="song-card">
-            {/* Render your card component with the result data */}
-
-            <h3>{result.songName}</h3>
-            <p>{result.songArtists}</p>
-            {/* Add other card details as needed */}
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
 
-export default SearchComponent;
+export default Search;

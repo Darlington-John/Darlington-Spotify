@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { getGreeting } from './Filters';
 import { toggleNav } from './../JavaScript.js';
 import { Link, useNavigate } from 'react-router-dom';
+import Search from './Search.jsx';
 const NavBar = (props) => {
   const navigate = useNavigate();
 
@@ -25,7 +26,7 @@ const NavBar = (props) => {
       className="flex flex-row items-center justify-between sticky top-0 xs:hidden bg-deepBlack py-2  z-50"
       id="Navbar"
     >
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row gap-3 items-center">
         <button
           className="bg-deepBlack rounded-full p-2 nav-btn"
           onClick={handleBackClick}
@@ -39,6 +40,7 @@ const NavBar = (props) => {
           {' '}
           <img src={ArrLeftIcon} className="w-4" alt="" />
         </button>
+        <div className="md:hidden ">{props.Search && <Search />}</div>
       </div>
       <div className="flex flex-row gap-4 items-center">
         <button className="py-2 px-4 bg-white text-base nav-btn rounded-full">

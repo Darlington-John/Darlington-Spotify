@@ -90,7 +90,7 @@ import HappierThanEverEdit from './../Assets/Music/Billie Eilish Happier Than Ev
 import Ghost from './../Assets/Music/Justin Bieber Ghost.mp3';
 import Flames from './../Assets/Music/David Guetta Ft Sia Flames.mp3';
 import FlamesImg from './../Assets/Images/Flames.jpg';
-import ArtistsBio from './ArtistsBio';
+
 import DavidImg from './../Assets/Images/David.jpg';
 
 import DavidTwoImg from './../Assets/Images/DavidTwo.jpg';

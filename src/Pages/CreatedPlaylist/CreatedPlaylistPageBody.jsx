@@ -171,11 +171,6 @@ const CreatedPlaylistPageBody = () => {
                   />
                 )}
 
-                {/* <img
-                  src={imgSrcFromCard}
-                  alt={`Playlist ${playlistId}`}
-                  className="w-full edit-image"
-                /> */}
                 <div className=" edit-image flex flex-col gap-3 items-center justify-center">
                   <img src={EditIcon} className="w-14" />
                   <h1>Choose Photo</h1>
@@ -191,49 +186,9 @@ const CreatedPlaylistPageBody = () => {
                   <h1>My Playlist #{playlistId}</h1>
                 )}
               </h1>
-
-              {/* <h1 className=" text-sm ">
-                Jxt Darlington {likedSongsCount} songs
-              </h1> */}
             </div>
           </div>
           <div className="flex flex-col transBlackLight  p-5 md:px-2 md:pt-0 gap-5">
-            {/* {likedSongs.length > 0 ? (
-              <PlayListGroup
-                duration={ClockIcon}
-                album="Album"
-                title="Title"
-                number="#"
-              />
-            ) : (
-              ' '
-            )} */}
-            {/* <div className="text-white">
-              {likedSongs.length > 0 ? (
-                likedSongs.map((song, index) => (
-                  <div key={song.id}>
-                    <Cards
-                      {...song}
-                      songNumber={index + 1}
-                      isPlaying={song.audioUrl === selectedSong?.audioUrl}
-                      togglePlay={() => handleTogglePlay(song.audioUrl)}
-                      setIsPlaying={setIsPlaying}
-                      isLiked
-                    />
-                  </div>
-                ))
-              ) : (
-                <div className="text-center py-12 flex flex-col items-center gap-2">
-                  <img className="w-20 mx-auto" src={AltoIcon} />
-                  <h1 className="font-bold text-3xl">
-                    Songs you add will appear here
-                  </h1>
-                  <h1 className="text-base">
-                    Add songs by tapping the heart icon
-                  </h1>
-                </div>
-              )}
-            </div> */}
             <div className="text-white">
               {playlistId === '1' ? (
                 <div>
@@ -476,11 +431,7 @@ const CreatedPlaylistPageBody = () => {
                       className="w-60 h-60 object-cover"
                     />
                   )}
-                  {/* <img
-                  src={imgSrcFromCard}
-                  alt={`Playlist ${playlistId}`}
-                  className="w-full edit-image"
-                /> */}{' '}
+
                   <div
                     className=" edit-image flex flex-col gap-3 items-center justify-center "
                     onClick={handleDivClick}

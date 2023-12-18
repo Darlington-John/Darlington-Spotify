@@ -81,8 +81,6 @@ import King from './../Assets/Music/Xxxtentacion King.mp3';
 import Angeles from './../Assets/Music/Angeles Crest.wav';
 import Never from './../Assets/Music/XXXTENTACION NEVER.mp3';
 
-import ArtistsBio from './ArtistsBio';
-
 import { useMusic } from './MusicContext';
 import Cards from './Cards';
 export const lifeSucksMix = [

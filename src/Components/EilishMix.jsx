@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import BlohshImg from './../Assets/Images/Blohsh.jpg';
-import LifeSucksImg from './../Assets/Images/LifeSucks.jpg';
+
 import FallAsleepImg from './../Assets/Images/FallAsleep.jpg';
 
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
@@ -52,7 +51,7 @@ import Copycat from './../Assets/Music/Billie Eilish Copycat.mp3';
 
 import Cards from './Cards';
 import { useMusic } from './MusicContext';
-import ArtistsBio from './ArtistsBio';
+
 export const eilishMix = [
   {
     id: 1,

@@ -8,7 +8,6 @@ import SideBarRight from '../../Components/SidebarRight';
 import Filters from '../../Components/Filters';
 import OverLay from '../../Components/Overlay';
 import Features from '../../Components/Features';
-import Search from '../../Components/Search';
 
 const HomePageBody = () => {
   return (
@@ -23,7 +22,6 @@ const HomePageBody = () => {
         <Features FeaturesTitle="Made for Jxt Darlington" madeForUser=" " />
         <Features FeaturesTitle="Popular radios" Radio=" " />
         <Features FeaturesTitle="Best of Artists" thisIs=" " />
-        <Search />
       </div>
       <SideBarRight />
       <Bottombar />

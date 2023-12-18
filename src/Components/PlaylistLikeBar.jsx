@@ -16,8 +16,6 @@ import { eilishMix } from './EilishMix';
 import { myGospel } from './MyGospel';
 const PlaylistLikeBar = (props) => {
   const {
-    currentPlaylist,
-    setCurrentPlaylist,
     handleChangePlaylist,
     playFirstSong,
     isPlaying,

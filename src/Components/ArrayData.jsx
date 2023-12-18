@@ -31,6 +31,17 @@ import EilishPlaylist from './EilishMix';
 import LifeSucksPlaylist from './LifeSucksMix';
 import MyGospelPlaylist from './MyGospel';
 import PlaylistLikeBar from './PlaylistLikeBar';
+import TTHImg from './../Assets/Images/TTH.jpg';
+import ScienceImg from './../Assets/Images/Science.jpg';
+import LifeEventsImg from './../Assets/Images/LifeEvents.jpg';
+import FridayImg from './../Assets/Images/Friday.jpg';
+import DeepImg from './../Assets/Images/Deep.jpg';
+import GospelImg from './../Assets/Images/Gospel.jpg';
+import AfroImg from './../Assets/Images/Afro.jpg';
+import BeastImg from './../Assets/Images/Beast.jpg';
+import SleepImg from './../Assets/Images/Sleep.jpg';
+import MoviesImg from './../Assets/Images/Movies.jpg';
+
 export const FiltersData = [
   {
     id: 1,
@@ -436,5 +447,126 @@ export const ThisIsData = [
     switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
   },
 ];
-
+export const BrowseCardData = [
+  {
+    id: 1,
+    genre: 'Music',
+    genreImg: TTHImg,
+    background: '#dc148c',
+  },
+  {
+    id: 2,
+    genre: 'Podcasts',
+    genreImg: ScienceImg,
+    background: '#006450',
+  },
+  {
+    id: 3,
+    genre: 'Life Events',
+    genreImg: LifeEventsImg,
+    background: '#8400e7',
+  },
+  {
+    id: 4,
+    genre: 'New Realease',
+    genreImg: FridayImg,
+    background: '#e8115b',
+  },
+  {
+    id: 5,
+    genre: 'Focus',
+    genreImg: DeepImg,
+    background: '#503750',
+  },
+  {
+    id: 6,
+    genre: 'Gospel',
+    genreImg: GospelImg,
+    background: '#0d73ec',
+  },
+  {
+    id: 7,
+    genre: 'Afro',
+    genreImg: AfroImg,
+    background: '#d84000',
+  },
+  {
+    id: 8,
+    genre: 'Beast',
+    genreImg: BeastImg,
+    background: '#777777',
+  },
+  {
+    id: 9,
+    genre: 'Sleep',
+    genreImg: SleepImg,
+    background: '#1e3264',
+  },
+  {
+    id: 10,
+    genre: 'Movies',
+    genreImg: MoviesImg,
+    background: '#af2896',
+  },
+  {
+    id: 11,
+    genre: 'Music',
+    genreImg: TTHImg,
+    background: '#dc148c',
+  },
+  {
+    id: 12,
+    genre: 'Podcasts',
+    genreImg: ScienceImg,
+    background: '#006450',
+  },
+  {
+    id: 13,
+    genre: 'Life Events',
+    genreImg: LifeEventsImg,
+    background: '#8400e7',
+  },
+  {
+    id: 14,
+    genre: 'New Realease',
+    genreImg: FridayImg,
+    background: '#e8115b',
+  },
+  {
+    id: 15,
+    genre: 'Focus',
+    genreImg: DeepImg,
+    background: '#503750',
+  },
+  {
+    id: 16,
+    genre: 'Gospel',
+    genreImg: GospelImg,
+    background: '#0d73ec',
+  },
+  {
+    id: 17,
+    genre: 'Afro',
+    genreImg: AfroImg,
+    background: '#d84000',
+  },
+  {
+    id: 18,
+    genre: 'Beast',
+    genreImg: BeastImg,
+    background: '#777777',
+  },
+  {
+    id: 19,
+    genre: 'Sleep',
+    genreImg: SleepImg,
+    background: '#1e3264',
+  },
+  {
+    id: 20,
+    genre: 'Movies',
+    genreImg: MoviesImg,
+    background: '#af2896',
+  },
+];
 export default FiltersData;

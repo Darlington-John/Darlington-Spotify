@@ -1,8 +1,8 @@
 import LikedPlaylistPageBody from './LikedPlaylistPageBody';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const LikedPlaylistPage = () => {
-  const [likedSongs, setLikedSongs] = useState([]);
+  const [likedSongs] = useState([]);
 
   return (
     <div className="bg-deepBlack">
