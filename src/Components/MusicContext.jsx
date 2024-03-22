@@ -34,6 +34,15 @@ export const MusicProvider = ({ children }) => {
   const [addedSongsPlaylistFour, setAddedSongsPlaylistFour] = useState([]);
   const [addedSongsFive, setAddedSongsFive] = useState([]);
   const [addedSongsPlaylistFive, setAddedSongsPlaylistFive] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
   useEffect(() => {
     const storedLikedSongs =
       JSON.parse(localStorage.getItem('likedSongs')) || [];
@@ -707,6 +716,7 @@ export const MusicProvider = ({ children }) => {
     playFifthPlaylist,
     addSongToPlaylist,
     allPlaylists,
+    isOpen, setIsOpen, openPopup, closePopup
   };
 
   return (

@@ -1,17 +1,18 @@
-import React from 'react';
+import React , {useState} from 'react';
 import ArrLeftIcon from './../Assets/Icons/ArrLeft.svg';
 import ArrRightIcon from './../Assets/Icons/ArrRight.svg';
-import DownloadIcon from './../Assets/Icons/Download.svg';
-import DarlingtonIcon from './../Assets/Images/Blohsh.jpg';
 import AlarmIcon from './../Assets/Icons/Alarm.svg';
 import SettingsIcon from './../Assets/Icons/Settings.svg';
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
-import { useState } from 'react';
+
 import { getGreeting } from './Filters';
 import { toggleNav } from './../JavaScript.js';
 import { Link, useNavigate } from 'react-router-dom';
 import Search from './Search.jsx';
+import { useAuth0 } from "@auth0/auth0-react";
+import profileIcon from './../Assets/Icons/Profile.svg'
 const NavBar = (props) => {
+  const { user } = useAuth0();
   const navigate = useNavigate();
 
   const handleBackClick = () => {
@@ -20,7 +21,33 @@ const NavBar = (props) => {
   const handleForwardClick = () => {
     navigate(1);
   };
-
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+  const { isAuthenticated } = useAuth0();
+  const handleLogin = async () => {
+    await loginWithRedirect({
+      appState: {
+        returnTo: window.location.pathname,
+      },
+    });
+  };
+  const handleLogout = () => {
+    logout({
+      logoutParams: {
+        returnTo: window.location.origin,
+      },
+    });
+  };
+  const handleSignUp = async () => {
+    await loginWithRedirect({
+      appState: {
+        returnTo: window.location.pathname,
+      },
+      authorizationParams: {
+        screen_hint: "signup",
+      },
+    });
+  };
   return (
     <div
       className="flex flex-row items-center justify-between sticky top-0 xs:hidden bg-deepBlack py-2  z-50"
@@ -43,22 +70,39 @@ const NavBar = (props) => {
         <div className="md:hidden ">{props.Search && <Search />}</div>
       </div>
       <div className="flex flex-row gap-4 items-center">
-        <button className="py-2 px-4 bg-white text-base nav-btn rounded-full">
-          Explore premium
+ 
+
+
+        {!isAuthenticated && (
+        <>
+             <button className="py-2 px-4 bg-grey text-base nav-btn rounded-full flex gap-2 items-center text-white" onClick={handleSignUp}>
+Sign Up
         </button>
-        <button className="py-2 px-4 bg-grey text-base nav-btn rounded-full flex gap-2 items-center text-white">
-          <img src={DownloadIcon} className="w-4" alt="" />
-          <span>Install app</span>
+        <button className="py-2 px-4 bg-white text-base nav-btn rounded-full" onClick={handleLogin}>
+          Log in
         </button>
+        </>
+      )}
+      {isAuthenticated && (
+             <button className="py-2 px-4 bg-grey text-base nav-btn rounded-full flex gap-2 items-center text-white" onClick={handleLogout}>
+             Log out
+                     </button>
+      )}
+         {isAuthenticated && (
         <div className="flex items-center gap-2">
           <button className="bg-deepBlack rounded-full p-2 nav-btn">
             <img src={AlarmIcon} className="w-4" alt="" />
           </button>
+       
+            <button className="bg-deepBlack rounded-full p-0  nav-btn"><Link to="/profile">
 
-          <button className="bg-deepBlack rounded-full p-0  nav-btn">
-            <img src={DarlingtonIcon} className="w-6 rounded-full" alt="" />
+            <img src={user? user.picture:  profileIcon}  className="w-6 rounded-full" alt="" />
+            
+            </Link>
           </button>
+     
         </div>
+         )}
       </div>
     </div>
   );

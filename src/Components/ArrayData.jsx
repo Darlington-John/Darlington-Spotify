@@ -6,6 +6,7 @@ import ShitsuImg from './../Assets/Images/Shitsu.jpg';
 import HillSongImg from './../Assets/Images/HillSong.jpg';
 import ChillImg from './../Assets/Images/Chill.jpg';
 import SiaMixImg from './../Assets/Images/SiaMix.jpg';
+import BillieMixImg from './../Assets/Images/BillieMix.jpg';
 import DavidMixImg from './../Assets/Images/DavidMix.jpg';
 
 import PostMixImg from './../Assets/Images/PostMix.jpg';
@@ -19,9 +20,10 @@ import BilieRadioImg from './../Assets/Images/BilieRadio.jpg';
 import DavidRadioImg from './../Assets/Images/DavidRadio.jpg';
 import EdRadioImg from './../Assets/Images/EdRadio.jpg';
 import ThisSiaImg from './../Assets/Images/ThisSia.jpg';
+import ThisBillImg from './../Assets/Images/ThisBill.jpg';
 import ThisXXXImg from './../Assets/Images/ThisXXX.jpg';
 import ThisImagineImg from './../Assets/Images/ThisImagine.jpg';
-import ThisChainImg from './../Assets/Images/ThisChain.jpg';
+
 import ThisTwentyImg from './../Assets/Images/ThisTwenty.jpg';
 
 import ClockIcon from './../Assets/Icons/Clock.svg';
@@ -34,6 +36,7 @@ import PlaylistLikeBar from './PlaylistLikeBar';
 import TTHImg from './../Assets/Images/TTH.jpg';
 import ScienceImg from './../Assets/Images/Science.jpg';
 import LifeEventsImg from './../Assets/Images/LifeEvents.jpg';
+import ThisNeighImg from './../Assets/Images/ThisNeigh.jpg';
 import FridayImg from './../Assets/Images/Friday.jpg';
 import DeepImg from './../Assets/Images/Deep.jpg';
 import GospelImg from './../Assets/Images/Gospel.jpg';
@@ -142,16 +145,11 @@ export const FiltersData = [
 export const mixData = [
   {
     key: 'Billie',
-    FeatureImg: FallAsleepImg,
+    FeatureImg: BillieMixImg,
     CardTitle: 'Billie Eilish Mix',
     Featuring: 'Harry Styles, Sia, Post Malone',
     contentType: 'Playlist',
-    message: (
-      <span>
-        Just some of Billie Eilish songs you might like, not like I care if you
-        do though -<span className="text-sm text-silver"> Darlington </span>
-      </span>
-    ),
+    message: 'Harry Styles, Sia, Post Malone and Billie Eilish',
     Time: ' about 2hrs 30mins',
     Likes: '768, 573 likes',
     number: '#',
@@ -175,8 +173,8 @@ export const mixData = [
     duration: ClockIcon,
     album: 'Album',
     title: 'Title',
-    playlistSongs: <EilishPlaylist Eilish=" " />,
-    switchPlaylist: <PlaylistLikeBar eilishMixPlaylistSwitch=" " />,
+    playlistSongs: <Playlists myHits=" " />,
+    switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
   },
   {
     key: 'Sia',
@@ -371,6 +369,36 @@ export const radioData = [
 ];
 export const ThisIsData = [
   {
+    key: 'ThisBil',
+    FeatureImg: ThisBillImg,
+    CardTitle: 'Billie Eilish',
+    Featuring: 'By Spotify',
+    message: 'All the essentials all in one playlist',
+    Time: 'about 2hrs 30mins',
+    Likes: '768, 573 likes',
+    number: '#',
+    duration: ClockIcon,
+    album: 'Album',
+    title: 'Title',
+    playlistSongs:  <Playlists eilish=" " /> ,
+    switchPlaylist: <PlaylistLikeBar eilishMixPlaylistSwitch=" " />,
+  },
+  {
+    key: 'ThisNeigh',
+    FeatureImg: ThisNeighImg,
+    CardTitle: 'The Neighbourhood',
+    Featuring: 'By spotify',
+    message: 'All the essentials all in one playlist',
+    Time: 'about 2hrs 30mins',
+    Likes: '768, 573 likes',
+    number: '#',
+    duration: ClockIcon,
+    album: 'Album',
+    title: 'Title',
+    playlistSongs: <Playlists myHits=" " />,
+    switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
+  },
+  {
     key: 'ThisSia',
     FeatureImg: ThisSiaImg,
     CardTitle: 'Sia',
@@ -386,10 +414,10 @@ export const ThisIsData = [
     switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
   },
   {
-    key: 'ThisTwenty',
-    FeatureImg: ThisTwentyImg,
-    CardTitle: 'Twenty One Pilots',
-    Featuring: 'By spotify',
+    key: 'ThisImagine',
+    FeatureImg: ThisImagineImg,
+    CardTitle: 'Imagine Dragons',
+    Featuring: 'By Spotify',
     message: 'All the essentials all in one playlist',
     Time: 'about 2hrs 30mins',
     Likes: '768, 573 likes',
@@ -398,13 +426,14 @@ export const ThisIsData = [
     album: 'Album',
     title: 'Title',
     playlistSongs: <Playlists myHits=" " />,
-    switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
+    switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />
   },
+
   {
-    key: 'ThisImagine',
-    FeatureImg: ThisImagineImg,
-    CardTitle: 'Imagine Dragons',
-    Featuring: 'By Spotify',
+    key: 'ThisTwenty',
+    FeatureImg: ThisTwentyImg,
+    CardTitle: 'Twenty One Pilots',
+    Featuring: 'By spotify',
     message: 'All the essentials all in one playlist',
     Time: 'about 2hrs 30mins',
     Likes: '768, 573 likes',
@@ -430,22 +459,7 @@ export const ThisIsData = [
     playlistSongs: <Playlists myHits=" " />,
     switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
   },
-
-  {
-    key: 'ThisChain',
-    FeatureImg: ThisChainImg,
-    CardTitle: 'The Chainsmokers',
-    Featuring: 'by Spotify',
-    message: 'All the essentials all in one playlist',
-    Time: 'about 2hrs 30mins',
-    Likes: '768, 573 likes',
-    number: '#',
-    duration: ClockIcon,
-    album: 'Album',
-    title: 'Title',
-    playlistSongs: <Playlists myHits=" " />,
-    switchPlaylist: <PlaylistLikeBar myHitsMixPlaylistSwitch=" " />,
-  },
+  
 ];
 export const BrowseCardData = [
   {
@@ -560,6 +574,7 @@ export const BrowseCardData = [
     id: 19,
     genre: 'Sleep',
     genreImg: SleepImg,
+    
     background: '#1e3264',
   },
   {

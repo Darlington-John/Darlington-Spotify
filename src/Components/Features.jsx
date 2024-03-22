@@ -9,7 +9,7 @@ const Features = (props) => {
       {props.topMixes && (
         <>
           <div className="flex flex-row items-center justify-between">
-            <h1 className="text-white text-3xl font-bold hover:underline cursor-pointer 2xs:text-lg">
+            <h1 className="text-white text-3xl font-bold  2xs:text-lg">
               {props.FeaturesTitle}
             </h1>
           </div>
@@ -24,7 +24,7 @@ const Features = (props) => {
       {props.madeForUser && (
         <>
           <div className="flex flex-row items-center justify-between">
-            <h1 className="text-white text-3xl font-bold hover:underline cursor-pointer 2xs:text-lg">
+            <h1 className="text-white text-3xl font-bold  2xs:text-lg">
               {props.FeaturesTitle}
             </h1>
           </div>

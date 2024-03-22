@@ -1,16 +1,28 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from '../Pages/Home/HomePage';
-import PlaylistPage from '../Pages/Playlist/PlaylistPage';
+import {  Route, Routes } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
+import HomePage from '../Pages/HomePage';
+import PlaylistPage from '../Pages/PlaylistPage';
 import NowPlaying from '../Components/NowPlaying';
-import LikedPlaylistPage from '../Pages/LikedPlaylist/LikedPlaylistPage';
-import CreatedPlaylist from '../Pages/CreatedPlaylist/CreatedPlaylistPage';
-import SearchPage from '../Pages/Search/SearchPage';
-require('events').EventEmitter.defaultMaxListeners = 40;
+import LikedPlaylistPage from '../Pages/LikedPlaylistPage';
+import CreatedPlaylist from '../Pages/CreatedPlaylistPage';
+import SearchPage from '../Pages/SearchPage';
+import { CallbackPage } from '../Pages/callback-page';
+import Profile from '../Pages/profile';
+import { PageLoader } from '../Components/PageLoader';
+
 
 function App() {
+  const { isLoading } = useAuth0();
+  if (isLoading) {
+    return (
+
+      <PageLoader/>
+
+    );
+  }
   return (
-    <BrowserRouter>
+<>
       <Routes>
         <Route path="/" element={<HomePage />} />{' '}
         <Route path="FiltersData/:PlaylistTitle" element={<PlaylistPage />} />{' '}
@@ -21,11 +33,12 @@ function App() {
           element={<CreatedPlaylist />}
         />
         <Route path="/SearchPage" element={<SearchPage />} />
-      </Routes>{' '}
+        <Route path="/callback" element={<CallbackPage />} />
+        <Route path="/profile" element={<Profile/>} />
+      </Routes>
       <NowPlaying nowPlayingMobile=" " />
-    </BrowserRouter>
+      </>
   );
 }
 
 export default App;
-

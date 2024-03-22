@@ -18,23 +18,33 @@ module.exports = {
         },
         screens: {
             '2xl': { max: '1535px' },
-            // => @media (max-width: 1535px) { ... }
+            
             '1xl': { max: '1400px' },
             xl: { max: '1279px' },
-            // => @media (max-width: 1279px) { ... }
+            
 
             lg: { max: '1023px' },
-            // => @media (max-width: 1023px) { ... }
+            
 
             md: { max: '767px' },
-            // => @media (max-width: 767px) { ... }
+            
 
             sm: { max: '639px' },
             xs: { max: '575px' },
             '2xs': { max: '400px' },
-            // => @media (max-width: 639px) { ... }
+            
         },
-        extend: {},
+        extend: {
+            keyframes: {
+                bounce: {
+                  '0%, 100%': { transform: 'scale(1)' },
+                  '50%': { transform: 'scale(1.2)' },
+                }
+              },
+              animation: {
+                wiggle: 'bounce 1s ease alternate infinite',
+              }
+        },
     },
     plugins: [],
 };

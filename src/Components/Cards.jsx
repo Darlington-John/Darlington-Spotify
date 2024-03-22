@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation  } from 'react-router-dom';
 
 import BillieEilishImg from './../Assets/Images/BillieEilish.jpg';
+import greenMusicImg from './../Assets/Images/greenMusic.png';
+import { useAuth0 } from "@auth0/auth0-react";
 
-import { useLocation } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
 import LikeIcon from './../Assets/Icons/Like.svg';
 import LikeActiveIcon from './../Assets/Icons/LikeActive.svg';
 import BillieForestImg from './../Assets/Images/BillieForest.jpg';
@@ -24,8 +24,8 @@ import VerEllipsisIcon from './../Assets/Icons/VerEllipsis.svg';
 import PauseWhiteIcon from './../Assets/Icons/PauseWhite.svg';
 
 import { useMusic } from './MusicContext';
-
 const Cards = (props) => {
+  const { isAuthenticated } = useAuth0();
   const {
     selectedSong,
     toggleLike,
@@ -43,6 +43,7 @@ const Cards = (props) => {
     addedSongsFour,
     toggleAddedFive,
     addedSongsFive,
+    openPopup
   } = useMusic();
   const [showMessage, setShowMessage] = useState(false);
   const [showAddedMessage, setShowAddedMessage] = useState(false);
@@ -175,7 +176,7 @@ const Cards = (props) => {
   };
 
   const { isPlaying, togglePlay } = props;
-  const [createdPlaylists, setCreatedPlaylists] = useState(
+  const [createdPlaylists] = useState(
     JSON.parse(localStorage.getItem('createdPlaylists')) || [],
   );
 
@@ -372,7 +373,7 @@ const Cards = (props) => {
       {props.navbarCardsAlbum && (
         <div
           className="w-full flex flex-col gap-8 rounded-lg navbar-cards-container cursor-pointer"
-          onClick={createPlaylist}
+          onClick={isAuthenticated ? createPlaylist : openPopup}
         >
           <div className="w-full flex flex-col gap-8 px-5 py-1 rounded-lg card1">
             <div className="w-full flex items-center justify-start gap-5 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
@@ -427,7 +428,7 @@ const Cards = (props) => {
         <div className="gradient-container  flex flex-col ">
           <div
             className="flex flex-col gap-3 items-start relative rounded-t-lg"
-            onClick={openPopUp}
+            onClick={selectedSong ? openPopUp : null}
           >
             {selectedSong ? (
               <>
@@ -439,18 +440,17 @@ const Cards = (props) => {
             ) : (
               <>
                 <img
-                  src={BillieEilishImg}
+                  src={greenMusicImg}
                   className=" w-full rounded-t-xl max-h-80 object-cover"
                 />
               </>
             )}
             <div className="gradient-overlay"></div>
             <h1
-              className="text-white absolute top-3 left-5 text-base"
+              className=" w-full text-white absolute top-3 left-5 text-base"
               style={{ color: 'white' }}
             >
-              {' '}
-              About the artist
+              {selectedSong ?'About the artist' : (<div className='p-1 bg-grey w-3/5'></div>)}
             </h1>
           </div>
           <div className="bg-lightBlack flex flex-col  w-full py-4 px-2 rounded-b-xl">
@@ -458,25 +458,26 @@ const Cards = (props) => {
               className="text-xl song-name-link hover:underline"
               style={{ color: 'white' }}
             >
-              {selectedSong ? selectedSong.songArtistMain : 'Billie Eilish'}
+              {selectedSong ? selectedSong.songArtistMain : (<div className='p-1 bg-grey w-3/5'></div>)}
             </h1>
             <div className="flex justify-between items-center py-2 flex-wrap">
               <h2 className="flex gap-2 items-baseline flex-wrap">
-                <span className="text-lg">
+                <span className="text-lg w-full">
                   {' '}
-                  {selectedSong ? selectedSong.songStream : '67,767,338'}
+                  {selectedSong ? selectedSong.songStream : (<div className='p-1 bg-grey w-3/5'></div>)}
                 </span>
-                <span className="text-sm">Monthly Listeners</span>
+                <span className="text-sm">{selectedSong ? ('Monthly Listeners') : (<div className='p-1 bg-grey w-2/5'></div>)}</span>
               </h2>
               <button
                 onClick={toggleFollowed}
-                className="py-2 my-2 px-4 bg-grey follow-button rounded-full text-sm z-10"
+                className={`py-2 my-2 px-4 bg-grey follow-button rounded-full text-sm z-10  ${selectedSong ? (''): (' hidden')}`}
               >
+                
                 {isFollowed ? <span>Follow</span> : <span>Unfollow</span>}
               </button>
             </div>
             <div className="Artist-Bio">
-              <h3 className="text-sm">
+              <h3 className={`text-sm ${selectedSong ? ('') : ("invisible")}`}>
                 {selectedSong ? (
                   selectedSong.aboutArtists
                 ) : (
@@ -671,9 +672,9 @@ const Cards = (props) => {
           className={`grid grid-cols-3  w-full hover:bg-lightBlack   py-2 rounded-md px-4 items-center song-card xl:justify-between xl:grid-cols-2 md:px-2 ${
             isOpen ? 'spGreen bg-grey hover:bg-grey' : ''
           }`}
-          onDoubleClick={() => {
+          onDoubleClick={isAuthenticated ? () => {
             togglePlay(props.audioUrl);
-          }}
+          } : openPopup}
         >
           <div className="flex flex-row items-center gap-2 w-full">
             <div className="song-card-play">
@@ -688,9 +689,9 @@ const Cards = (props) => {
               <img
                 src={isPlaying ? PauseWhiteIcon : PlayWhiteIcon}
                 className="w-3 PlayWhiteIcon"
-                onClick={() => {
+                onClick={isAuthenticated ? () => {
                   togglePlay(props.audioUrl);
-                }}
+                } : openPopup}
               />
             </div>
             <div className="flex flex-row gap-2 items-center">
@@ -822,40 +823,75 @@ const Cards = (props) => {
       <>
         {' '}
         {props.navbarCardsLike && (
-          <Link to="/likedSongs">
-            <div
-              className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack ${
-                location.pathname === '/likedSongs' ? 'bg-lightBlack' : ''
-              }`}
-            >
-              <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
-                <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
-                  <div className="flex items-center justify-center bg-silver  rounded-md ">
-                    <img src={LikedSongsImg} className="  w-12 rounded-md" />
-                  </div>
-
-                  <div className="flex flex flex-col gap-1 text-base">
-                    <Link
-                      to="/likedSongs"
-                      id={location.pathname === '/likedSongs' ? 'active' : ''}
-                    >
-                      Liked songs
-                    </Link>
-                    <div className="flex flex-row gap-1 text-sm text-silver">
-                      <h1>Playlist</h1>
-                      <h1>.</h1>
-                      <h1>{likedSongsCount} songs</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
-                <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-                  <img src={LikedSongsImg} className="w-12 rounded-md" />
-                </div>
-              </div>
-            </div>
-          </Link>
+          <>
+          {isAuthenticated ? (
+             <Link to="/likedSongs">
+             <div
+               className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack ${
+                 location.pathname === '/likedSongs' ? 'bg-lightBlack' : ''
+               }`}
+             >
+               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
+                 <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
+                   <div className="flex items-center justify-center bg-silver  rounded-md ">
+                     <img src={LikedSongsImg} className="  w-12 rounded-md" />
+                   </div>
+ 
+                   <div className="flex flex flex-col gap-1 text-base">
+                     <Link
+                       to="/likedSongs"
+                       id={location.pathname === '/likedSongs' ? 'active' : ''}
+                     >
+                       Liked songs
+                     </Link>
+                     <div className="flex flex-row gap-1 text-sm text-silver">
+                       <h1>Playlist</h1>
+                       <h1>.</h1>
+                       <h1>{likedSongsCount} songs</h1>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
+                 <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
+                   <img src={LikedSongsImg} className="w-12 rounded-md"  alt=''/>
+                 </div>
+               </div>
+             </div>
+           </Link>) : (
+             <div
+               className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack opacity-20  cursor-not-allowed`}
+             >
+               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
+                 <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
+                   <div className="flex items-center justify-center bg-silver  rounded-md ">
+                     <img src={LikedSongsImg} className="  w-12 rounded-md" />
+                   </div>
+ 
+                   <div className="flex flex flex-col gap-1 text-base">
+                     <Link
+                       to="/likedSongs"
+                       id={location.pathname === '/likedSongs' ? 'active' : ''}
+                     >
+                       Liked songs
+                     </Link>
+                     <div className="flex flex-row gap-1 text-sm text-silver">
+                       <h1>Playlist</h1>
+                       <h1>.</h1>
+                       <h1>{likedSongsCount} songs</h1>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
+                 <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
+                   <img src={LikedSongsImg} className="w-12 rounded-md"  alt=''/>
+                 </div>
+               </div>
+             </div>
+         )}
+      </>
+          
         )}
       </>
 
@@ -934,7 +970,7 @@ const Cards = (props) => {
       )}
       {props.createdPlaylist && (
         <>
-          {playlists.map((playlist) => (
+{isAuthenticated ? (   <>       {playlists.map((playlist) => (
             <Link
               to={`/CreatedPlaylist/${playlist.id}?imgSrc=${encodeURIComponent(
                 playlist.imgSrc,
@@ -985,7 +1021,7 @@ const Cards = (props) => {
                 </div>
               </div>
             </Link>
-          ))}
+          ))}</>) : (' ')}
         </>
       )}
       {props.Browse && (

@@ -5,16 +5,16 @@ const OverLay = () => {
     <div className="Overlay" id="myNav">
       <div className="Overlay-content">
         <div>
-          <Link to="/K12Page">View Account</Link>
-          <Link to="/HigherEdPage">Profile</Link>
-          <Link to="/ChildrenPage">Log Out</Link>
+          <Link to="/profile">View Account</Link>
+          <Link to="/profile">Profile</Link>
+
         </div>
         <div className="MiniLinks">
-          <Link to="/SignUpPage">Premium</Link>
-          <Link to="/SignUpPage">Support</Link>
-          <Link to="/SignUpPage">Download</Link>
-          <Link to="/SignUpPage">Privacy</Link>
-          <Link to="/SignUpPage">Terms</Link>
+          <Link to="#">Premium</Link>
+          <Link to="#">Support</Link>
+          <Link to="#">Download</Link>
+          <Link to="#">Privacy</Link>
+          <Link to="#">Terms</Link>
         </div>
       </div>
     </div>

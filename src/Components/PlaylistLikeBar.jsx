@@ -14,7 +14,9 @@ import { lifeSucksMix } from './LifeSucksMix';
 
 import { eilishMix } from './EilishMix';
 import { myGospel } from './MyGospel';
+import { useAuth0 } from "@auth0/auth0-react";
 const PlaylistLikeBar = (props) => {
+  const { isAuthenticated } = useAuth0();
   const {
     handleChangePlaylist,
     playFirstSong,
@@ -30,6 +32,7 @@ const PlaylistLikeBar = (props) => {
     playFourthPlaylist,
     addedSongsFive,
     playFifthPlaylist,
+    openPopup
   } = useMusic();
   const [isLike, setIsLike] = useState(false);
   const toggleLike = () => {
@@ -37,15 +40,16 @@ const PlaylistLikeBar = (props) => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between sticky top-0  bg-transparent py-2  md:pt-4">
+    <div className="flex flex-row items-center justify-between   bg-transparent py-2  md:pt-4">
       <div className="flex flex-row gap-6 items-center md:justify-between md:w-full">
         {props.ambientPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('ambientSongs');
               playFirstSong(ambientSongs);
-            }}
+            } : openPopup}
+
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />
@@ -57,10 +61,10 @@ const PlaylistLikeBar = (props) => {
         {props.myHitsMixPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('myHitsMix');
               playFirstSong(myHitsMix);
-            }}
+            } : openPopup}
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />
@@ -72,10 +76,10 @@ const PlaylistLikeBar = (props) => {
         {props.eilishMixPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('eilishMix');
               playFirstSong(eilishMix);
-            }}
+            } : openPopup}
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />
@@ -87,10 +91,10 @@ const PlaylistLikeBar = (props) => {
         {props.lifeSucksMixPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('lifeSucksMix');
               playFirstSong(lifeSucksMix);
-            }}
+            } : openPopup}
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />
@@ -102,10 +106,10 @@ const PlaylistLikeBar = (props) => {
         {props.myGospelPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('myGospel');
               playFirstSong(myGospel);
-            }}
+            } : openPopup}
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />
@@ -117,10 +121,10 @@ const PlaylistLikeBar = (props) => {
         {props.likedSongsPlaylistSwitch && (
           <button
             className="bg-spGreen rounded-full p-4 md:order-2"
-            onClick={() => {
+            onClick={isAuthenticated ? () => {
               handleChangePlaylist('likedSongs');
               playFirstSong(likedSongs);
-            }}
+            } : openPopup}
           >
             {isPlaying ? (
               <img src={PauseIcon} className="w-5" />

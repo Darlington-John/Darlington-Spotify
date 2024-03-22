@@ -1,7 +1,7 @@
 import React from 'react';
 import Cards from './Cards';
 import HappierThanEverImg from './../Assets/Images/HappierThanEver.jpg';
-
+import greenMusicImg from './../Assets/Images/greenMusic.png';
 import ellipsisIcon from './../Assets/Icons/ellipsis.svg';
 
 import XmarkIcon from './../Assets/Icons/Xmark.svg';
@@ -95,10 +95,10 @@ const SideBarRight = (props) => {
             ) : (
               <div className="flex flex-col animate-pulse w-full">
                 <div className="flex flex-row items-center justify-between  w-full p-4">
-                  <h1 className="song-header hover:underline">
+                  <h1 className="song-header hover:underline w-full">
                     {selectedSong
                       ? selectedSong.songName
-                      : "I Didn't Change My Number"}
+                      :(<div className='p-1 bg-grey w-3/5'></div>)}
                   </h1>
                   <img
                     src={XmarkIcon}
@@ -119,26 +119,26 @@ const SideBarRight = (props) => {
                   ) : (
                     <>
                       <img
-                        src={HappierThanEverImg}
+                        src={greenMusicImg}
                         className="rounded-xl"
                         alt=""
                       />
                     </>
                   )}
                   <div className="flex flex-row justify-between ">
-                    <div className="flex flex-col ">
+                    <div className="flex flex-col w-full">
                       <Link
                         to="#"
                         className="text-xl song-name-link hover:underline lg:text-base"
                       >
                         {selectedSong
                           ? selectedSong.songName
-                          : "I Did'nt Change My Number"}
+                          :(<div className='p-1 bg-grey w-3/5'></div>)}
                       </Link>
                       <Link className="hover:underline">
                         {selectedSong
                           ? selectedSong.songArtistMain
-                          : 'Billie Eilish'}
+                          : (<div className='p-1 bg-grey w-2/5 mt-2'></div>)}
                       </Link>
                     </div>
                   </div>

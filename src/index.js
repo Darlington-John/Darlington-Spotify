@@ -4,14 +4,20 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App/App';
 import { MusicProvider } from './Components/MusicContext';
+import { BrowserRouter } from 'react-router-dom';
+import { Auth0ProviderWithNavigate } from './auth0-provider-with-navigate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MusicProvider>
+    <BrowserRouter>
+      <Auth0ProviderWithNavigate>
+      <MusicProvider>
       <App />
-    </MusicProvider>{' '}
-  </React.StrictMode>,
+    </MusicProvider>
+      </Auth0ProviderWithNavigate>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

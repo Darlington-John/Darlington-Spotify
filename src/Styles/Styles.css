@@ -12,7 +12,27 @@
   background-color: #ffffff !important;
   transition: all 1s ease;
 }
+.classic-input {
+  width: 100%;
+  background-color: #00000000;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: none;
+  
+  font-size: 16px;
+  outline: 1px solid #d3d3d3;
+  box-sizing: border-box;
+}
 
+.classic-input:focus {
+  outline: 2px solid #d3d3d3;
+  pointer-events: none;
+}
+
+.classic-input::placeholder {
+  color: #d3d3d378;
+  font-size: 14px;
+}
 .app-sidebar {
   min-width: 80px;
   max-width: 25%;
@@ -227,21 +247,21 @@ a {
   flex-direction: column;
 }
 
-.play-button {
+/* .play-button {
   background-color: #ffffff;
   color: white;
   border: none;
   border-radius: 50%;
   padding: 8px;
   cursor: pointer;
-  z-index: 500;
-}
 
-.duration {
+} */
+
+/* .duration {
   color: #d3d3d3;
   font-size: 12px;
   padding: 0px 10px;
-}
+} */
 
 .progress-container {
   width: 550px;
@@ -489,12 +509,12 @@ input[type="range"]:disabled::-moz-range-thumb {
 }
 
 .now-playing-mobile {
-  background: rgb(135, 116, 83);
+
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
   bottom: 62px;
-  border-radius: 10px;
+
   display: none;
 }
 
@@ -768,7 +788,7 @@ button:not(:hover) {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    #121212 10%,
+    #121212 7%,
     #121212 100%
   );
   padding-bottom: 30px;

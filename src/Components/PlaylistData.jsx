@@ -76,6 +76,8 @@ import FormsOfFearImg from './../Assets/Images/FormsOfFear.jpg';
 
 import ItWas from './../Assets/Music/Harry Styles As It Was.mp3';
 import Circles from './../Assets/Music/Post Malone Circles.mp3';
+import Sweather from './../Assets/Music/The Neighbourhood Sweater Weather.mp3';
+import Softcore from './../Assets/Music/The Neighbourhood Softcore.mp3';
 import Chandelier from './../Assets/Music/Sia Chandelier.mp3';
 import Hearing from './../Assets/Music/Hearing Damage Thom Yorke.mp3';
 import Demons from './../Assets/Music/Imagine Dragons Demons.mp3';
@@ -92,7 +94,7 @@ import Flames from './../Assets/Music/David Guetta Ft Sia Flames.mp3';
 import FlamesImg from './../Assets/Images/Flames.jpg';
 
 import DavidImg from './../Assets/Images/David.jpg';
-
+import hardImg from './../Assets/Images/hard.jpg';
 import DavidTwoImg from './../Assets/Images/DavidTwo.jpg';
 import DavidThreeImg from './../Assets/Images/DavidThree.jpg';
 import DavidFourImg from './../Assets/Images/DavidFour.jpg';
@@ -105,7 +107,11 @@ import HarryTwoImg from './../Assets/Images/HarryTwo.jpg';
 import HarryOneImg from './../Assets/Images/HarryOne.jpg';
 import HarryHouseImg from './../Assets/Images/HarryHouse.jpg';
 import PostImg from './../Assets/Images/Post.jpg';
-
+import neighImg from './../Assets/Images/neigh.jpg';
+import cloudImg from './../Assets/Images/cloud.jpg';
+import neighOneImg from './../Assets/Images/neighOne.jpg';
+import neighTwoImg from './../Assets/Images/neighTwo.jpg';
+import neighThreeImg from './../Assets/Images/neighThree.jpg';
 import PostTwoImg from './../Assets/Images/PostTwo.jpg';
 import PostThreeImg from './../Assets/Images/PostThree.jpg';
 import PostFourImg from './../Assets/Images/PostFour.jpg';
@@ -135,7 +141,10 @@ import GlassThreeImg from './../Assets/Images/GlassThree.jpg';
 import LSDImg from './../Assets/Images/LSD.jpg';
 import SmokeImg from './../Assets/Images/Smoke.jpg';
 import MadImg from './../Assets/Images/Mad.jpg';
-
+import Daddy from './../Assets/Music/The Neighbourhood Syd Daddy Issues.mp3';
+import Cry from './../Assets/Music/The Neighbourhood Cry Baby.mp3';
+import Afraid from './../Assets/Music/The Neighbourhood Afraid.mp3';
+import Alley from './../Assets/Music/The Neighbourhood Alleyways.mp3';
 import Gimme from './../Assets/Music/Sia Gimme Love Reasonable Woman Version.mp3';
 import GimmeImg from './../Assets/Images/Gimme.jpg';
 import BlindImg from './../Assets/Images/Blind.jpg';
@@ -167,7 +176,6 @@ export const myHitsMix = [
   {
     id: 1,
     songCard: ' ',
-    songNumber: '1',
     songImg: HappierThanEverImg,
     songName: 'OverHeated',
     songArtists: 'Billie Eilish',
@@ -221,6 +229,47 @@ export const myHitsMix = [
           i wanted,' and Best Song Written For Visual Media for 'No Time To
           Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
           Billie and her brother FINNEAS, who also produced the album.`,
+  },
+  {
+    songCard: ' ',
+    songImg: cloudImg,
+    songName: 'Sweather Weather',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "I love you",
+    songDuration: '4:00',
+    audioUrl: Sweather,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
   },
   {
     id: 2,
@@ -412,7 +461,6 @@ export const myHitsMix = [
   {
     id: 5,
     songCard: ' ',
-    songNumber: '5',
     songImg: FallAsleepImg,
     songName: 'Bad Guy',
     songArtists: 'Billie Eilish',
@@ -466,6 +514,47 @@ export const myHitsMix = [
           i wanted,' and Best Song Written For Visual Media for 'No Time To
           Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
           Billie and her brother FINNEAS, who also produced the album.`,
+  },
+  {
+    songCard: ' ',
+    songImg: hardImg,
+    songName: 'Softcore',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "Hard to Imagine",
+    songDuration: '3:26',
+    audioUrl: Softcore,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
   },
   {
     id: 6,
@@ -541,6 +630,47 @@ export const myHitsMix = [
         album).
   
     `,
+  },
+  {
+    songCard: ' ',
+    songImg: cloudImg,
+    songName: 'Daddy Issues',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "I love you ",
+    songDuration: '4:20',
+    audioUrl: Daddy,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
   },
   {
     id: 7,
@@ -660,6 +790,47 @@ export const myHitsMix = [
           i wanted,' and Best Song Written For Visual Media for 'No Time To
           Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
           Billie and her brother FINNEAS, who also produced the album.`,
+  },
+  {
+    songCard: ' ',
+    songImg: hardImg,
+    songName: 'Cry baby',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "Hard to Imagine ",
+    songDuration: '3:10',
+    audioUrl: Cry,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
   },
   {
     id: 9,
@@ -840,6 +1011,47 @@ export const myHitsMix = [
     `,
   },
   {
+    songCard: ' ',
+    songImg: cloudImg,
+    songName: 'Alleyways',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "I love you ",
+    songDuration: '4:28',
+    audioUrl: Alley,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
+  },
+  {
     id: 12,
     songCard: ' ',
     songNumber: '12',
@@ -968,6 +1180,47 @@ export const myHitsMix = [
           i wanted,' and Best Song Written For Visual Media for 'No Time To
           Die.’ Billie Eilish’s latest album ‘Happier Than Ever’ was written by
           Billie and her brother FINNEAS, who also produced the album.`,
+  },
+  {
+    songCard: ' ',
+    songImg: hardImg,
+    songName: 'Afraid',
+    songArtists: 'The Neighbourhood',
+    songArtistMain: 'The Neighbourhood',
+    songAlbum: "Hard to Imagine",
+    songDuration: '4:27',
+    audioUrl: Afraid,
+    artistImg: neighImg,
+    songStream: '39,767,338',
+    aboutArtists: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Br...
+    `,
+    artistsFirst: neighOneImg,
+    artistsSec: neighTwoImg,
+    artistsThird: neighThreeImg,
+    artistsFourth: neighOneImg,
+    artistsFifth: neighThreeImg,
+    artistsNo: '#30',
+    artistFollow: '42,054,272',
+    listLocOne: 'Jarkarta, ID',
+    listOne: '1,048,590',
+    listLocTwo: 'Mexico City, MX',
+    listTwo: '911,711',
+    listLocThree: 'London, GB',
+    listThree: '894,229 ',
+    listLocFour: 'Syndney, AU',
+    listFour: '782,582 ',
+    listLocFive: 'Sao Paulo, BR',
+    listFive: '744,634 ',
+    artistsBio: `
+    Since 2011, California quintet The Neighbourhood, with  Rutherford (vocals), Zach Abels (guitar), Jeremy Freedman (guitar), Mikey Margott (bass), and Brandon Fried (drums), have zigged and zagged past conventions and expectations. Following the success of their platinum-selling debut  and lead single "," they worked with everyone from  to , graced top festivals like Coachella, and appeared on late-night television. With 2018's third album, , the band pushed past mere commercial success with over 1 billion streams and views, and earned critical acclaim.
+
+    So, what’s next? Instead of stealing away to a remote locale or exotic hideaway, Jesse Rutherford has retreated inward. Under silver paint and grills, Chip Chrome introduces himself on the band's fourth full-length, . Big questions remain. Is this still The Neighbourhood? Are Chip and Jesse the same person?
+    
+    In fact, Chip has always been behind-the-scenes. He stepped into the spotlight on the 2019 single "." "I wanted to do something totally new,” Jesse revealed. “We had a plan to do a music video for 'Middle of Somewhere,' and I showed up in spandex and paint! Chip was a way for me to say, 'I'm going to do me. You're not going to stop me.'"
+    
+    “Chip Chrome & The Mono-Tones helped define my voice,” Jesse added. “The more I hear it, the more I think 'This is totally a Neighbourhood record.'”"
+      `,
   },
   {
     id: 14,

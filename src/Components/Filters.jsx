@@ -1,10 +1,12 @@
 import React from 'react';
 import Cards from './Cards';
 import FiltersData from './ArrayData';
+import { useAuth0 } from "@auth0/auth0-react";
 const Filters = () => {
+  const { isAuthenticated } = useAuth0();
   const greeting = getGreeting();
-  return (
-    <div className="flex flex-col py-6 gap-4  2xs:hidden">
+  return (<>
+      {isAuthenticated ? (    <div className="flex flex-col py-6 gap-4  2xs:hidden">
       <h1 className="text-white text-3xl font-bold xs:hidden">{greeting}</h1>
 
       <div className="grid-cols-3 grid  justify-between w-full gap-3 md:grid-cols-2  ">
@@ -18,7 +20,8 @@ const Filters = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div>) : ('')}
+  </>
   );
 };
 

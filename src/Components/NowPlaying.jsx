@@ -1,30 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import ChangeMyNumber from "./../Assets/Music/Billie Eilish-I did'nt change my number.mp3";
-import HappierThanEverImg from './../Assets/Images/HappierThanEver.jpg';
+import greenMusicImg from './../Assets/Images/greenMusic.png';
 import { Link } from 'react-router-dom';
 import PlayIcon from './../Assets/Icons/Play.svg';
 import PauseIcon from './../Assets/Icons/Pause.svg';
 import NextIcon from './../Assets/Icons/Next.svg';
+import NextDisabledIcon from './../Assets/Icons/NextDisabled.svg';
 import PreviousIcon from './../Assets/Icons/Previous.svg';
+import PreviousDisabledIcon from './../Assets/Icons/PreviousDisabled.svg';
 import ShuffleIcon from './../Assets/Icons/Shuffle.svg';
 import ShuffleActiveIcon from './../Assets/Icons/ShuffleActive.svg';
+import ShuffleDisabledIcon from './../Assets/Icons/ShuffleDisabled.svg';
 import LoopIcon from './../Assets/Icons/Loop.svg';
-
+import LoopDisabledIcon from './../Assets/Icons/LoopDisabled.svg';
 import LoopOneIcon from './../Assets/Icons/LoopOne.svg';
 
 import NowPlayingIcon from './../Assets/Icons/NowPlaying.svg';
+import NowPlayingDisabledIcon from './../Assets/Icons/NowPlayingDisabled.svg';
 import NowPlayingActiveIcon from './../Assets/Icons/NowPlayingActive.svg';
 import MicIcon from './../Assets/Icons/Mic.svg';
+import MicDisabledIcon from './../Assets/Icons/MicDisabled.svg';
 import MicActiveIcon from './../Assets/Icons/MicActive.svg';
 import QueueIcon from './../Assets/Icons/Queue.svg';
+import QueueDisabledIcon from './../Assets/Icons/QueueDisabled.svg';
 import QueueActiveIcon from './../Assets/Icons/QueueActive.svg';
 import ConnectedIcon from './../Assets/Icons/Connected.svg';
+import ConnectedDisabledIcon from './../Assets/Icons/ConnectedDisabled.svg';
 import ConnectedActiveIcon from './../Assets/Icons/ConnectedActive.svg';
 import UnMuteIcon from './../Assets/Icons/UnMute.svg';
 import MuteIcon from './../Assets/Icons/Mute.svg';
+import ColorThief from 'colorthief';
 
 import { useMusic } from './MusicContext';
 const NowPlaying = (props) => {
+  const [bgColor, setBgColor] = useState('#000');
   const {
     selectedSong,
     togglePlay,
@@ -38,6 +47,22 @@ const NowPlaying = (props) => {
     handleToggleShuffle,
     isShuffleOn,
   } = useMusic();
+  useEffect(() => {
+    const getColor = async () => {
+      const colorThief = new ColorThief();
+      const img = document.createElement('img');
+      img.src =  selectedSong  ? selectedSong.songImg :  greenMusicImg;
+      img.crossOrigin = 'Anonymous'; // Enable CORS
+ img.onload = () => {
+  const lightVibrantColor = colorThief.getPalette(img, 5)[2];
+
+      const rgbColor = `rgb(${lightVibrantColor.join(', ')})`;
+      setBgColor(rgbColor);
+    };
+    };
+    getColor();
+  }, [selectedSong  ? selectedSong.songImg :  greenMusicImg]);
+
   const { audioRef } = useMusic();
 
   const [isShuffle, setIsShuffle] = useState(false);
@@ -139,6 +164,7 @@ const NowPlaying = (props) => {
         >
           <div>
             {selectedSong ? (
+              
               <>
                 <img
                   src={selectedSong.songImg}
@@ -149,41 +175,44 @@ const NowPlaying = (props) => {
             ) : (
               <>
                 <img
-                  src={HappierThanEverImg}
+                  src={greenMusicImg}
                   className="w-16 rounded-lg"
                   alt=""
                 />
               </>
             )}
           </div>
-          <div className="flex  flex-col  name gap-1">
+          <div className="flex  flex-col  name gap-1 w-full">
             <Link className="text-base">
               {selectedSong
                 ? selectedSong.songName
-                : "I Didn't Change My Number"}
+                : (<div className='p-1 bg-grey w-3/5'></div>)}
             </Link>
             <Link className="text-sm text-silver">
-              {selectedSong ? selectedSong.songArtists : 'Billie Eilish'}
+              {selectedSong ? selectedSong.songArtists : (<div className='p-1 bg-grey w-2/5'></div>)}
             </Link>
           </div>
-          <div></div>
         </div>
 
         <div className="custom-audio-player" style={{ flex: '30%' }}>
           <div className="flex flex-row gap-6">
-            <button onClick={toggleShuffle}>
+            <button onClick={selectedSong ? toggleShuffle : null} >
+            {selectedSong ? (  <>
               {isShuffleOn ? (
                 <img src={ShuffleActiveIcon} className="w-4" alt="" />
               ) : (
                 <img src={ShuffleIcon} className="w-4" alt="" />
               )}
+            </>) : ( <img src={ShuffleDisabledIcon} className="w-4" alt="" />)}
+      
             </button>
-            <button onClick={playPrevious}>
-              <img src={PreviousIcon} className="w-4" alt="" />
+            <button onClick={selectedSong ? playPrevious : null} >
+              
+              {selectedSong ? (<img src={PreviousIcon} className="w-4" alt="" />) : (<img src={PreviousDisabledIcon} className="w-4" alt="" />)}
             </button>
             {selectedSong ? (
               <>
-                <button onClick={handleClick} className="play-button">
+                <button onClick={selectedSong ? handleClick : null}  className="bg-[#fff]  p-[8px] rounded-full">
                   {isPlaying ? (
                     <img src={PauseIcon} className="w-4" alt="Pause" />
                   ) : (
@@ -193,7 +222,7 @@ const NowPlaying = (props) => {
               </>
             ) : (
               <>
-                <button onClick={handleClick} className="play-button">
+                <button onClick={selectedSong ? handleClick : null} className={`  p-[8px] rounded-full ${selectedSong ? (' bg-[#fff]') : (' bg-grey')}`}>
                   {isDefault ? (
                     <img src={PauseIcon} className="w-4" alt="Pause" />
                   ) : (
@@ -203,20 +232,27 @@ const NowPlaying = (props) => {
               </>
             )}
 
-            <button onClick={playNext}>
-              <img src={NextIcon} className="w-4" alt="" />
+            <button onClick={selectedSong ? playNext : null} >
+              {selectedSong ? (<img src={NextIcon} className="w-4" alt="" />): (<img src={NextDisabledIcon} className="w-4" alt="" />)}
+              
             </button>
-            <button onClick={toggleLoop}>
-              {isLooping ? (
+            <button onClick={selectedSong ? toggleLoop : null} >
+              {selectedSong ? (<>  {isLooping ? (
                 <img src={LoopOneIcon} className="w-4" alt="" />
               ) : (
                 <img src={LoopIcon} className="w-4" alt="" />
-              )}
+              )}</>): (<img src={LoopDisabledIcon} className="w-4" alt="" />)}
+            
             </button>
           </div>
           <div className="flex justify-between items-center">
-            <span className="duration">{currentTime}</span>
-            <div className="progress-container" onClick={handleSeek}>
+          {/* .duration {
+  color: #d3d3d3;
+  font-size: 12px;
+  padding: 0px 10px;
+} */}
+            <span className={`text-xs px-3 ${selectedSong ? ('text-[#d3d3d3] ') : (' text-grey')}`}>{currentTime}</span>
+            <div className="progress-container" onClick={selectedSong ? handleSeek : null} >
               <div
                 style={{
                   width: `${progress}%`,
@@ -224,45 +260,47 @@ const NowPlaying = (props) => {
                 className="progress"
               ></div>
             </div>
-
-            <span className="duration">{duration}</span>
+            <span className={`text-xs px-3 ${selectedSong ? ('text-[#d3d3d3] ') : (' text-grey')}`}>{duration}</span>
           </div>
         </div>
         <div
           className="flex flex-row gap-6 justify-end items-center"
           style={{ flex: '30%' }}
         >
-          <button onClick={toggleNowPlay}>
-            {isNowPlay ? (
+          <button onClick={selectedSong ? toggleNowPlay : null} >
+            {selectedSong ? (<>            {isNowPlay ? (
               <img src={NowPlayingActiveIcon} className="w-4" alt="" />
             ) : (
               <img src={NowPlayingIcon} className="w-4" alt="" />
-            )}
+            )}</>) : (<img src={NowPlayingDisabledIcon} className="w-4" alt="" />)}
+
           </button>
-          <button onClick={toggleMic}>
-            {isMic ? (
+          <button onClick={selectedSong ? toggleMic : null} >
+          {selectedSong ? (<>                        {isMic ? (
               <img src={MicActiveIcon} className="w-4" alt="" />
             ) : (
               <img src={MicIcon} className="w-4" alt="" />
-            )}
+            )}</>) : (<img src={MicDisabledIcon} className="w-4" alt="" />)}
+
           </button>
-          <button onClick={toggleQueue}>
-            {isQueue ? (
+          <button onClick={selectedSong ? toggleQueue : null} >
+          {selectedSong ? (<>                        {isQueue ? (
               <img src={QueueActiveIcon} className="w-4" alt="" />
             ) : (
               <img src={QueueIcon} className="w-4" alt="" />
-            )}
+            )}</>) : (<img src={QueueDisabledIcon} className="w-4" alt="" />)}
           </button>
-          <button onClick={toggleConnected}>
-            {isConnected ? (
+          <button onClick={selectedSong ? toggleConnected : null} >
+
+          {selectedSong ? (<>              {isConnected ? (
               <img src={ConnectedActiveIcon} className="w-4" alt="" />
             ) : (
               <img src={ConnectedIcon} className="w-4" alt="" />
-            )}
+            )}</>) : (<img src={ConnectedDisabledIcon} className="w-4" alt="" />)}
           </button>
 
-          <div className="flex items-center gap-2">
-            <button onClick={toggleMute}>
+          <div className={`flex items-center gap-2  ${selectedSong ? (' '): (' opacity-20')}`}>
+            <button onClick={selectedSong ? toggleMute : null} >
               {/* Display mute or unmute icon based on the isMuted state */}
               <img
                 src={volumeIcons[isMuted ? 1 : 0]}
@@ -301,7 +339,8 @@ const NowPlaying = (props) => {
         )}
       </div>
       {props.nowPlayingMobile && (
-        <div className="flex flex-row items-center justify-between now-playing-mobile z-40 fixed w-11/12 px-4 md:px-2 py-2 box-border">
+   <>
+   {selectedSong ? (     <div className="flex flex-row items-center justify-between now-playing-mobile z-40 fixed w-11/12 px-4 md:px-2 py-2 box-border   overflow-hidden md:w-full rounded-md md:rounded-t-md md:rounded-b-none "  style={{ backgroundColor: bgColor }}>
           <div className="flex  flex-row  justify-between w-full items-center gap-4 box-border">
             <div className="flex flex-row gap-2 items-center">
               <div>
@@ -316,7 +355,7 @@ const NowPlaying = (props) => {
                 ) : (
                   <>
                     <img
-                      src={HappierThanEverImg}
+                      src={greenMusicImg}
                       className="w-14 rounded-lg md:rounded-sm md:w-10"
                       alt=""
                     />
@@ -337,11 +376,11 @@ const NowPlaying = (props) => {
             <div className="flex flex-row gap-3">
               {selectedSong ? (
                 <>
-                  <button onClick={handleClick} className="play-button">
+                  <button onClick={handleClick} className="bg-[#fff] p-2 rounded-full ">
                     {isPlaying ? (
-                      <img src={PauseIcon} className="w-4" alt="Pause" />
+                      <img src={PauseIcon} className="w-3" alt="Pause" />
                     ) : (
-                      <img src={PlayIcon} className="w-4" alt="Play" />
+                      <img src={PlayIcon} className="w-3" alt="Play" />
                     )}
                   </button>
                 </>
@@ -356,16 +395,12 @@ const NowPlaying = (props) => {
                   </button>
                 </>
               )}
-              <audio
-                ref={audioRef}
-                src={ChangeMyNumber}
-                onTimeUpdate={handleTimeUpdate}
-              ></audio>
+
             </div>
             <div
               className="progress-container fixed bottom-0 w-full box-border vvv"
-              onClick={handleSeek}
-              style={{ width: '90%' }}
+              onClick={selectedSong ? handleClick : null} 
+              style={{ width: '100%' }}
             >
               <div
                 style={{
@@ -375,7 +410,8 @@ const NowPlaying = (props) => {
               ></div>
             </div>
           </div>
-        </div>
+        </div>) : ('')}
+   </>
       )}
     </div>
   );
