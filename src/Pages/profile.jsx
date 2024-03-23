@@ -11,7 +11,6 @@ const Profile = () => {
     const { user } = useAuth0();
 
   return (
-<Layout>
 
       <div className="app-frame ">
         <NavBar />
@@ -93,7 +92,6 @@ Free
     
             </div>
       </div>
-</Layout>
   );
 };
 
