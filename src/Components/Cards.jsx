@@ -284,43 +284,51 @@ const Cards = (props) => {
           </div>
           <div className="w-full flex flex-col gap-8 bg-greyBlack p-1 rounded-lg card2 ">
             <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                class="Svg-sc-ytk21e-0 iYxpxA home-active-icon"
-                viewBox="0 0 24 24"
-                id="homeIcon"
-              >
-                <path
-                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
-                  id="homePath"
-                  className={location.pathname === '/' ? 'active' : ''}
-                  fill="#b3b3b3"
-                />
-              </svg>
+              
+            <Link to="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 iYxpxA home-active-icon"
+                  viewBox="0 0 24 24"
+                  id="homeIcon"
+                >
+                  <path
+                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                    id="homePath"
+                    className={location.pathname === '/' ? 'active' : ''}
+                    fill="#b3b3b3"
+                  />
+                </svg>
+              </Link>
             </div>
             <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                data-encore-id="icon"
-                role="img"
-                aria-hidden="true"
-                class="Svg-sc-ytk21e-0 iYxpxA search-active-icon"
-                viewBox="0 0 24 24"
-                id="homeIcon"
-              >
-                <path
-                  d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"
-                  fill="transparent"
-                />
-                <path
-                  d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
-                  id="searchPath"
-                  fill="#b3b3b3"
-                />
-              </svg>
+            <Link to="/SearchPage">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 iYxpxA search-active-icon"
+                  viewBox="0 0 24 24"
+                  id="homeIcon"
+                >
+                  <path
+                    d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"
+                    fill="transparent"
+                  />
+                  <path
+                    d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
+                    id="searchPath"
+                    fill="#b3b3b3"
+                    className={
+                      location.pathname === '/SearchPage' ? 'active' : ''
+                    }
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
@@ -344,7 +352,7 @@ const Cards = (props) => {
                   fill="white"
                 />
               </svg>
-              <Link to="/" id="active">
+              <Link to="#" id="active">
                 Library
               </Link>
             </div>
@@ -401,7 +409,7 @@ const Cards = (props) => {
 
           <div className="w-full flex flex-col gap-8 px-5 py-1 rounded-lg card2">
             <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap">
-              <div className="plus-container">
+              <div className="plus-container" onClick={isAuthenticated ? createPlaylist : openPopup}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   version="1.0"
@@ -858,37 +866,7 @@ const Cards = (props) => {
                  </div>
                </div>
              </div>
-           </Link>) : (
-             <div
-               className={`w-full flex flex-col gap-8 rounded-lg navbar-cards-container hover:bg-lightBlack opacity-20  cursor-not-allowed`}
-             >
-               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card1">
-                 <div className="w-full flex items-center justify-start gap-3 text-sm font-sans hover:text-white nav-link duration-300 flex-wrap ">
-                   <div className="flex items-center justify-center bg-silver  rounded-md ">
-                     <img src={LikedSongsImg} className="  w-12 rounded-md" />
-                   </div>
- 
-                   <div className="flex flex flex-col gap-1 text-base">
-                     <Link
-                       to="/likedSongs"
-                       id={location.pathname === '/likedSongs' ? 'active' : ''}
-                     >
-                       Liked songs
-                     </Link>
-                     <div className="flex flex-row gap-1 text-sm text-silver">
-                       <h1>Playlist</h1>
-                       <h1>.</h1>
-                       <h1>{likedSongsCount} songs</h1>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <div className="w-full flex flex-col gap-8 px-5 py-1  rounded-lg card2">
-                 <div className="w-full flex items-center justify-center gap-5 text-base font-bold font-sans hover:text-white nav-link duration-300 flex-wrap text-ellipsis overflow-hidden ...">
-                   <img src={LikedSongsImg} className="w-12 rounded-md"  alt=''/>
-                 </div>
-               </div>
-             </div>
+           </Link>) : (''
          )}
       </>
           

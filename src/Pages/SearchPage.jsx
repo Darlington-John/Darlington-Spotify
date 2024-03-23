@@ -19,7 +19,7 @@ const SearchPage = () => {
   } = useMusic();
   return (
 
-<Layout>
+
       <div className="app-frame ">
         <NavBar Search=" " />
 
@@ -65,7 +65,7 @@ const SearchPage = () => {
           )}
         </div>
       </div>
-</Layout>
+
   );
 };
 

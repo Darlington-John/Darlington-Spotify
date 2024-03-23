@@ -159,7 +159,6 @@ const CreatedPlaylist = () => {
   }, [ playlistImage ? playlistImage: imgSrcFromCard]);
   
   return (
- <Layout>
     <div className="app-frame md:p-0">
       <NavBar />
 
@@ -422,9 +421,8 @@ const CreatedPlaylist = () => {
           </div>
         </div>
       </div>
-    </div>
-    {isOpen && (
-      <div className="w-screen h-screen fixed  flex items-center justify-center bg-transBlack z-50 ">
+      {isOpen && (
+      <div className="w-screen h-screen fixed  flex items-center justify-center bg-transBlack z-50 top-0 left-0">
         <div
           id="popup"
           className="popup text-white p-10 bg-lightBlack text-xl rounded-lg flex gap-4 xs:w-full xs:flex-col"
@@ -483,7 +481,8 @@ const CreatedPlaylist = () => {
         </div>
       </div>
     )}
-</Layout>
+    </div>
+
   );
 };
 

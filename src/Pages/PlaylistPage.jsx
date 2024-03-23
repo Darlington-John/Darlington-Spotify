@@ -51,7 +51,7 @@ const PlaylistPage = () => {
                   ? playlist.PlaylistImg
                   : '-']);
   return (
-   <Layout>
+
       <div className="app-frame md:p-0">
         <NavBar />
         <MobileNavbar
@@ -135,7 +135,7 @@ const PlaylistPage = () => {
           </div>
         </div>
       </div>
-      </Layout>
+
   );
 };
 

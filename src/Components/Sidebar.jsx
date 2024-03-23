@@ -6,7 +6,7 @@ const SideBar = () => {
   const sidebar1Ref = useRef(null);
   const sidebar2Ref = useRef(null);
   const [sidebar1Width, setSidebar1Width] = useState(300);
-  const [setSidebar2Width] = useState(400);
+  const [setSidebar2Width] = useState(200);
   const [isResizing1, setIsResizing1] = useState(false);
   const [isResizing2, setIsResizing2] = useState(false);
 

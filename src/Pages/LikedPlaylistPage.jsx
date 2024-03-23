@@ -30,7 +30,7 @@ const LikedPlaylistPage = () => {
     setSelectedSong(selectedSong);
   };
   return (
- <Layout>
+
     <div className="app-frame md:p-0">
       <NavBar />
 
@@ -99,7 +99,6 @@ const LikedPlaylistPage = () => {
         </div>
       </div>
     </div>
-    </Layout>
   );
 };
 

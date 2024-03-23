@@ -10,6 +10,7 @@ import SearchPage from '../Pages/SearchPage';
 import { CallbackPage } from '../Pages/callback-page';
 import Profile from '../Pages/profile';
 import { PageLoader } from '../Components/PageLoader';
+import Layout from '../Components/PageLayout';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   }
   return (
 <>
+<Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />{' '}
         <Route path="FiltersData/:PlaylistTitle" element={<PlaylistPage />} />{' '}
@@ -36,6 +38,8 @@ function App() {
         <Route path="/callback" element={<CallbackPage />} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
+
+      </Layout>
       <NowPlaying nowPlayingMobile=" " />
       </>
   );

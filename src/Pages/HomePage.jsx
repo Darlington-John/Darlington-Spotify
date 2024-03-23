@@ -16,7 +16,7 @@ const HomePage = () => {
   const { user } = useAuth0();
   return (
     
-      <Layout>
+
       <div className="app-frame">
         <NavBar />
         <MobileNavbar greeting=" " />
@@ -34,7 +34,6 @@ const HomePage = () => {
           </>)}
         
       </div>
-   </Layout>
   );
 };
 
