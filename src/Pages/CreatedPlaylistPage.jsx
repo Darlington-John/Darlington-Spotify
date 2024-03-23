@@ -149,7 +149,7 @@ const CreatedPlaylist = () => {
       img.src =playlistImage ? playlistImage: imgSrcFromCard;
       img.crossOrigin = 'Anonymous'; // Enable CORS
  img.onload = () => {
-  const lightVibrantColor = colorThief.getPalette(img, 5)[3];
+  const lightVibrantColor = colorThief.getPalette(img, 5)[2];
 
       const rgbColor = `rgb(${lightVibrantColor.join(', ')})`;
       setBgColor(rgbColor);
@@ -193,7 +193,7 @@ const CreatedPlaylist = () => {
           )}
           <div className="flex flex-col gap-2 ">
             <h1 className="text-base">Playlist </h1>
-            <h1 className=" text-8xl    font-bold md:text-6xl xs:text-4xl">
+            <h1 className=" text-7xl    font-bold md:text-4xl xs:text-4xl">
               {playlistName.length > 0 ? (
                 <h1>{playlistName}</h1>
               ) : (
@@ -425,7 +425,7 @@ const CreatedPlaylist = () => {
       <div className="w-screen h-screen fixed  flex items-center justify-center bg-transBlack z-50 top-0 left-0">
         <div
           id="popup"
-          className="popup text-white p-10 bg-lightBlack text-xl rounded-lg flex gap-4 xs:w-full xs:flex-col"
+          className="popup text-white p-10 bg-lightBlack text-xl rounded-lg flex gap-4 xs:w-full xs:flex-col" style={{ backgroundColor: bgColor }}
         >
           <div>
             {imgSrcFromCard && (

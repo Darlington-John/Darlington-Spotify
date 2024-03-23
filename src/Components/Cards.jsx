@@ -751,7 +751,7 @@ const Cards = (props) => {
 
                     <div
                       className="flex items-center justify-between  w-full bg-grey  z-40 p-2 hover:bg-lightBlack rounded-lg cursor-pointer"
-                      onClick={createPlaylist}
+         onClick={isAuthenticated ? createPlaylist : openPopup}
                     >
                       <h1 className="text-sm ">Create Playlist</h1>
                       <img src={PlusCircleIcon} className="w-4 " alt="" />
