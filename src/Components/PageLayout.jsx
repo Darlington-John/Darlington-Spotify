@@ -12,7 +12,7 @@ const Layout = ({children}) => {
     <SideBar />
     <Popup/>
 {children}
-<SideBarRight />
+{isAuthenticated ? (<SideBarRight />) : ''}
     <Bottombar />
   </div> );
 }
