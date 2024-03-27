@@ -38,7 +38,6 @@ function App() {
         <Route path="/callback" element={<CallbackPage />} />
         <Route path="/profile" element={<Profile/>} />
       </Routes>
-
       </Layout>
       <NowPlaying nowPlayingMobile=" " />
       </>

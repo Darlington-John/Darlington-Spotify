@@ -696,7 +696,7 @@ const Cards = (props) => {
 
               <img
                 src={isPlaying ? PauseWhiteIcon : PlayWhiteIcon}
-                className="w-3 PlayWhiteIcon"
+                className="w-3 PlayWhiteIcon cursor-pointer"
                 onClick={isAuthenticated ? () => {
                   togglePlay(props.audioUrl);
                 } : openPopup}

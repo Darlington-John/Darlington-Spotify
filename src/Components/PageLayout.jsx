@@ -6,13 +6,19 @@ import Bottombar from './Bottombar';
 import SideBar from './Sidebar';
 import { useAuth0 } from "@auth0/auth0-react";
 import Popup from './authPopup';
+import { useMusic } from './MusicContext';
 const Layout = ({children}) => {
+  const {
+    selectedSong
+  } = useMusic();
     const { isAuthenticated } = useAuth0();
     return (     <div className="app-container ">
     <SideBar />
     <Popup/>
 {children}
-{isAuthenticated ? (<SideBarRight />) : ''}
+{isAuthenticated ? (
+<>{selectedSong ? <SideBarRight /> : '' }</>
+) : ''}
     <Bottombar />
   </div> );
 }
